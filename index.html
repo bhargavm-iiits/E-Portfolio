@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHARGAV M. | Neural Prototype</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for robust symbolism -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="cursor"></div>
+    <div class="film-grain"></div>
+    <div class="vignette"></div>
+
+    <!-- Background 3D Engine Layer -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <div id="loader">
+        <div class="cad-loader">
+            <div class="loader-circle"></div>
+            <div class="loader-circle inner"></div>
+            <div class="loader-dot"></div>
+        </div>
+        <div class="loader-text">
+            <span>COMPILING MODEL PARAMETERS</span>
+            <span class="loader-percentage">0%</span>
+        </div>
+    </div>
+
+    <main id="scroll-timeline">
+        
+        <!-- SCENE 01: INTRO -->
+        <section class="scene intro-scene" id="scene-intro">
+            <div class="sticky-wrapper">
+                <div class="layer-container center-content">
+                    <div class="hero-block fade-block">
+                        <h1 class="hero-title">BHARGAV M</h1>
+                        <p class="hero-subtitle mono-tag">
+                            <i class="fa-solid fa-briefcase orange-text"></i> B.Tech AI & Data Science | AR/VR Developer | ML Engineer | Full Stack developer<br>
+                            <span style="font-size: 0.8rem; opacity: 0.7; margin-top: 10px; display: inline-block;">
+                                <i class="fa-solid fa-location-dot orange-text"></i> IIIT Sri City
+                            </span>
+                        </p>
+                    </div>
+                    <div class="contact-array fade-block" style="margin-top: 2rem;">
+                        <a href="tel:+917795036940" class="mono-tag hover-orange"><i class="fa-solid fa-phone"></i> +91 7795036940</a>
+                        <a href="mailto:bhargav.m23@iiits.in" class="mono-tag hover-orange"><i class="fa-solid fa-envelope"></i> bhargav.m23@iiits.in</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 02: EDUCATION -->
+        <section class="scene sequence-scene" id="scene-edu">
+            <div class="sticky-wrapper">
+                <div class="title-layer center-content">
+                    <span class="mono-tag orange-tag">SECTOR // 01</span>
+                    <h1 class="hero-title" style="font-size: 8vw;">ACADEMIC CORE.</h1>
+                </div>
+                
+                <div class="detail-layer align-right">
+                    <div class="blueprint-box rich-box">
+                        <div class="data-row separator">
+                            <div class="data-col">
+                                <span class="mono-tag"><i class="fa-solid fa-building-columns orange-text"></i> IIIT SRI CITY</span>
+                                <span class="mono-tag sub">2023 - PRESENT</span>
+                            </div>
+                            <div class="data-col right">
+                                <span class="orange-text">B.Tech AI & DS</span>
+                                <span class="mono-tag">CGPA: 6.45</span>
+                            </div>
+                        </div>
+                        <div class="data-row separator">
+                            <div class="data-col">
+                                <span class="mono-tag"><i class="fa-solid fa-school orange-text"></i> BGS PU COLLEGE</span>
+                                <span class="mono-tag sub">2020 - 2022</span>
+                            </div>
+                            <div class="data-col right">
+                                <span class="orange-text">CLASS XII</span>
+                                <span class="mono-tag">92.3%</span>
+                            </div>
+                        </div>
+                        <div class="data-row">
+                            <div class="data-col">
+                                <span class="mono-tag"><i class="fa-solid fa-school orange-text"></i> BGS PUBLIC SCHOOL</span>
+                                <span class="mono-tag sub">2020</span>
+                            </div>
+                            <div class="data-col right">
+                                <span class="orange-text">CLASS X</span>
+                                <span class="mono-tag">97.6%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 03: EXPERIENCE -->
+        <section class="scene sequence-scene" id="scene-experience">
+            <div class="sticky-wrapper">
+                <div class="title-layer center-content">
+                    <h1 class="hero-title" style="font-size: 8vw;">PROFESSIONAL<br>SYNERGY.</h1>
+                </div>
+                
+                <div class="detail-layer align-left">
+                    <div class="blueprint-box massive-box">
+                        <div class="experience-block">
+                            <div class="exp-header" style="margin-bottom: 2rem;">
+                                <h3>CYMAX</h3>
+                                <span class="mono-tag orange-text d-block"><i class="fa-solid fa-user-gear"></i> AR/VR DEVELOPER INTERN</span>
+                                <span class="mono-tag sub d-block"><i class="fa-solid fa-map-pin"></i> HYDERABAD // JAN 2026 - PRESENT</span>
+                            </div>
+                            <div class="terminal-bullets">
+                                <p class="mono-tag"><span class="orange-text">></span> Developing a secure VR media platform with a web-based controller interface, implementing one-to-one device pairing, user authentication, and subscription-based content access.</p>
+                                <p class="mono-tag"><span class="orange-text">></span> Building an encrypted VR video player with secure streaming, runtime decryption, and DRM-based content protection to prevent unauthorized redistribution.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 04: PROJECTS TITLE ONLY -->
+        <section class="scene sequence-scene" id="scene-projects-title">
+            <div class="sticky-wrapper">
+                <div class="title-layer center-content">
+                    <h1 class="hero-title" style="font-size: 10vw;">PROJECTS.</h1>
+                </div>
+                <div class="detail-layer center-content">
+                    <!-- Blank or minimal transition layer -->
+                    <span class="mono-tag orange-text">PREPARING PROJECT DATA MATRICES...</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 05: OPTHAMISS -->
+        <section class="scene sequence-scene" id="scene-proj-optha">
+            <div class="sticky-wrapper">
+                <div class="title-layer center-content">
+                    <span class="mono-tag orange-tag">PROJECT 01</span>
+                    <h1 class="hero-title" style="font-size: 6vw;">OpthaMiss</h1>
+                </div>
+
+                <div class="detail-layer align-right">
+                    <div class="blueprint-box rich-box alt-style">
+                        <p class="abstract">AI Tele-Ophthalmology System</p>
+                        
+                        <div class="tech-stack-row">
+                            <span class="glow-edge">JavaScript</span>
+                            <span class="glow-edge">React</span>
+                            <span class="glow-edge">PyTorch</span>
+                            <span class="glow-edge">ViT</span>
+                        </div>
+
+                        <div class="terminal-bullets">
+                            <p class="mono-tag"><span class="orange-text">></span> Built an advanced AI tele-ophthalmology screening platform for retinal disease detection.</p>
+                            <p class="mono-tag"><span class="orange-text">></span> Deployed deep learning models in low-resource environments (AUC-ROC 0.98).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 06: PRIVACY RAG -->
+        <section class="scene sequence-scene" id="scene-proj-rag">
+            <div class="sticky-wrapper">
+                <div class="title-layer center-content">
+                    <span class="mono-tag orange-tag">PROJECT 02</span>
+                    <!-- Breaking the long title slightly for aesthetics -->
+                    <h1 class="hero-title" style="font-size: 5vw; line-height:1.2;">Privacy-Preserving<br>-RAG</h1>
+                </div>
+
+                <div class="detail-layer align-left">
+                    <div class="blueprint-box rich-box alt-style">
+                        <p class="abstract">Generative AI Privacy Model</p>
+                        
+                        <div class="tech-stack-row">
+                            <span class="glow-edge">Python</span>
+                            <span class="glow-edge">LLMs</span>
+                            <span class="glow-edge">Generative AI</span>
+                            <span class="glow-edge">RAG</span>
+                        </div>
+
+                        <div class="terminal-bullets">
+                            <p class="mono-tag"><span class="orange-text">></span> Crafted a secure Gen AI architecture focusing on strict privacy bounds for LLM processing.</p>
+                            <p class="mono-tag"><span class="orange-text">></span> Integrated safe vector retrieval paradigms ensuring data anonymization within generation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 07: HATE SPEECH -->
+        <section class="scene sequence-scene" id="scene-proj-hate">
+            <div class="sticky-wrapper">
+                <div class="title-layer center-content">
+                    <span class="mono-tag orange-tag">PROJECT 03</span>
+                    <h1 class="hero-title" style="font-size: 5vw;">Hate-Speech-<br>Detection</h1>
+                </div>
+
+                <div class="detail-layer align-right">
+                    <div class="blueprint-box rich-box alt-style">
+                        <p class="abstract">Multimodal NLP Abuse Filter</p>
+                        
+                        <div class="tech-stack-row">
+                            <span class="glow-edge">Jupyter Notebook</span>
+                            <span class="glow-edge">CLIP</span>
+                            <span class="glow-edge">LoRA</span>
+                            <span class="glow-edge">EasyOCR</span>
+                        </div>
+
+                        <div class="terminal-bullets">
+                            <p class="mono-tag"><span class="orange-text">></span> Engineered robust multimodal classification using dual-encoder architectures with LoRA fine-tuning.</p>
+                            <p class="mono-tag"><span class="orange-text">></span> Deployed OCR parsing to analyze text-in-image hostility vectors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 08: AI PLANT DISEASE -->
+        <section class="scene sequence-scene" id="scene-proj-plant">
+            <div class="sticky-wrapper">
+                <div class="title-layer center-content">
+                    <span class="mono-tag orange-tag">PROJECT 04</span>
+                    <h1 class="hero-title" style="font-size: 4.5vw;">AI-Plant-Disease<br>-Detection</h1>
+                </div>
+
+                <div class="detail-layer align-left">
+                    <div class="blueprint-box rich-box alt-style">
+                        <p class="abstract">Diagnostic CNN Classification Engine</p>
+                        
+                        <div class="tech-stack-row">
+                            <span class="glow-edge">JavaScript</span>
+                            <span class="glow-edge">PyTorch</span>
+                            <span class="glow-edge">MobileNetV2</span>
+                            <span class="glow-edge">Flask</span>
+                        </div>
+
+                        <div class="terminal-bullets">
+                            <p class="mono-tag"><span class="orange-text">></span> Developed CV classifier for robust 13-class plant disease detection mapping attention filters.</p>
+                            <p class="mono-tag"><span class="orange-text">></span> Structured real-time inference using a lightweight Flask bridge to web dashboards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 09: JARVIS -->
+        <section class="scene sequence-scene" id="scene-proj-jarvis">
+            <div class="sticky-wrapper">
+                <div class="title-layer center-content">
+                    <span class="mono-tag orange-tag">PROJECT 05</span>
+                    <h1 class="hero-title" style="font-size: 7vw;">Jarvis</h1>
+                </div>
+
+                <div class="detail-layer align-right">
+                    <div class="blueprint-box rich-box alt-style">
+                        <p class="abstract">AI Voice Assistant Dashboard</p>
+                        
+                        <div class="tech-stack-row">
+                            <span class="glow-edge">Python</span>
+                            <span class="glow-edge">SpeechRecognition</span>
+                            <span class="glow-edge">pyttsx3</span>
+                            <span class="glow-edge">REST API</span>
+                        </div>
+
+                        <div class="terminal-bullets">
+                            <p class="mono-tag"><span class="orange-text">></span> Constructed a fully modular voice assistant relying on STT + TTS OS-level integrations.</p>
+                            <p class="mono-tag"><span class="orange-text">></span> Facilitated background desktop tasks and query resolutions via speech.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 10: VOX ALIGN -->
+        <section class="scene sequence-scene" id="scene-proj-vox">
+            <div class="sticky-wrapper">
+                <div class="title-layer center-content">
+                    <span class="mono-tag orange-tag">PROJECT 06</span>
+                    <h1 class="hero-title" style="font-size: 7vw;">Vox-Align</h1>
+                </div>
+
+                <div class="detail-layer align-left">
+                    <div class="blueprint-box rich-box alt-style">
+                        <p class="abstract">Multimodal Emotional Desktop Agent</p>
+                        
+                        <div class="tech-stack-row">
+                            <span class="glow-edge">Python</span>
+                            <span class="glow-edge">Gemini LLM</span>
+                            <span class="glow-edge">ChromaDB</span>
+                            <span class="glow-edge">BERT</span>
+                        </div>
+
+                        <div class="terminal-bullets">
+                            <p class="mono-tag"><span class="orange-text">></span> Built an advanced emotion detecting & responding AI combining STT, Gemini RAG, and BERT.</p>
+                            <p class="mono-tag"><span class="orange-text">></span> Bundled via PyInstaller as a standalone conversational reasoning application.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 11: ACHIEVEMENTS -->
+        <section class="scene sequence-scene" id="scene-achievements">
+            <div class="sticky-wrapper">
+                <div class="title-layer center-content">
+                    <span class="mono-tag orange-tag">AWARDS // HACKATHONS</span>
+                    <h1 class="hero-title" style="font-size: 8vw;">IDEAVERSE<br>2026.</h1>
+                </div>
+
+                <div class="detail-layer center-content">
+                    <div class="blueprint-box rich-box highlight-box" style="margin: auto;">
+                        <span class="orange-text subtitle-highlight" style="font-size: 1.2rem; font-weight: bold;"><i class="fa-solid fa-trophy"></i> TOP 8 OUT OF 150+ TEAMS</span>
+                        <div class="terminal-bullets padding-top">
+                            <p class="mono-tag"><span class="orange-text">></span> Secured Top 8 position among 150+ teams for developing MISS-EyeScreen, an AI-powered tele-ophthalmology system.</p>
+                            <p class="mono-tag"><span class="orange-text">></span> Built a multimodal deep learning solution using Vision Transformers (ViT), PyTorch, FastAPI, and React, achieving high-performance metrics (AUC-ROC up to 0.98, sensitivity ~92%) for real-time screening.</p>
+                            <p class="mono-tag"><span class="orange-text">></span> Designed a scalable end-to-end AI pipeline integrating computer vision and deployment-ready architecture for low-resource environments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 12: TECH SKILLS -->
+        <section class="scene sequence-scene" id="scene-skills">
+            <div class="sticky-wrapper">
+                <div class="title-layer center-content">
+                    <h1 class="hero-title" style="font-size: 8vw;">SYSTEM<br>CAPABILITIES.</h1>
+                </div>
+
+                <div class="detail-layer center-content">
+                    <div class="blueprint-box massive-box">
+                        <div class="skills-grid">
+                            <div class="skill-row">
+                                <span class="orange-text mono-tag"><i class="fa-solid fa-brain"></i> ML & AI MODELS</span>
+                                <p class="mono-tag sub">PyTorch, CNNs (AI-Plant-Disease-Detection), Transformers & LoRA (Hate-Speech-Detection), Computer Vision (OpthaMiss_V1)</p>
+                            </div>
+                            <div class="skill-row">
+                                <span class="orange-text mono-tag"><i class="fa-solid fa-language"></i> GEN AI & NLP</span>
+                                <p class="mono-tag sub">Privacy-Preserving-RAG, Gemini LLM, ChromaDB, BERT (Vox-Align)</p>
+                            </div>
+                            <div class="skill-row">
+                                <span class="orange-text mono-tag"><i class="fa-solid fa-wave-square"></i> VOICE & AUTOMATION</span>
+                                <p class="mono-tag sub">OpenAI Whisper, pyttsx3, AI Voice Assistants (Jarvis)</p>
+                            </div>
+                            <div class="skill-row">
+                                <span class="orange-text mono-tag"><i class="fa-solid fa-code"></i> SOFTWARE DEV</span>
+                                <p class="mono-tag sub">Python, JavaScript, Jupyter Notebook, Flask, React</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 13: CONTACT (FORMERLY TERMINATE) -->
+        <section class="scene sequence-scene" id="scene-footer">
+            <div class="sticky-wrapper">
+                <div class="title-layer center-content">
+                    <h1 class="hero-title" style="font-size: 10vw;">CONTACT.</h1>
+                </div>
+
+                <div class="detail-layer flex-between" style="padding-bottom: 2rem;">
+                    
+                    <div class="blueprint-box half-box align-left" style="margin-top:2vh;">
+                        <span class="mono-tag orange-tag"><i class="fa-solid fa-camera"></i> EXTRA METRICS</span>
+                        <div class="data-row separator" style="padding-bottom: 15px;">
+                            <div class="data-col">
+                                <span class="orange-text">PHOTOGRAPHY CLUB</span>
+                                <span class="mono-tag sub">Workshops & Event Coverage</span>
+                            </div>
+                        </div>
+                        <div class="data-row">
+                            <div class="data-col">
+                                <span class="orange-text"><i class="fa-solid fa-palette"></i> MERAKI CLUB</span>
+                                <span class="mono-tag sub">Art Projects & Cultural Events</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blueprint-box half-box align-right" style="margin-bottom:2vh; align-self: flex-end;">
+                        <span class="mono-tag orange-tag"><i class="fa-solid fa-link"></i> ESTABLISH LINK</span>
+                        <div class="terminal-bullets">
+                            <p class="mono-tag" style="margin-bottom:10px;"><span class="orange-text"><i class="fa-solid fa-phone"></i></span> <a href="tel:+917795036940" class="hover-orange">+91 7795036940</a></p>
+                            <p class="mono-tag" style="margin-bottom:10px;"><span class="orange-text"><i class="fa-solid fa-envelope"></i></span> <a href="mailto:bhargav.m23@iiits.in" class="hover-orange">bhargav.m23@iiits.in</a></p>
+                            <p class="mono-tag" style="margin-bottom:10px;"><span class="orange-text"><i class="fa-brands fa-linkedin"></i></span> <a href="https://www.linkedin.com/in/bhargav-m-304b12289/" target="_blank" class="hover-orange">linkedin.com/in/bhargav-m-304b12289</a></p>
+                            <p class="mono-tag"><span class="orange-text"><i class="fa-brands fa-github"></i></span> <a href="https://github.com/bhargavm-iiits" target="_blank" class="hover-orange">github.com/bhargavm-iiits</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Essential Libraries via CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script src="main.js"></script>
+</body>
+</html>
