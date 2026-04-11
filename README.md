@@ -1,5 +1,7 @@
 # Bhargav M. - Neural Prototype 3D E-Portfolio
 
+**🔴 LIVE DEPLOYMENT:** [https://e-portfolio-xi-bay.vercel.app/](https://e-portfolio-xi-bay.vercel.app/)
+
 A highly immersive, cinematic, and interactive 3D WebGL portfolio built strictly with Vanilla Javascript, Three.js, GSAP, and native CSS. 
 
 Designed to mimic an "Engineering Blueprint / Sci-Fi HUD" product launch, the entire portfolio acts as a single continuous timeline where user scrolling orchestrates a 13-scene 3D camera fly-through deeply into the background matrix.
