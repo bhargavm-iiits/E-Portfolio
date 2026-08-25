@@ -102,34 +102,26 @@ export function renderExperience() {
 
 // ---------- Featured project cinematic scenes ----------
 export function renderFeaturedScenes() {
-  const container = document.getElementById("featured-projects");
+  const container = document.getElementById("featured-projects-text");
   const featured = projects.filter((p) => p.featured);
   container.innerHTML = featured
     .map(
       (p, i) => `
-    <section class="scene sequence-scene" id="scene-proj-${p.id}">
-      <div class="sticky-wrapper">
-        <div class="title-layer center-content">
-          <span class="mono-tag orange-tag">${p.tag}</span>
-          <h1 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 6rem);">${p.title}</h1>
-        </div>
-        <div class="detail-layer ${i % 2 === 0 ? "align-right" : "align-left"}">
-          <div class="blueprint-box rich-box alt-style" style="border-color:${p.color}66;">
-            <p class="abstract" style="border-color:${p.color};">${p.abstract}</p>
-            <div class="tech-stack-row">
-              ${p.tech.map((t) => `<span class="glow-edge" style="border-color:${p.color};color:${p.color};">${t}</span>`).join("")}
-            </div>
-            <div class="terminal-bullets">
-              ${p.bullets.map((b) => `<p class="mono-tag"><span class="orange-text">></span> ${b}</p>`).join("")}
-            </div>
-            <div class="project-links">
-              <a href="${p.github}" target="_blank" rel="noopener" class="hover-orange magnetic"><i class="fa-brands fa-github"></i> SOURCE</a>
-              ${p.live ? `<a href="${p.live}" target="_blank" rel="noopener" class="hover-orange magnetic"><i class="fa-solid fa-up-right-from-square"></i> LIVE</a>` : ""}
-            </div>
-          </div>
-        </div>
+    <article class="featured-entry ${i < featured.length - 1 ? "separator" : ""}" data-reveal style="--card-color:${p.color};">
+      <span class="mono-tag orange-tag">${p.tag}</span>
+      <h3>${p.title}</h3>
+      <p class="abstract" style="border-color:${p.color};">${p.abstract}</p>
+      <div class="tech-stack-row">
+        ${p.tech.map((t) => `<span class="glow-edge" style="border-color:${p.color};color:${p.color};">${t}</span>`).join("")}
       </div>
-    </section>`
+      <div class="terminal-bullets">
+        ${p.bullets.map((b) => `<p class="mono-tag"><span class="orange-text">></span> ${b}</p>`).join("")}
+      </div>
+      <div class="project-links">
+        <a href="${p.github}" target="_blank" rel="noopener" class="hover-orange magnetic"><i class="fa-brands fa-github"></i> SOURCE</a>
+        ${p.live ? `<a href="${p.live}" target="_blank" rel="noopener" class="hover-orange magnetic"><i class="fa-solid fa-up-right-from-square"></i> LIVE</a>` : ""}
+      </div>
+    </article>`
     )
     .join("");
 }
@@ -382,7 +374,7 @@ export function initNavRail() {
     { id: "scene-intro", label: "INTRO" },
     { id: "scene-edu", label: "EDU" },
     { id: "scene-experience", label: "WORK" },
-    { id: "featured-projects", label: "PROJECTS" },
+    { id: "section-featured", label: "PROJECTS" },
     { id: "scene-achievements", label: "AWARDS" },
     { id: "section-grid", label: "ALL WORK" },
     { id: "section-skills", label: "SKILLS" },

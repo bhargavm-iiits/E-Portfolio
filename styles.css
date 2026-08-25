@@ -336,6 +336,14 @@ body.has-custom-cursor .link-btn { cursor: none; }
 .static-section { padding: 8vh 8vw 10vh; position: relative; }
 .section-heading { margin-bottom: 3rem; text-align: center; }
 
+/* Featured project text entries */
+.featured-entry {
+  max-width: 800px; margin: 0 auto; padding-bottom: 3rem; margin-bottom: 3rem;
+}
+.featured-entry.separator { border-bottom: 1px dashed rgba(142, 147, 184, 0.25); }
+.featured-entry h3 { color: var(--card-color, var(--text-main)); }
+.featured-entry .abstract { border-color: var(--card-color, var(--violet-bright)); }
+
 /* Filter tabs */
 .filter-tabs { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; }
 .filter-tab {
