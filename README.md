@@ -1,64 +1,60 @@
-# Bhargav M. - Neural Prototype 3D E-Portfolio
+# Bhargav M. — Immersive 3D E-Portfolio
 
 **🔴 LIVE DEPLOYMENT:** [https://e-portfolio-xi-bay.vercel.app/](https://e-portfolio-xi-bay.vercel.app/)
 
-A highly immersive, cinematic, and interactive 3D WebGL portfolio built strictly with Vanilla Javascript, Three.js, GSAP, and native CSS. 
-
-Designed to mimic an "Engineering Blueprint / Sci-Fi HUD" product launch, the entire portfolio acts as a single continuous timeline where user scrolling orchestrates a 13-scene 3D camera fly-through deeply into the background matrix.
+A fully interactive, cinematic 3D WebGL portfolio built with Three.js, GSAP, and vanilla ES modules — no build step. Scrolling flies the camera through a glowing portal into a procedurally generated city, past floating glass project cubes you can drag, hover, and click.
 
 ## 🚀 Key Features
 
-* **Cinematic 3D Scroll Journey:** Abandoned traditional scroll behavior. The user's scroll wheel is mathematically locked to a `gsap.timeline()` that directly scrubs the underlying Three.js canvas forward and backwards seamlessly.
-* **Deep Space Geometric Engine:** A massive background `THREE.Group` consisting of floating 3D mathematical primitives (Tetrahedrons, Octahedrons, Tori, etc.), infinitely scaling grid floors, and massive navigational rings dynamically moving along the Z-axis.
-* **Scroll-Triggered Visual Context:** As users scroll through different projects (*OpthaMiss, Hate-Speech-Detection, Jarvis, etc.*), the Three.js mesh colors dynamically interpolate to match the mood of the dataset.
-* **Sequential Layer Revealing:** Native CSS layout architecture separating `<div class="title-layer">` and `<div class="detail-layer">`, allowing GSAP to orchestrate highly controlled fade-in sequences so the UI is parsed sequentially by the user.
-* **Lenis Smooth Scroll:** Hardware accelerated page inertia ensuring buttery smooth scrub interactions across the 3D timeline regardless of the mouse input variant.
+* **3D Portal Fly-Through:** A GSAP-scrubbed camera timeline carries the viewer from the hero straight through an emissive portal ring into a procedural city — instanced towers, a light-beam spire, and a distant planet, all built at runtime, no external 3D assets.
+* **Interactive Glass Project Cubes:** Featured projects float as raycast-hoverable `MeshPhysicalMaterial` glass cubes with mouse parallax. Hover for a HUD label, click to open the project's detail modal.
+* **Filterable Project Grid:** All 15 repositories render from a single data file (`js/data.js`) into a tilt-on-hover card grid, filterable by AR/VR, AI/ML, or Web.
+* **Data-Driven Content:** Every project, skill, and bio line comes from `js/data.js` — adding a new repo is a single object, not a new HTML section.
+* **Accessible by Default:** Respects `prefers-reduced-motion` (disables scroll-scrub and bloom, renders content statically), keyboard-navigable modal and grid, skip link, focus-visible states, and a mobile fallback that drops heavy post-processing.
 
 ## 🛠️ Technology Stack
 
-* **Structure:** HTML5
-* **Styling:** Vanilla CSS3 (Custom Variables, absolute sequencing, `backdrop-filter`, and CSS variable neon grids)
-* **Logic & Canvas Engine:** Vanilla ES6+ JavaScript
-* **3D Rendering:** `Three.js` (r134)
-* **Animation & Scroll:** `GSAP 3` & `ScrollTrigger`
-* **Inertia Scaling:** `@studio-freight/lenis`
-* **Iconography:** `FontAwesome` (via CDN)
+* **3D Rendering:** `Three.js` (ES modules via import map) + `UnrealBloomPass` / `ACESFilmicToneMapping`
+* **Animation & Scroll:** `GSAP 3` + `ScrollTrigger`, `Lenis` smooth scroll
+* **Structure & Styling:** Semantic HTML5, vanilla CSS3 (custom properties, `backdrop-filter`, CSS Grid)
+* **Logic:** Vanilla ES6+ JavaScript, modularized (`js/data.js`, `scene.js`, `portal.js`, `cubes.js`, `scroll.js`, `ui.js`, `main.js`)
+* **Iconography:** FontAwesome (CDN)
 
 ## 📁 Source Architecture
 
 ```text
-/e-portfolio-3d
-├── index.html   # 13-Scene Semantic Storyboard structure
-├── styles.css   # Engineering Blueprint Design System & HUD Setup
-├── main.js      # Three.js Environment, GSAP tl3D engine, and Lenis hook
+/E-Portfolio
+├── index.html        Semantic shell — sections are populated from data at runtime
+├── styles.css         Design system: deep-space navy/violet palette, cards, modal, nav rail
+├── js/
+│   ├── data.js        Single source of truth: profile, education, experience, 15 projects, skills
+│   ├── scene.js        Renderer, camera, bloom composer, render loop (pauses off-tab)
+│   ├── portal.js       Portal ring, procedural city, spire beam, planet, debris field
+│   ├── cubes.js        Raycast-interactive glass project cubes
+│   ├── scroll.js        Lenis + GSAP ScrollTrigger camera fly-through and reveal timelines
+│   ├── ui.js            Renders all sections from data.js; grid filters, modal, cursor, nav rail
+│   └── main.js          Orchestrator
 └── README.md
 ```
 
 ## ⚙️ How to Run Locally
 
-Because the project relies entirely on Vanilla JS and CDN-delivered dependencies with no Node compilation step, deployment is instantaneous.
+The 3D engine loads as ES modules, which browsers block over `file://`. Serve it:
 
-1. **Clone the repo:**
-   ```bash
-   git clone https://github.com/bhargavm-iiits/[repo-name].git
-   ```
-
-2. **Serve it locally:**
-   Since Three.js loads a WebGL canvas and some browsers flag CORS loading issues for local files across the `file://` protocol, it is recommended to run a super lightweight local server.
-   
-   If you have Python installed:
-   ```bash
-   python -m http.server 8000
-   ```
-   *Then navigate to `http://localhost:8000` in your browser.*
+```bash
+git clone https://github.com/bhargavm-iiits/E-Portfolio.git
+cd E-Portfolio
+python -m http.server 8000
+# then open http://localhost:8000
+```
 
 ## 📬 Contact & Links
 
-* **Engineering Mind:** Bhargav M
+* **Name:** Bhargav M
 * **Email:** [bhargav.m23@iiits.in](mailto:bhargav.m23@iiits.in)
 * **Phone:** +91 7795036940
-* **LinkedIn:** [linkedin.com/in/bhargav-m-304b12289](https://www.linkedin.com/in/bhargav-m-304b12289/)
+* **LinkedIn:** [linkedin.com/in/bhargav-ai](https://www.linkedin.com/in/bhargav-ai)
 * **GitHub:** [github.com/bhargavm-iiits](https://github.com/bhargavm-iiits)
 
 ---
-*SYS.ONLINE // INITIALIZING TRAJECTORY DATA...*
+*SYS.ONLINE // PORTAL STABLE*
