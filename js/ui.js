@@ -83,18 +83,21 @@ export function renderEducation() {
 // ---------- Experience ----------
 export function renderExperience() {
   const el = document.getElementById("experience-block");
-  el.innerHTML = `
-    <div class="exp-header">
-      <h3>${experience.company}</h3>
-      <span class="mono-tag orange-text d-block"><i class="fa-solid fa-user-gear"></i> ${experience.role}</span>
-      <span class="mono-tag sub d-block"><i class="fa-solid fa-map-pin"></i> ${experience.location}</span>
-    </div>
-    <div class="terminal-bullets">
-      ${experience.bullets
-        .map((b) => `<p class="mono-tag"><span class="orange-text">></span> ${b}</p>`)
-        .join("")}
-    </div>
-  `;
+  el.innerHTML = experience
+    .map(
+      (job, i) => `
+    <div class="experience-entry ${i < experience.length - 1 ? "separator" : ""}">
+      <div class="exp-header">
+        <h3>${job.company}</h3>
+        <span class="mono-tag orange-text d-block"><i class="fa-solid fa-user-gear"></i> ${job.role}</span>
+        <span class="mono-tag sub d-block"><i class="fa-solid fa-map-pin"></i> ${job.location}</span>
+      </div>
+      <div class="terminal-bullets">
+        ${job.bullets.map((b) => `<p class="mono-tag"><span class="orange-text">></span> ${b}</p>`).join("")}
+      </div>
+    </div>`
+    )
+    .join("");
 }
 
 // ---------- Featured project cinematic scenes ----------

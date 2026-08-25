@@ -29,15 +29,26 @@ export const education = [
   { school: "BGS PUBLIC SCHOOL", period: "2020", degree: "CLASS X", score: "97.6%" },
 ];
 
-export const experience = {
-  company: "CYMAX",
-  role: "AR/VR DEVELOPER INTERN",
-  location: "HYDERABAD // JAN 2026 - PRESENT",
-  bullets: [
-    "Developing a secure VR media platform with a web-based controller interface, implementing one-to-one device pairing, user authentication, and subscription-based content access.",
-    "Building an encrypted VR video player with secure streaming, runtime decryption, and DRM-based content protection to prevent unauthorized redistribution.",
-  ],
-};
+export const experience = [
+  {
+    company: "CYMAX",
+    role: "AR/VR DEVELOPER INTERN",
+    location: "HYDERABAD // JAN 2026 - PRESENT",
+    bullets: [
+      "Developing a secure VR media platform with a web-based controller interface, implementing one-to-one device pairing, user authentication, and subscription-based content access.",
+      "Building an encrypted VR video player with secure streaming, runtime decryption, and DRM-based content protection to prevent unauthorized redistribution.",
+    ],
+  },
+  {
+    company: "IIIT SRI CITY",
+    role: "SUMMER INTERN",
+    location: "SRI CITY // MAY 2026 - JULY 2026",
+    bullets: [
+      "Worked across the Teaching-and-Learning, AR-Navigation, and ISRO project lines, building interactive and AR-driven learning and navigation systems.",
+      "Built and iterated 3D content and simulations using Unity, Blender, and Unreal Engine.",
+    ],
+  },
+];
 
 export const achievement = {
   title: "IDEAVERSE 2026",

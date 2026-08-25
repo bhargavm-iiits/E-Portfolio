@@ -267,6 +267,8 @@ body.has-custom-cursor .link-btn { cursor: none; }
 .project-links a { display: flex; align-items: center; gap: 0.4rem; font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 1px; }
 
 .exp-header { margin-bottom: 1.5rem; }
+.experience-entry { padding-bottom: 2rem; margin-bottom: 2rem; }
+.experience-entry.separator { border-bottom: 1px dashed rgba(142, 147, 184, 0.25); }
 .d-block { display: block; margin-top: 5px; }
 
 /* Static (non-scrubbed) sections */
