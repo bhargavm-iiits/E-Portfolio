@@ -1,6 +1,7 @@
 // Single source of truth for all portfolio content.
 export const profile = {
   name: "Bhargav M",
+  displayName: "BHARGAV",
   eyebrow: "AR/VR · AI ENGINEER",
   headlineTop: "I BUILD",
   headlineGradient: "IMMERSIVE",

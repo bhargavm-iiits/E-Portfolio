@@ -26,6 +26,7 @@ export function renderHero() {
     <div class="sticky-wrapper">
       <div class="hero-grid">
         <div class="hero-copy fade-block">
+          <h2 class="hero-name">${profile.displayName}</h2>
           <span class="mono-tag eyebrow"><i class="fa-solid fa-vr-cardboard orange-text"></i> ${profile.eyebrow}</span>
           <h1 class="hero-title">
             <span class="line-white">${profile.headlineTop}</span>
