@@ -26,12 +26,10 @@ export function renderHero() {
     <div class="sticky-wrapper">
       <div class="hero-grid">
         <div class="hero-copy fade-block">
-          <h2 class="hero-name">${profile.displayName}</h2>
           <span class="mono-tag eyebrow"><i class="fa-solid fa-vr-cardboard orange-text"></i> ${profile.eyebrow}</span>
-          <h1 class="hero-title">
-            <span class="line-white">${profile.headlineTop}</span>
-            <span class="line-gradient">${profile.headlineGradient}</span>
-            <span class="line-white">${profile.headlineWhite}</span>
+          <h1 class="hero-name-3d" id="hero-name-3d">
+            <span class="name-line name-white">${profile.heroName.line1}</span>
+            <span class="name-line name-gradient">${profile.heroName.line2}</span>
           </h1>
           <p class="mono-tag tagline">${profile.tagline}</p>
           <p class="bio">${profile.bio}</p>
@@ -348,6 +346,30 @@ export function initCursor() {
     if (e.target.closest(".magnetic, .project-card, .filter-tab")) {
       cursor.classList.remove("cursor-hover");
     }
+  });
+}
+
+// ---------- Hero name 3D tilt ----------
+export function initHeroTilt() {
+  const nameEl = document.getElementById("hero-name-3d");
+  const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!nameEl || !hasFinePointer || reduced) return;
+
+  window.addEventListener("pointermove", (e) => {
+    const dx = (e.clientX / window.innerWidth - 0.5) * 2;
+    const dy = (e.clientY / window.innerHeight - 0.5) * 2;
+    gsap.to(nameEl, {
+      rotateY: dx * 16,
+      rotateX: dy * -10,
+      duration: 0.6,
+      ease: "power2.out",
+      transformPerspective: 900,
+    });
+  });
+
+  window.addEventListener("pointerleave", () => {
+    gsap.to(nameEl, { rotateX: 0, rotateY: 0, duration: 0.8, ease: "power2.out" });
   });
 }
 

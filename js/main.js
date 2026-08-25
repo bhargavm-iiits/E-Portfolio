@@ -6,6 +6,7 @@ window.scrollTo(0, 0);
 import "./scene.js";
 import "./portal.js";
 import "./cubes.js";
+import "./headsets.js";
 import {
   renderHero,
   renderEducation,
@@ -16,6 +17,7 @@ import {
   renderSkills,
   renderContact,
   initCursor,
+  initHeroTilt,
   initNavRail,
   playLoader,
 } from "./ui.js";
@@ -32,6 +34,7 @@ renderSkills();
 renderContact();
 
 initCursor();
+initHeroTilt();
 initNavRail();
 initScroll();
 startRenderLoop();

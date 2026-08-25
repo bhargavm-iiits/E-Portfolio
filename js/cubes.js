@@ -37,12 +37,12 @@ featured.forEach((project, i) => {
   const wire = new THREE.Mesh(wireGeo, wireMat);
   cube.add(wire);
 
-  const angle = (i / featured.length) * Math.PI * 2;
-  const radius = 9 + (i % 2) * 2;
+  // Fixed to a right-of-center arc (never orbits into the text column on the left).
+  const spread = featured.length > 1 ? i / (featured.length - 1) - 0.5 : 0;
   cube.position.set(
-    Math.cos(angle) * radius,
-    Math.sin(i * 1.7) * 3,
-    -4 + Math.sin(angle) * radius * 0.4
+    9 + spread * 3,
+    spread * -4,
+    -5 - i * 2.2
   );
   cube.scale.setScalar(1.3);
   cube.userData.project = project;
@@ -74,8 +74,6 @@ window.addEventListener("pointerdown", (e) => {
 });
 
 onFrame((dt, t) => {
-  cubeGroup.rotation.y += dt * 0.03;
-
   raycaster.setFromCamera(pointer, camera);
   const hit = raycaster.intersectObjects(cubes)[0];
   const newHovered = hit ? hit.object : null;

@@ -1,12 +1,9 @@
 // Single source of truth for all portfolio content.
 export const profile = {
   name: "Bhargav M",
-  displayName: "BHARGAV",
+  heroName: { line1: "BHARGAV", line2: "M" },
   eyebrow: "AR/VR · AI ENGINEER",
-  headlineTop: "I BUILD",
-  headlineGradient: "IMMERSIVE",
-  headlineWhite: "INTELLIGENCE",
-  tagline: "BUILD · TRAIN · EXPERIENCE",
+  tagline: "I BUILD IMMERSIVE INTELLIGENCE",
   bio: "B.Tech AI & Data Science at IIIT Sri City. I build AR/VR experiences and the AI models that make them think.",
   location: "IIIT Sri City",
   phone: "+91 7795036940",

@@ -18,7 +18,7 @@ rim.position.set(-10, -4, -10);
 scene.add(rim);
 
 // --- Portal ring ---
-const ringGeo = new THREE.TorusGeometry(6, 0.35, 24, 100);
+const ringGeo = new THREE.TorusGeometry(5, 0.32, 24, 100);
 const ringMat = new THREE.MeshStandardMaterial({
   color: VIOLET,
   emissive: VIOLET,
@@ -27,10 +27,10 @@ const ringMat = new THREE.MeshStandardMaterial({
   roughness: 0.2,
 });
 const portalRing = new THREE.Mesh(ringGeo, ringMat);
-portalRing.position.set(6, 0, -10);
+portalRing.position.set(10, 0, -16);
 portalGroup.add(portalRing);
 
-const innerRingGeo = new THREE.TorusGeometry(6.6, 0.05, 16, 100);
+const innerRingGeo = new THREE.TorusGeometry(5.5, 0.05, 16, 100);
 const innerRingMat = new THREE.MeshBasicMaterial({ color: BLUE, transparent: true, opacity: 0.6 });
 const innerRing = new THREE.Mesh(innerRingGeo, innerRingMat);
 innerRing.position.copy(portalRing.position);
@@ -51,8 +51,8 @@ const segDummy = new THREE.Object3D();
 for (let i = 0; i < segCount; i++) {
   const a = (i / segCount) * Math.PI * 2;
   segDummy.position.set(
-    portalRing.position.x + Math.cos(a) * 6.9,
-    Math.sin(a) * 6.9,
+    portalRing.position.x + Math.cos(a) * 5.8,
+    Math.sin(a) * 5.8,
     portalRing.position.z
   );
   segDummy.rotation.z = a;
@@ -62,7 +62,7 @@ for (let i = 0; i < segCount; i++) {
 portalGroup.add(segments);
 
 // --- Portal disc (the "window" into the city) ---
-const discGeo = new THREE.CircleGeometry(5.8, 64);
+const discGeo = new THREE.CircleGeometry(4.8, 64);
 const discMat = new THREE.MeshBasicMaterial({
   color: 0x0a0f2e,
   transparent: true,

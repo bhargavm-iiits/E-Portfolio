@@ -60,15 +60,6 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   text-align: center;
   text-transform: uppercase;
 }
-.hero-title .line-white { color: var(--text-main); display: block; }
-.hero-title .line-gradient {
-  display: block;
-  background: var(--grad-head);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 .mono-tag {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -140,6 +131,39 @@ body.has-custom-cursor .cursor { display: block; }
 @keyframes rotate-reverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
 .loader-text { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); display: flex; gap: 20px; letter-spacing: 1px; }
 
+/* Aurora background */
+#aurora-bg {
+  position: fixed; inset: 0;
+  z-index: -3; overflow: hidden;
+  background: var(--bg-void);
+}
+.blob {
+  position: absolute; border-radius: 50%;
+  filter: blur(100px); mix-blend-mode: screen; opacity: 0.4;
+  will-change: transform;
+}
+.blob-a {
+  width: 55vmax; height: 55vmax; top: -18%; left: -12%;
+  background: radial-gradient(circle, var(--blue) 0%, transparent 70%);
+  animation: auroraDrift1 26s ease-in-out infinite alternate;
+}
+.blob-b {
+  width: 60vmax; height: 60vmax; bottom: -22%; right: -15%;
+  background: radial-gradient(circle, var(--violet) 0%, transparent 70%);
+  animation: auroraDrift2 30s ease-in-out infinite alternate;
+}
+.blob-c {
+  width: 42vmax; height: 42vmax; top: 32%; left: 42%;
+  background: radial-gradient(circle, var(--magenta) 0%, transparent 70%);
+  animation: auroraDrift3 22s ease-in-out infinite alternate;
+}
+@keyframes auroraDrift1 { from { transform: translate(0, 0) scale(1); } to { transform: translate(8%, 6%) scale(1.15); } }
+@keyframes auroraDrift2 { from { transform: translate(0, 0) scale(1); } to { transform: translate(-6%, -8%) scale(1.1); } }
+@keyframes auroraDrift3 { from { transform: translate(-4%, -4%) scale(1); } to { transform: translate(5%, 7%) scale(1.2); } }
+@media (prefers-reduced-motion: reduce) {
+  .blob { animation: none; }
+}
+
 /* WebGL background */
 #webgl-canvas {
   position: fixed; inset: 0;
@@ -185,18 +209,52 @@ h3 { font-size: clamp(1.4rem, 3vw, 2.2rem); margin-bottom: 0.5rem; }
 /* Hero */
 .hero-grid {
   position: absolute; inset: 0;
-  display: flex; align-items: center;
-  padding: 6vw 8vw;
+  display: flex; align-items: flex-start;
+  padding: 13vh 8vw 6vh;
 }
-.hero-copy { max-width: 720px; display: flex; flex-direction: column; gap: 1.25rem; }
-.hero-name {
-  font-size: clamp(1.4rem, 2.4vw, 2rem);
-  letter-spacing: 8px;
-  color: var(--text-main);
-  text-transform: uppercase;
-  margin-bottom: -0.5rem;
-}
+.hero-copy { max-width: 640px; display: flex; flex-direction: column; gap: 1rem; }
 .hero-copy .eyebrow { display: flex; align-items: center; gap: 0.5rem; }
+
+.hero-name-3d {
+  perspective: 900px;
+  transform-style: preserve-3d;
+  will-change: transform;
+  line-height: 0.95;
+  text-align: left;
+}
+.name-line {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 9.5vw, 8rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.name-white {
+  color: var(--text-main);
+  text-shadow:
+    1px 1px 0 rgba(110, 168, 255, 0.55),
+    2px 2px 0 rgba(110, 168, 255, 0.4),
+    3px 3px 0 rgba(139, 92, 246, 0.3),
+    4px 4px 0 rgba(139, 92, 246, 0.2),
+    6px 8px 24px rgba(0, 0, 0, 0.6);
+}
+.name-gradient {
+  background: var(--grad-head);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 8px 24px rgba(139, 92, 246, 0.5));
+  animation: nameShimmer 6s ease-in-out infinite;
+}
+@keyframes nameShimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .name-gradient { animation: none; }
+}
 .hero-copy .tagline { letter-spacing: 3px; }
 .bio { color: var(--text-muted); max-width: 520px; line-height: 1.7; font-size: clamp(0.95rem, 1.2vw, 1.05rem); }
 
