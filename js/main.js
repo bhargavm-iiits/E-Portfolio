@@ -6,7 +6,6 @@ window.scrollTo(0, 0);
 import "./scene.js";
 import "./portal.js";
 import "./cubes.js";
-import "./headsets.js";
 import {
   renderHero,
   renderEducation,

@@ -25,15 +25,17 @@ export function renderHero() {
   el.innerHTML = `
     <div class="sticky-wrapper">
       <div class="hero-grid">
-        <div class="hero-copy fade-block">
-          <span class="mono-tag eyebrow"><i class="fa-solid fa-vr-cardboard orange-text"></i> ${profile.eyebrow}</span>
-          <h1 class="hero-name-3d" id="hero-name-3d">
-            <span class="name-line name-white">${profile.heroName.line1}</span>
-            <span class="name-line name-gradient">${profile.heroName.line2}</span>
-          </h1>
-          <p class="mono-tag tagline">${profile.tagline}</p>
-          <p class="bio">${profile.bio}</p>
-          <div class="capability-row">
+        <div class="hero-copy">
+          <span class="mono-tag eyebrow hero-reveal"><i class="fa-solid fa-vr-cardboard orange-text"></i> ${profile.eyebrow}</span>
+          <div class="hero-name-wrap hero-reveal">
+            <span class="name-glow" aria-hidden="true"></span>
+            <h1 class="hero-name-3d" id="hero-name-3d">
+              <span class="name-line name-white">${profile.heroName}</span>
+            </h1>
+          </div>
+          <p class="mono-tag tagline hero-reveal">${profile.tagline}</p>
+          <p class="bio hero-reveal">${profile.bio}</p>
+          <div class="capability-row hero-reveal">
             ${profile.capabilities
               .map(
                 (c) => `
@@ -44,7 +46,7 @@ export function renderHero() {
               )
               .join("")}
           </div>
-          <div class="contact-array">
+          <div class="contact-array hero-reveal">
             <a href="tel:${profile.phone.replace(/\s/g, "")}" class="mono-tag hover-orange magnetic"><i class="fa-solid fa-phone"></i> ${profile.phone}</a>
             <a href="mailto:${profile.email}" class="mono-tag hover-orange magnetic"><i class="fa-solid fa-envelope"></i> ${profile.email}</a>
           </div>
@@ -440,6 +442,11 @@ export function playLoader() {
     },
   })
     .to("#loader", { autoAlpha: 0, duration: 0.8, ease: "power2.inOut" })
-    .fromTo(".hero-copy", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, ease: "power3.out" }, "-=0.6");
+    .fromTo(
+      ".hero-reveal",
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out", stagger: 0.12 },
+      "-=0.5"
+    );
   return tl;
 }

@@ -135,15 +135,22 @@ const planet = new THREE.Mesh(planetGeo, planetMat);
 planet.position.set(4, 3, -20);
 cityGroup.add(planet);
 
+// --- Subtle depth-cue grid floor ---
+const gridFloor = new THREE.GridHelper(140, 40, 0x8b5cf6, 0x4f7df3);
+gridFloor.position.y = -10;
+gridFloor.material.transparent = true;
+gridFloor.material.opacity = 0.06;
+scene.add(gridFloor);
+
 // --- Floating debris field (deep space) ---
 const debrisGeo = new THREE.OctahedronGeometry(0.25, 0);
 const debrisMat = new THREE.MeshBasicMaterial({
   color: BLUE,
   wireframe: true,
   transparent: true,
-  opacity: 0.25,
+  opacity: 0.16,
 });
-const debrisCount = isMobile ? 40 : 120;
+const debrisCount = isMobile ? 30 : 70;
 const debris = [];
 const debrisGroup = new THREE.Group();
 for (let i = 0; i < debrisCount; i++) {

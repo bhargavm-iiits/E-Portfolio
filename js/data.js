@@ -1,7 +1,7 @@
 // Single source of truth for all portfolio content.
 export const profile = {
   name: "Bhargav M",
-  heroName: { line1: "BHARGAV", line2: "M" },
+  heroName: "BHARGAV",
   eyebrow: "AR/VR · AI ENGINEER",
   tagline: "I BUILD IMMERSIVE INTELLIGENCE",
   bio: "B.Tech AI & Data Science at IIIT Sri City. I build AR/VR experiences and the AI models that make them think.",
