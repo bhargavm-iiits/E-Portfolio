@@ -2,9 +2,9 @@
 export const profile = {
   name: "Bhargav M",
   heroName: "BHARGAV",
-  eyebrow: "AR/VR · AI ENGINEER",
-  tagline: "I BUILD IMMERSIVE INTELLIGENCE",
-  bio: "B.Tech AI & Data Science at IIIT Sri City. I build AR/VR experiences and the AI models that make them think.",
+  eyebrow: "UNITY DEVELOPER · AR/VR · AI & ML",
+  tagline: "I BUILD IMMERSIVE WORLDS & THE AI BEHIND THEM",
+  bio: "B.Tech AI & Data Science at IIIT Sri City. I build Unity-powered AR/VR experiences and the AI models that make them think.",
   location: "IIIT Sri City",
   phone: "+91 7795036940",
   email: "bhargav.m23@iiits.in",
@@ -13,9 +13,9 @@ export const profile = {
   github: "https://github.com/bhargavm-iiits",
   githubLabel: "github.com/bhargavm-iiits",
   capabilities: [
-    { icon: "vr", label: "AR / VR DEV" },
+    { icon: "code", label: "UNITY / C#" },
+    { icon: "vr", label: "AR FOUNDATION" },
     { icon: "brain", label: "AI & ML" },
-    { icon: "code", label: "C# / UNITY" },
     { icon: "rocket", label: "PYTORCH" },
   ],
 };
@@ -78,7 +78,7 @@ export const projects = [
       "Hybrid localization fuses ARCore visual-inertial odometry, Kalman-filtered GPS, route snapping, compass correction, and landmark image recognition into a single correctable yaw+translation transform.",
       "A* pathfinding and turn instruction generation drive live routing; 1.17 km missing from OpenStreetMap is bridged with a flagged, amber-highlighted interpolated connector.",
     ],
-    color: "#4F7DF3",
+    color: "#4F8DFF",
     github: "https://github.com/bhargavm-iiits/AR-Navigation",
     live: null,
   },
@@ -243,7 +243,7 @@ export const projects = [
     bullets: [
       "The interactive 3D portfolio you're looking at right now — source included.",
     ],
-    color: "#8E93B8",
+    color: "#94A3B8",
     github: "https://github.com/bhargavm-iiits/E-Portfolio",
     live: "https://e-portfolio-xi-bay.vercel.app",
   },

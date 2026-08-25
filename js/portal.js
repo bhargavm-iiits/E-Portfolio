@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { scene, onFrame, isMobile } from "./scene.js";
 
-const BLUE = new THREE.Color("#4F7DF3");
+const BLUE = new THREE.Color("#4F8DFF");
 const VIOLET = new THREE.Color("#8B5CF6");
 const MAGENTA = new THREE.Color("#C264F0");
 
@@ -123,17 +123,28 @@ const beam = new THREE.Mesh(beamGeo, beamMat);
 beam.position.set(0, 17, -2);
 cityGroup.add(beam);
 
-// distant planet
-const planetGeo = new THREE.SphereGeometry(2.2, 32, 32);
+// giant moon
+const planetGeo = new THREE.SphereGeometry(3.4, 40, 40);
 const planetMat = new THREE.MeshStandardMaterial({
   color: 0x1a1440,
   emissive: VIOLET,
-  emissiveIntensity: 0.15,
+  emissiveIntensity: 0.18,
   roughness: 1,
 });
 const planet = new THREE.Mesh(planetGeo, planetMat);
-planet.position.set(4, 3, -20);
+planet.position.set(5, 4, -24);
 cityGroup.add(planet);
+
+const moonRimGeo = new THREE.SphereGeometry(3.55, 40, 40);
+const moonRimMat = new THREE.MeshBasicMaterial({
+  color: BLUE,
+  transparent: true,
+  opacity: 0.12,
+  side: THREE.BackSide,
+});
+const moonRim = new THREE.Mesh(moonRimGeo, moonRimMat);
+moonRim.position.copy(planet.position);
+cityGroup.add(moonRim);
 
 // --- Subtle depth-cue grid floor ---
 const gridFloor = new THREE.GridHelper(140, 40, 0x8b5cf6, 0x4f7df3);
@@ -194,8 +205,10 @@ onFrame((dt, t) => {
   segments.rotation.z -= dt * 0.08;
   spire.rotation.y += dt * 0.2;
   planet.rotation.y += dt * 0.05;
+  moonRim.scale.setScalar(1 + Math.sin(t * 0.8) * 0.02);
   beam.material.opacity = 0.35 + Math.sin(t * 1.5) * 0.15;
   particles.rotation.y += dt * 0.01;
+  scene.fog.density = 0.012 + Math.sin(t * 0.3) * 0.002;
 
   debris.forEach((d) => {
     d.mesh.position.z += d.speed;

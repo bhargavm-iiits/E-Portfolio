@@ -46,9 +46,14 @@ export function renderHero() {
               )
               .join("")}
           </div>
+          <div class="hero-buttons hero-reveal">
+            <button class="btn-glow magnetic" id="btn-explore-projects">EXPLORE PROJECTS</button>
+            <a href="${profile.github}" target="_blank" rel="noopener" class="btn-ghost magnetic"><i class="fa-brands fa-github"></i> GITHUB</a>
+          </div>
           <div class="contact-array hero-reveal">
             <a href="tel:${profile.phone.replace(/\s/g, "")}" class="mono-tag hover-orange magnetic"><i class="fa-solid fa-phone"></i> ${profile.phone}</a>
             <a href="mailto:${profile.email}" class="mono-tag hover-orange magnetic"><i class="fa-solid fa-envelope"></i> ${profile.email}</a>
+            <a href="${profile.linkedin}" target="_blank" rel="noopener" class="mono-tag hover-orange magnetic"><i class="fa-brands fa-linkedin"></i> LINKEDIN</a>
           </div>
         </div>
       </div>
@@ -58,6 +63,10 @@ export function renderHero() {
       </div>
     </div>
   `;
+
+  document.getElementById("btn-explore-projects").addEventListener("click", () => {
+    document.getElementById("section-featured")?.scrollIntoView({ behavior: "smooth" });
+  });
 }
 
 // ---------- Education ----------

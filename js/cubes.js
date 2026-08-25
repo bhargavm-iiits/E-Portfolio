@@ -24,6 +24,9 @@ featured.forEach((project, i) => {
     opacity: isMobile ? 0.35 : 0.9,
     emissive: new THREE.Color(project.color),
     emissiveIntensity: 0.15,
+    iridescence: isMobile ? 0 : 1,
+    iridescenceIOR: 1.3,
+    iridescenceThicknessRange: [100, 400],
   });
   const cube = new THREE.Mesh(geo, glassMat);
 
