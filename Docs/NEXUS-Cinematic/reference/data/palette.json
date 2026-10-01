@@ -1,0 +1,2381 @@
+{
+ "keyframes": {
+  "KF01": {
+   "video": "C1",
+   "t": 0.0,
+   "slug": "gate-idle",
+   "palette": [
+    {
+     "hex": "#02030A",
+     "share": 0.385
+    },
+    {
+     "hex": "#0C1026",
+     "share": 0.195
+    },
+    {
+     "hex": "#1E2348",
+     "share": 0.162
+    },
+    {
+     "hex": "#363775",
+     "share": 0.132
+    },
+    {
+     "hex": "#6059AC",
+     "share": 0.092
+    },
+    {
+     "hex": "#C5B0ED",
+     "share": 0.035
+    }
+   ]
+  },
+  "KF02": {
+   "video": "C1",
+   "t": 3.0,
+   "slug": "hud-boot-particles",
+   "palette": [
+    {
+     "hex": "#04070F",
+     "share": 0.317
+    },
+    {
+     "hex": "#272D58",
+     "share": 0.215
+    },
+    {
+     "hex": "#121832",
+     "share": 0.187
+    },
+    {
+     "hex": "#404086",
+     "share": 0.157
+    },
+    {
+     "hex": "#726DC2",
+     "share": 0.082
+    },
+    {
+     "hex": "#CFBBEE",
+     "share": 0.042
+    }
+   ]
+  },
+  "KF03": {
+   "video": "C1",
+   "t": 5.0,
+   "slug": "activation-portal-window",
+   "palette": [
+    {
+     "hex": "#060A17",
+     "share": 0.27
+    },
+    {
+     "hex": "#18213E",
+     "share": 0.202
+    },
+    {
+     "hex": "#555CAB",
+     "share": 0.172
+    },
+    {
+     "hex": "#323A6C",
+     "share": 0.154
+    },
+    {
+     "hex": "#8B82D6",
+     "share": 0.117
+    },
+    {
+     "hex": "#D4C1F1",
+     "share": 0.085
+    }
+   ]
+  },
+  "KF04": {
+   "video": "C1",
+   "t": 6.5,
+   "slug": "vortex-spin",
+   "palette": [
+    {
+     "hex": "#080C1C",
+     "share": 0.238
+    },
+    {
+     "hex": "#3C4082",
+     "share": 0.201
+    },
+    {
+     "hex": "#6058B5",
+     "share": 0.192
+    },
+    {
+     "hex": "#8F86DA",
+     "share": 0.156
+    },
+    {
+     "hex": "#1E274A",
+     "share": 0.129
+    },
+    {
+     "hex": "#D8C7F2",
+     "share": 0.085
+    }
+   ]
+  },
+  "KF05": {
+   "video": "C1",
+   "t": 7.8,
+   "slug": "charge-lightning",
+   "palette": [
+    {
+     "hex": "#464397",
+     "share": 0.226
+    },
+    {
+     "hex": "#6B61C2",
+     "share": 0.202
+    },
+    {
+     "hex": "#2C2C68",
+     "share": 0.198
+    },
+    {
+     "hex": "#111430",
+     "share": 0.153
+    },
+    {
+     "hex": "#9891E0",
+     "share": 0.131
+    },
+    {
+     "hex": "#DCCDF4",
+     "share": 0.089
+    }
+   ]
+  },
+  "KF06": {
+   "video": "C1",
+   "t": 8.6,
+   "slug": "pass-figure-core-flare",
+   "palette": [
+    {
+     "hex": "#382D82",
+     "share": 0.307
+    },
+    {
+     "hex": "#4D41A1",
+     "share": 0.256
+    },
+    {
+     "hex": "#685BC0",
+     "share": 0.212
+    },
+    {
+     "hex": "#9080DB",
+     "share": 0.125
+    },
+    {
+     "hex": "#CEBAF1",
+     "share": 0.087
+    },
+    {
+     "hex": "#181839",
+     "share": 0.013
+    }
+   ]
+  },
+  "KF07": {
+   "video": "C1",
+   "t": 9.6,
+   "slug": "white-out",
+   "palette": [
+    {
+     "hex": "#E2B6F0",
+     "share": 0.198
+    },
+    {
+     "hex": "#CD99E8",
+     "share": 0.191
+    },
+    {
+     "hex": "#F3D4F6",
+     "share": 0.184
+    },
+    {
+     "hex": "#FCF4FB",
+     "share": 0.175
+    },
+    {
+     "hex": "#B47BDC",
+     "share": 0.137
+    },
+    {
+     "hex": "#925DC8",
+     "share": 0.114
+    }
+   ]
+  },
+  "KF08": {
+   "video": "C2",
+   "t": 1.5,
+   "slug": "world-entry-hud",
+   "palette": [
+    {
+     "hex": "#26386C",
+     "share": 0.313
+    },
+    {
+     "hex": "#38518F",
+     "share": 0.199
+    },
+    {
+     "hex": "#615BC3",
+     "share": 0.165
+    },
+    {
+     "hex": "#142544",
+     "share": 0.15
+    },
+    {
+     "hex": "#9984E3",
+     "share": 0.108
+    },
+    {
+     "hex": "#D9C7F3",
+     "share": 0.065
+    }
+   ]
+  },
+  "KF09": {
+   "video": "C2",
+   "t": 2.8,
+   "slug": "threshold",
+   "palette": [
+    {
+     "hex": "#5B4FBC",
+     "share": 0.252
+    },
+    {
+     "hex": "#413D9A",
+     "share": 0.211
+    },
+    {
+     "hex": "#7F6BD5",
+     "share": 0.165
+    },
+    {
+     "hex": "#212455",
+     "share": 0.13
+    },
+    {
+     "hex": "#AC91E7",
+     "share": 0.129
+    },
+    {
+     "hex": "#E0CEF4",
+     "share": 0.113
+    }
+   ]
+  },
+  "KF10": {
+   "video": "C2",
+   "t": 3.5,
+   "slug": "nexus-hub-city",
+   "palette": [
+    {
+     "hex": "#212D45",
+     "share": 0.261
+    },
+    {
+     "hex": "#304064",
+     "share": 0.235
+    },
+    {
+     "hex": "#121823",
+     "share": 0.201
+    },
+    {
+     "hex": "#495794",
+     "share": 0.147
+    },
+    {
+     "hex": "#7B85BE",
+     "share": 0.089
+    },
+    {
+     "hex": "#CCC0D6",
+     "share": 0.066
+    }
+   ]
+  },
+  "KF11": {
+   "video": "C2",
+   "t": 4.3,
+   "slug": "second-portal-burst",
+   "palette": [
+    {
+     "hex": "#585DB5",
+     "share": 0.241
+    },
+    {
+     "hex": "#3B4593",
+     "share": 0.216
+    },
+    {
+     "hex": "#7E7FD1",
+     "share": 0.186
+    },
+    {
+     "hex": "#B4A9E6",
+     "share": 0.135
+    },
+    {
+     "hex": "#E7DCF7",
+     "share": 0.125
+    },
+    {
+     "hex": "#1E2D54",
+     "share": 0.097
+    }
+   ]
+  },
+  "KF12": {
+   "video": "C2",
+   "t": 5.5,
+   "slug": "hyperspace-corridor",
+   "palette": [
+    {
+     "hex": "#2F557E",
+     "share": 0.248
+    },
+    {
+     "hex": "#213A5C",
+     "share": 0.245
+    },
+    {
+     "hex": "#4778A1",
+     "share": 0.18
+    },
+    {
+     "hex": "#142338",
+     "share": 0.166
+    },
+    {
+     "hex": "#6CA6C6",
+     "share": 0.108
+    },
+    {
+     "hex": "#C2CEE4",
+     "share": 0.052
+    }
+   ]
+  },
+  "KF13": {
+   "video": "C2",
+   "t": 7.5,
+   "slug": "wormhole-lightning",
+   "palette": [
+    {
+     "hex": "#214468",
+     "share": 0.251
+    },
+    {
+     "hex": "#315D88",
+     "share": 0.235
+    },
+    {
+     "hex": "#497AA6",
+     "share": 0.19
+    },
+    {
+     "hex": "#6A9CC5",
+     "share": 0.135
+    },
+    {
+     "hex": "#112C44",
+     "share": 0.107
+    },
+    {
+     "hex": "#A5C4E1",
+     "share": 0.081
+    }
+   ]
+  },
+  "KF14": {
+   "video": "C2",
+   "t": 9.3,
+   "slug": "ribbon-warp",
+   "palette": [
+    {
+     "hex": "#283F74",
+     "share": 0.248
+    },
+    {
+     "hex": "#3C5693",
+     "share": 0.2
+    },
+    {
+     "hex": "#1A2C51",
+     "share": 0.195
+    },
+    {
+     "hex": "#5A7BB3",
+     "share": 0.149
+    },
+    {
+     "hex": "#8CA6D5",
+     "share": 0.131
+    },
+    {
+     "hex": "#D0D4F1",
+     "share": 0.077
+    }
+   ]
+  },
+  "KF15": {
+   "video": "VR",
+   "t": 0.5,
+   "slug": "rooftop-portal-idle",
+   "palette": [
+    {
+     "hex": "#1D1B42",
+     "share": 0.286
+    },
+    {
+     "hex": "#2E2B63",
+     "share": 0.245
+    },
+    {
+     "hex": "#0D0D21",
+     "share": 0.157
+    },
+    {
+     "hex": "#6F68C0",
+     "share": 0.144
+    },
+    {
+     "hex": "#49428D",
+     "share": 0.123
+    },
+    {
+     "hex": "#D1B8ED",
+     "share": 0.046
+    }
+   ]
+  },
+  "KF16": {
+   "video": "VR",
+   "t": 1.4,
+   "slug": "headset-lock-on",
+   "palette": [
+    {
+     "hex": "#1E1C43",
+     "share": 0.273
+    },
+    {
+     "hex": "#312C66",
+     "share": 0.221
+    },
+    {
+     "hex": "#0E0E25",
+     "share": 0.163
+    },
+    {
+     "hex": "#7269C1",
+     "share": 0.145
+    },
+    {
+     "hex": "#4F4594",
+     "share": 0.12
+    },
+    {
+     "hex": "#CAB0EB",
+     "share": 0.078
+    }
+   ]
+  },
+  "KF17": {
+   "video": "VR",
+   "t": 1.8,
+   "slug": "silhouette-pass",
+   "palette": [
+    {
+     "hex": "#050716",
+     "share": 0.302
+    },
+    {
+     "hex": "#3C3C86",
+     "share": 0.205
+    },
+    {
+     "hex": "#6553B6",
+     "share": 0.158
+    },
+    {
+     "hex": "#242055",
+     "share": 0.116
+    },
+    {
+     "hex": "#9F81DD",
+     "share": 0.112
+    },
+    {
+     "hex": "#E2C9F6",
+     "share": 0.105
+    }
+   ]
+  },
+  "KF18": {
+   "video": "VR",
+   "t": 3.0,
+   "slug": "reticle-hud-streaks",
+   "palette": [
+    {
+     "hex": "#1F264C",
+     "share": 0.276
+    },
+    {
+     "hex": "#313A6C",
+     "share": 0.255
+    },
+    {
+     "hex": "#11152C",
+     "share": 0.175
+    },
+    {
+     "hex": "#4B5691",
+     "share": 0.156
+    },
+    {
+     "hex": "#7A80C8",
+     "share": 0.09
+    },
+    {
+     "hex": "#CDC3EF",
+     "share": 0.049
+    }
+   ]
+  },
+  "KF19": {
+   "video": "VR",
+   "t": 5.0,
+   "slug": "reticle-expand",
+   "palette": [
+    {
+     "hex": "#171B39",
+     "share": 0.233
+    },
+    {
+     "hex": "#262E5A",
+     "share": 0.21
+    },
+    {
+     "hex": "#3B3F80",
+     "share": 0.195
+    },
+    {
+     "hex": "#5F5DB2",
+     "share": 0.137
+    },
+    {
+     "hex": "#7A9AD1",
+     "share": 0.117
+    },
+    {
+     "hex": "#CAC6F0",
+     "share": 0.108
+    }
+   ]
+  },
+  "KF20": {
+   "video": "VR",
+   "t": 6.3,
+   "slug": "warp-bloom",
+   "palette": [
+    {
+     "hex": "#DACDF2",
+     "share": 0.183
+    },
+    {
+     "hex": "#9E8AD6",
+     "share": 0.179
+    },
+    {
+     "hex": "#BBADE6",
+     "share": 0.176
+    },
+    {
+     "hex": "#806BC1",
+     "share": 0.165
+    },
+    {
+     "hex": "#F7EDFA",
+     "share": 0.161
+    },
+    {
+     "hex": "#5F4FA0",
+     "share": 0.135
+    }
+   ]
+  },
+  "KF21": {
+   "video": "VR",
+   "t": 7.5,
+   "slug": "city-flyover",
+   "palette": [
+    {
+     "hex": "#222F3D",
+     "share": 0.26
+    },
+    {
+     "hex": "#141C25",
+     "share": 0.234
+    },
+    {
+     "hex": "#344758",
+     "share": 0.212
+    },
+    {
+     "hex": "#506676",
+     "share": 0.157
+    },
+    {
+     "hex": "#6F929F",
+     "share": 0.089
+    },
+    {
+     "hex": "#C4D0D0",
+     "share": 0.048
+    }
+   ]
+  },
+  "KF22": {
+   "video": "P1",
+   "t": 0.0,
+   "slug": "home-hero",
+   "palette": [
+    {
+     "hex": "#01081C",
+     "share": 0.388
+    },
+    {
+     "hex": "#0D1537",
+     "share": 0.155
+    },
+    {
+     "hex": "#304C96",
+     "share": 0.14
+    },
+    {
+     "hex": "#1D2A5B",
+     "share": 0.122
+    },
+    {
+     "hex": "#4A72BC",
+     "share": 0.121
+    },
+    {
+     "hex": "#8AADDE",
+     "share": 0.074
+    }
+   ]
+  },
+  "KF23": {
+   "video": "P1",
+   "t": 1.7,
+   "slug": "hero-push-text-slide",
+   "palette": [
+    {
+     "hex": "#1B294F",
+     "share": 0.2
+    },
+    {
+     "hex": "#070E23",
+     "share": 0.199
+    },
+    {
+     "hex": "#3F60A3",
+     "share": 0.197
+    },
+    {
+     "hex": "#2C4279",
+     "share": 0.165
+    },
+    {
+     "hex": "#6188C6",
+     "share": 0.149
+    },
+    {
+     "hex": "#97BAE6",
+     "share": 0.09
+    }
+   ]
+  },
+  "KF24": {
+   "video": "P1",
+   "t": 2.6,
+   "slug": "holo-hud-around-head",
+   "palette": [
+    {
+     "hex": "#3A5A99",
+     "share": 0.212
+    },
+    {
+     "hex": "#5982C0",
+     "share": 0.208
+    },
+    {
+     "hex": "#83ABDB",
+     "share": 0.171
+    },
+    {
+     "hex": "#070D25",
+     "share": 0.167
+    },
+    {
+     "hex": "#223269",
+     "share": 0.144
+    },
+    {
+     "hex": "#B9D6F0",
+     "share": 0.097
+    }
+   ]
+  },
+  "KF25": {
+   "video": "P1",
+   "t": 3.1,
+   "slug": "visor-mask-menu",
+   "palette": [
+    {
+     "hex": "#040918",
+     "share": 0.338
+    },
+    {
+     "hex": "#010206",
+     "share": 0.212
+    },
+    {
+     "hex": "#101835",
+     "share": 0.197
+    },
+    {
+     "hex": "#1F1E49",
+     "share": 0.179
+    },
+    {
+     "hex": "#33486C",
+     "share": 0.054
+    },
+    {
+     "hex": "#769EC1",
+     "share": 0.019
+    }
+   ]
+  },
+  "KF26": {
+   "video": "P1",
+   "t": 3.4,
+   "slug": "vr-main-menu",
+   "palette": [
+    {
+     "hex": "#181C40",
+     "share": 0.446
+    },
+    {
+     "hex": "#0D122A",
+     "share": 0.261
+    },
+    {
+     "hex": "#2A345F",
+     "share": 0.149
+    },
+    {
+     "hex": "#02050E",
+     "share": 0.057
+    },
+    {
+     "hex": "#49548A",
+     "share": 0.056
+    },
+    {
+     "hex": "#7A9FC1",
+     "share": 0.031
+    }
+   ]
+  },
+  "KF27": {
+   "video": "P1",
+   "t": 3.7,
+   "slug": "menu-orb-lens",
+   "palette": [
+    {
+     "hex": "#2A3F60",
+     "share": 0.239
+    },
+    {
+     "hex": "#10152F",
+     "share": 0.23
+    },
+    {
+     "hex": "#132640",
+     "share": 0.167
+    },
+    {
+     "hex": "#241946",
+     "share": 0.164
+    },
+    {
+     "hex": "#526C8A",
+     "share": 0.106
+    },
+    {
+     "hex": "#8BA4BA",
+     "share": 0.094
+    }
+   ]
+  },
+  "KF28": {
+   "video": "P1",
+   "t": 4.4,
+   "slug": "m01-vr-physics-lab",
+   "palette": [
+    {
+     "hex": "#2E445A",
+     "share": 0.247
+    },
+    {
+     "hex": "#435D75",
+     "share": 0.236
+    },
+    {
+     "hex": "#607A91",
+     "share": 0.161
+    },
+    {
+     "hex": "#1A2A3A",
+     "share": 0.151
+    },
+    {
+     "hex": "#88A2B5",
+     "share": 0.145
+    },
+    {
+     "hex": "#C8D5D6",
+     "share": 0.06
+    }
+   ]
+  },
+  "KF29": {
+   "video": "P1",
+   "t": 4.9,
+   "slug": "door-split",
+   "palette": [
+    {
+     "hex": "#0B243E",
+     "share": 0.267
+    },
+    {
+     "hex": "#365269",
+     "share": 0.214
+    },
+    {
+     "hex": "#486C86",
+     "share": 0.163
+    },
+    {
+     "hex": "#1D3A56",
+     "share": 0.138
+    },
+    {
+     "hex": "#6B8EA7",
+     "share": 0.114
+    },
+    {
+     "hex": "#99B9CA",
+     "share": 0.105
+    }
+   ]
+  },
+  "KF30": {
+   "video": "P1",
+   "t": 5.5,
+   "slug": "m02-terrain-path",
+   "palette": [
+    {
+     "hex": "#031121",
+     "share": 0.257
+    },
+    {
+     "hex": "#0B2541",
+     "share": 0.241
+    },
+    {
+     "hex": "#163D5F",
+     "share": 0.166
+    },
+    {
+     "hex": "#39657D",
+     "share": 0.153
+    },
+    {
+     "hex": "#598BA6",
+     "share": 0.116
+    },
+    {
+     "hex": "#9AC1CC",
+     "share": 0.066
+    }
+   ]
+  },
+  "KF31": {
+   "video": "P1",
+   "t": 6.1,
+   "slug": "whip-pan",
+   "palette": [
+    {
+     "hex": "#1A2630",
+     "share": 0.233
+    },
+    {
+     "hex": "#0D171F",
+     "share": 0.203
+    },
+    {
+     "hex": "#405766",
+     "share": 0.191
+    },
+    {
+     "hex": "#323A41",
+     "share": 0.182
+    },
+    {
+     "hex": "#697881",
+     "share": 0.125
+    },
+    {
+     "hex": "#95B0BB",
+     "share": 0.065
+    }
+   ]
+  },
+  "KF32": {
+   "video": "P1",
+   "t": 6.6,
+   "slug": "m03-isro-hangar",
+   "palette": [
+    {
+     "hex": "#1F262C",
+     "share": 0.299
+    },
+    {
+     "hex": "#313B42",
+     "share": 0.2
+    },
+    {
+     "hex": "#0D1318",
+     "share": 0.17
+    },
+    {
+     "hex": "#4E555A",
+     "share": 0.147
+    },
+    {
+     "hex": "#71777A",
+     "share": 0.108
+    },
+    {
+     "hex": "#A0A4A5",
+     "share": 0.075
+    }
+   ]
+  },
+  "KF33": {
+   "video": "P1",
+   "t": 7.1,
+   "slug": "shrink-orb-logos",
+   "palette": [
+    {
+     "hex": "#07111D",
+     "share": 0.43
+    },
+    {
+     "hex": "#16212D",
+     "share": 0.162
+    },
+    {
+     "hex": "#293745",
+     "share": 0.121
+    },
+    {
+     "hex": "#425468",
+     "share": 0.112
+    },
+    {
+     "hex": "#637A8F",
+     "share": 0.1
+    },
+    {
+     "hex": "#9BAEB8",
+     "share": 0.075
+    }
+   ]
+  },
+  "KF34": {
+   "video": "P1",
+   "t": 7.8,
+   "slug": "tech-constellation",
+   "palette": [
+    {
+     "hex": "#0A1725",
+     "share": 0.348
+    },
+    {
+     "hex": "#050C16",
+     "share": 0.328
+    },
+    {
+     "hex": "#13263C",
+     "share": 0.124
+    },
+    {
+     "hex": "#264362",
+     "share": 0.09
+    },
+    {
+     "hex": "#4E708E",
+     "share": 0.066
+    },
+    {
+     "hex": "#8CACC0",
+     "share": 0.044
+    }
+   ]
+  },
+  "KF35": {
+   "video": "P1",
+   "t": 8.4,
+   "slug": "portal-burst",
+   "palette": [
+    {
+     "hex": "#0C1C2C",
+     "share": 0.25
+    },
+    {
+     "hex": "#183351",
+     "share": 0.237
+    },
+    {
+     "hex": "#2D537B",
+     "share": 0.152
+    },
+    {
+     "hex": "#4C80AC",
+     "share": 0.137
+    },
+    {
+     "hex": "#7EB0CE",
+     "share": 0.121
+    },
+    {
+     "hex": "#C4E6F2",
+     "share": 0.102
+    }
+   ]
+  },
+  "KF36": {
+   "video": "P1",
+   "t": 9.6,
+   "slug": "final-hero-cta-hover",
+   "palette": [
+    {
+     "hex": "#051020",
+     "share": 0.426
+    },
+    {
+     "hex": "#030B19",
+     "share": 0.309
+    },
+    {
+     "hex": "#0A182E",
+     "share": 0.187
+    },
+    {
+     "hex": "#263146",
+     "share": 0.035
+    },
+    {
+     "hex": "#515F73",
+     "share": 0.031
+    },
+    {
+     "hex": "#ACB9C7",
+     "share": 0.012
+    }
+   ]
+  },
+  "KF37": {
+   "video": "P2",
+   "t": 2.9,
+   "slug": "into-headset-pov",
+   "palette": [
+    {
+     "hex": "#0A1028",
+     "share": 0.23
+    },
+    {
+     "hex": "#363F71",
+     "share": 0.21
+    },
+    {
+     "hex": "#576398",
+     "share": 0.207
+    },
+    {
+     "hex": "#7B8CC0",
+     "share": 0.17
+    },
+    {
+     "hex": "#1B224D",
+     "share": 0.15
+    },
+    {
+     "hex": "#C6E3F3",
+     "share": 0.033
+    }
+   ]
+  },
+  "KF38": {
+   "video": "P2",
+   "t": 3.3,
+   "slug": "droste-visor",
+   "palette": [
+    {
+     "hex": "#333C60",
+     "share": 0.269
+    },
+    {
+     "hex": "#1A213F",
+     "share": 0.25
+    },
+    {
+     "hex": "#49587F",
+     "share": 0.194
+    },
+    {
+     "hex": "#677CA4",
+     "share": 0.131
+    },
+    {
+     "hex": "#060A16",
+     "share": 0.117
+    },
+    {
+     "hex": "#9BB4D2",
+     "share": 0.038
+    }
+   ]
+  },
+  "KF39": {
+   "video": "P2",
+   "t": 4.6,
+   "slug": "labels-explode",
+   "palette": [
+    {
+     "hex": "#111F3A",
+     "share": 0.323
+    },
+    {
+     "hex": "#243A57",
+     "share": 0.208
+    },
+    {
+     "hex": "#0D142A",
+     "share": 0.2
+    },
+    {
+     "hex": "#251B47",
+     "share": 0.154
+    },
+    {
+     "hex": "#47607E",
+     "share": 0.066
+    },
+    {
+     "hex": "#7B94AC",
+     "share": 0.05
+    }
+   ]
+  },
+  "KF40": {
+   "video": "P2",
+   "t": 5.7,
+   "slug": "terrain-extrude",
+   "palette": [
+    {
+     "hex": "#0E2134",
+     "share": 0.277
+    },
+    {
+     "hex": "#05111D",
+     "share": 0.243
+    },
+    {
+     "hex": "#1C384E",
+     "share": 0.181
+    },
+    {
+     "hex": "#3B5968",
+     "share": 0.124
+    },
+    {
+     "hex": "#5C808A",
+     "share": 0.103
+    },
+    {
+     "hex": "#84AAB3",
+     "share": 0.073
+    }
+   ]
+  },
+  "KF41": {
+   "video": "P2",
+   "t": 9.0,
+   "slug": "particle-torus",
+   "palette": [
+    {
+     "hex": "#081627",
+     "share": 0.307
+    },
+    {
+     "hex": "#040E19",
+     "share": 0.299
+    },
+    {
+     "hex": "#122135",
+     "share": 0.124
+    },
+    {
+     "hex": "#20364D",
+     "share": 0.119
+    },
+    {
+     "hex": "#34526F",
+     "share": 0.096
+    },
+    {
+     "hex": "#527796",
+     "share": 0.055
+    }
+   ]
+  },
+  "KF42": {
+   "video": "P3",
+   "t": 1.6,
+   "slug": "vertical-slide-blur",
+   "palette": [
+    {
+     "hex": "#D8DDE3",
+     "share": 0.381
+    },
+    {
+     "hex": "#060D21",
+     "share": 0.254
+    },
+    {
+     "hex": "#3D599B",
+     "share": 0.116
+    },
+    {
+     "hex": "#1F2E5B",
+     "share": 0.11
+    },
+    {
+     "hex": "#BEBDBE",
+     "share": 0.081
+    },
+    {
+     "hex": "#7686AF",
+     "share": 0.059
+    }
+   ]
+  },
+  "KF43": {
+   "video": "P3",
+   "t": 2.5,
+   "slug": "daylight-glass-deck",
+   "palette": [
+    {
+     "hex": "#CDD3DD",
+     "share": 0.426
+    },
+    {
+     "hex": "#DEE1E6",
+     "share": 0.382
+    },
+    {
+     "hex": "#B7BCC7",
+     "share": 0.102
+    },
+    {
+     "hex": "#7B88A6",
+     "share": 0.049
+    },
+    {
+     "hex": "#1F2848",
+     "share": 0.021
+    },
+    {
+     "hex": "#E0965D",
+     "share": 0.02
+    }
+   ]
+  },
+  "KF44": {
+   "video": "P3",
+   "t": 4.0,
+   "slug": "featured-card-carousel",
+   "palette": [
+    {
+     "hex": "#D4D9E1",
+     "share": 0.37
+    },
+    {
+     "hex": "#E0E3E7",
+     "share": 0.222
+    },
+    {
+     "hex": "#C2C9D4",
+     "share": 0.195
+    },
+    {
+     "hex": "#202F3E",
+     "share": 0.102
+    },
+    {
+     "hex": "#526677",
+     "share": 0.06
+    },
+    {
+     "hex": "#8B97A5",
+     "share": 0.051
+    }
+   ]
+  },
+  "KF45": {
+   "video": "P3",
+   "t": 6.0,
+   "slug": "card-hover-glow",
+   "palette": [
+    {
+     "hex": "#DBDEE4",
+     "share": 0.328
+    },
+    {
+     "hex": "#112538",
+     "share": 0.211
+    },
+    {
+     "hex": "#C7CFDB",
+     "share": 0.207
+    },
+    {
+     "hex": "#375668",
+     "share": 0.135
+    },
+    {
+     "hex": "#99B3C7",
+     "share": 0.06
+    },
+    {
+     "hex": "#6C8191",
+     "share": 0.059
+    }
+   ]
+  },
+  "KF46": {
+   "video": "P3",
+   "t": 8.8,
+   "slug": "tech-tiles-light",
+   "palette": [
+    {
+     "hex": "#D9DDE3",
+     "share": 0.388
+    },
+    {
+     "hex": "#CED4DE",
+     "share": 0.281
+    },
+    {
+     "hex": "#E2E5E8",
+     "share": 0.237
+    },
+    {
+     "hex": "#B0B8C4",
+     "share": 0.036
+    },
+    {
+     "hex": "#848C8C",
+     "share": 0.036
+    },
+    {
+     "hex": "#3E4A52",
+     "share": 0.022
+    }
+   ]
+  },
+  "KF47": {
+   "video": "P3",
+   "t": 9.5,
+   "slug": "tiles-dissolve-hero",
+   "palette": [
+    {
+     "hex": "#DADDE3",
+     "share": 0.376
+    },
+    {
+     "hex": "#D1D6DF",
+     "share": 0.321
+    },
+    {
+     "hex": "#E2E5E8",
+     "share": 0.201
+    },
+    {
+     "hex": "#B6BDC7",
+     "share": 0.045
+    },
+    {
+     "hex": "#8E99A2",
+     "share": 0.035
+    },
+    {
+     "hex": "#556B6D",
+     "share": 0.021
+    }
+   ]
+  },
+  "KF48": {
+   "video": "P4",
+   "t": 0.8,
+   "slug": "mechanical-ring-portal",
+   "palette": [
+    {
+     "hex": "#030A1C",
+     "share": 0.359
+    },
+    {
+     "hex": "#141D3C",
+     "share": 0.19
+    },
+    {
+     "hex": "#3D5A97",
+     "share": 0.142
+    },
+    {
+     "hex": "#283661",
+     "share": 0.129
+    },
+    {
+     "hex": "#5C81BD",
+     "share": 0.117
+    },
+    {
+     "hex": "#91B4DF",
+     "share": 0.065
+    }
+   ]
+  },
+  "KF49": {
+   "video": "P4",
+   "t": 1.4,
+   "slug": "ring-fly-through",
+   "palette": [
+    {
+     "hex": "#4D6A99",
+     "share": 0.198
+    },
+    {
+     "hex": "#202742",
+     "share": 0.195
+    },
+    {
+     "hex": "#36486D",
+     "share": 0.192
+    },
+    {
+     "hex": "#091020",
+     "share": 0.172
+    },
+    {
+     "hex": "#7895C0",
+     "share": 0.149
+    },
+    {
+     "hex": "#AFC6E5",
+     "share": 0.094
+    }
+   ]
+  },
+  "KF50": {
+   "video": "P4",
+   "t": 1.8,
+   "slug": "daylight-world-glass",
+   "palette": [
+    {
+     "hex": "#698CB9",
+     "share": 0.235
+    },
+    {
+     "hex": "#8AA7C9",
+     "share": 0.213
+    },
+    {
+     "hex": "#4D6D9D",
+     "share": 0.176
+    },
+    {
+     "hex": "#3C5076",
+     "share": 0.139
+    },
+    {
+     "hex": "#A8C3DF",
+     "share": 0.134
+    },
+    {
+     "hex": "#1E2A43",
+     "share": 0.104
+    }
+   ]
+  },
+  "KF51": {
+   "video": "P4",
+   "t": 4.0,
+   "slug": "glass-projects-dashboard",
+   "palette": [
+    {
+     "hex": "#C4CCD9",
+     "share": 0.344
+    },
+    {
+     "hex": "#D2DBE6",
+     "share": 0.254
+    },
+    {
+     "hex": "#1B2228",
+     "share": 0.142
+    },
+    {
+     "hex": "#ADB6C4",
+     "share": 0.102
+    },
+    {
+     "hex": "#435267",
+     "share": 0.094
+    },
+    {
+     "hex": "#73859D",
+     "share": 0.064
+    }
+   ]
+  },
+  "KF52": {
+   "video": "P4",
+   "t": 6.0,
+   "slug": "tirumala-row",
+   "palette": [
+    {
+     "hex": "#CFD5DC",
+     "share": 0.303
+    },
+    {
+     "hex": "#C6CAD0",
+     "share": 0.296
+    },
+    {
+     "hex": "#D7E0E8",
+     "share": 0.183
+    },
+    {
+     "hex": "#14212D",
+     "share": 0.088
+    },
+    {
+     "hex": "#425E6F",
+     "share": 0.076
+    },
+    {
+     "hex": "#939CA8",
+     "share": 0.054
+    }
+   ]
+  },
+  "KF53": {
+   "video": "P4",
+   "t": 8.9,
+   "slug": "tech-glass-tiles-hover",
+   "palette": [
+    {
+     "hex": "#848C9D",
+     "share": 0.493
+    },
+    {
+     "hex": "#959CAB",
+     "share": 0.256
+    },
+    {
+     "hex": "#A5ABB8",
+     "share": 0.167
+    },
+    {
+     "hex": "#494D59",
+     "share": 0.047
+    },
+    {
+     "hex": "#CBCFD6",
+     "share": 0.027
+    },
+    {
+     "hex": "#D78E46",
+     "share": 0.009
+    }
+   ]
+  },
+  "KF54": {
+   "video": "P5",
+   "t": 0.8,
+   "slug": "iris-reveal-daylight",
+   "palette": [
+    {
+     "hex": "#030A1C",
+     "share": 0.401
+    },
+    {
+     "hex": "#141D3E",
+     "share": 0.177
+    },
+    {
+     "hex": "#415D97",
+     "share": 0.136
+    },
+    {
+     "hex": "#273768",
+     "share": 0.11
+    },
+    {
+     "hex": "#7393B8",
+     "share": 0.103
+    },
+    {
+     "hex": "#AEC9DB",
+     "share": 0.074
+    }
+   ]
+  },
+  "KF55": {
+   "video": "P5",
+   "t": 2.2,
+   "slug": "dark-glass-card-grid",
+   "palette": [
+    {
+     "hex": "#1B1A37",
+     "share": 0.251
+    },
+    {
+     "hex": "#0D1323",
+     "share": 0.229
+    },
+    {
+     "hex": "#0E233A",
+     "share": 0.166
+    },
+    {
+     "hex": "#3F4969",
+     "share": 0.153
+    },
+    {
+     "hex": "#2D2B51",
+     "share": 0.151
+    },
+    {
+     "hex": "#69708D",
+     "share": 0.05
+    }
+   ]
+  },
+  "KF56": {
+   "video": "P5",
+   "t": 3.0,
+   "slug": "split-and-zoom",
+   "palette": [
+    {
+     "hex": "#131B31",
+     "share": 0.358
+    },
+    {
+     "hex": "#212243",
+     "share": 0.233
+    },
+    {
+     "hex": "#353E5C",
+     "share": 0.168
+    },
+    {
+     "hex": "#4B5580",
+     "share": 0.115
+    },
+    {
+     "hex": "#0C111D",
+     "share": 0.093
+    },
+    {
+     "hex": "#6D80A5",
+     "share": 0.033
+    }
+   ]
+  },
+  "KF57": {
+   "video": "P5",
+   "t": 4.2,
+   "slug": "webgl-window-lab",
+   "palette": [
+    {
+     "hex": "#252749",
+     "share": 0.259
+    },
+    {
+     "hex": "#141E36",
+     "share": 0.248
+    },
+    {
+     "hex": "#0C1222",
+     "share": 0.192
+    },
+    {
+     "hex": "#2F415E",
+     "share": 0.175
+    },
+    {
+     "hex": "#526685",
+     "share": 0.085
+    },
+    {
+     "hex": "#81A3BA",
+     "share": 0.039
+    }
+   ]
+  },
+  "KF58": {
+   "video": "P5",
+   "t": 4.9,
+   "slug": "panel-door-swing",
+   "palette": [
+    {
+     "hex": "#0F1F36",
+     "share": 0.257
+    },
+    {
+     "hex": "#212945",
+     "share": 0.242
+    },
+    {
+     "hex": "#0B0F1A",
+     "share": 0.176
+    },
+    {
+     "hex": "#2D435D",
+     "share": 0.167
+    },
+    {
+     "hex": "#46677E",
+     "share": 0.115
+    },
+    {
+     "hex": "#6A9CB4",
+     "share": 0.043
+    }
+   ]
+  },
+  "KF59": {
+   "video": "P5",
+   "t": 6.6,
+   "slug": "terrain-glass-backplate",
+   "palette": [
+    {
+     "hex": "#051320",
+     "share": 0.248
+    },
+    {
+     "hex": "#13283E",
+     "share": 0.232
+    },
+    {
+     "hex": "#1F3952",
+     "share": 0.206
+    },
+    {
+     "hex": "#3D6377",
+     "share": 0.156
+    },
+    {
+     "hex": "#5A879E",
+     "share": 0.113
+    },
+    {
+     "hex": "#A8C1C3",
+     "share": 0.045
+    }
+   ]
+  },
+  "KF60": {
+   "video": "P5",
+   "t": 7.7,
+   "slug": "isro-glass-card",
+   "palette": [
+    {
+     "hex": "#030B11",
+     "share": 0.3
+    },
+    {
+     "hex": "#0B151D",
+     "share": 0.217
+    },
+    {
+     "hex": "#20282D",
+     "share": 0.19
+    },
+    {
+     "hex": "#333E43",
+     "share": 0.132
+    },
+    {
+     "hex": "#4F5A5F",
+     "share": 0.108
+    },
+    {
+     "hex": "#7D868A",
+     "share": 0.054
+    }
+   ]
+  },
+  "KF61": {
+   "video": "P5",
+   "t": 8.9,
+   "slug": "tech-tiles-dark",
+   "palette": [
+    {
+     "hex": "#040E19",
+     "share": 0.366
+    },
+    {
+     "hex": "#081728",
+     "share": 0.286
+    },
+    {
+     "hex": "#182432",
+     "share": 0.197
+    },
+    {
+     "hex": "#2A3A4B",
+     "share": 0.099
+    },
+    {
+     "hex": "#687078",
+     "share": 0.032
+    },
+    {
+     "hex": "#B4BBC1",
+     "share": 0.02
+    }
+   ]
+  },
+  "KF62": {
+   "video": "P6",
+   "t": 1.5,
+   "slug": "ring-assembly",
+   "palette": [
+    {
+     "hex": "#080F22",
+     "share": 0.246
+    },
+    {
+     "hex": "#1A2440",
+     "share": 0.212
+    },
+    {
+     "hex": "#395A97",
+     "share": 0.181
+    },
+    {
+     "hex": "#283B65",
+     "share": 0.174
+    },
+    {
+     "hex": "#5880BD",
+     "share": 0.123
+    },
+    {
+     "hex": "#93B5DF",
+     "share": 0.064
+    }
+   ]
+  },
+  "KF63": {
+   "video": "P6",
+   "t": 2.2,
+   "slug": "glass-shatter",
+   "palette": [
+    {
+     "hex": "#4468A2",
+     "share": 0.209
+    },
+    {
+     "hex": "#31497B",
+     "share": 0.208
+    },
+    {
+     "hex": "#212D4D",
+     "share": 0.168
+    },
+    {
+     "hex": "#6890C2",
+     "share": 0.156
+    },
+    {
+     "hex": "#0B1226",
+     "share": 0.155
+    },
+    {
+     "hex": "#A4C2DE",
+     "share": 0.103
+    }
+   ]
+  },
+  "KF64": {
+   "video": "P6",
+   "t": 2.7,
+   "slug": "hologram-digitise",
+   "palette": [
+    {
+     "hex": "#3F5EA8",
+     "share": 0.22
+    },
+    {
+     "hex": "#212C45",
+     "share": 0.183
+    },
+    {
+     "hex": "#6080C2",
+     "share": 0.178
+    },
+    {
+     "hex": "#334579",
+     "share": 0.165
+    },
+    {
+     "hex": "#8EA9DA",
+     "share": 0.145
+    },
+    {
+     "hex": "#C5D8ED",
+     "share": 0.108
+    }
+   ]
+  },
+  "KF65": {
+   "video": "P6",
+   "t": 3.8,
+   "slug": "player-front-trails",
+   "palette": [
+    {
+     "hex": "#0D1428",
+     "share": 0.263
+    },
+    {
+     "hex": "#191F3D",
+     "share": 0.263
+    },
+    {
+     "hex": "#2B2951",
+     "share": 0.25
+    },
+    {
+     "hex": "#3F4175",
+     "share": 0.125
+    },
+    {
+     "hex": "#5F66A3",
+     "share": 0.069
+    },
+    {
+     "hex": "#9DA7D6",
+     "share": 0.03
+    }
+   ]
+  },
+  "KF66": {
+   "video": "P6",
+   "t": 4.2,
+   "slug": "neon-city-trails",
+   "palette": [
+    {
+     "hex": "#242646",
+     "share": 0.299
+    },
+    {
+     "hex": "#383564",
+     "share": 0.205
+    },
+    {
+     "hex": "#13172B",
+     "share": 0.203
+    },
+    {
+     "hex": "#504D92",
+     "share": 0.128
+    },
+    {
+     "hex": "#817ABA",
+     "share": 0.103
+    },
+    {
+     "hex": "#C0B8DD",
+     "share": 0.062
+    }
+   ]
+  },
+  "KF67": {
+   "video": "P6",
+   "t": 4.7,
+   "slug": "world-to-panel",
+   "palette": [
+    {
+     "hex": "#12162D",
+     "share": 0.332
+    },
+    {
+     "hex": "#26264B",
+     "share": 0.201
+    },
+    {
+     "hex": "#070A14",
+     "share": 0.191
+    },
+    {
+     "hex": "#3F3C6F",
+     "share": 0.133
+    },
+    {
+     "hex": "#625E9D",
+     "share": 0.095
+    },
+    {
+     "hex": "#9C91C7",
+     "share": 0.047
+    }
+   ]
+  },
+  "KF68": {
+   "video": "P6",
+   "t": 5.4,
+   "slug": "inception-fold-nodes",
+   "palette": [
+    {
+     "hex": "#161B35",
+     "share": 0.327
+    },
+    {
+     "hex": "#2C2C56",
+     "share": 0.223
+    },
+    {
+     "hex": "#0A0D1A",
+     "share": 0.16
+    },
+    {
+     "hex": "#4A497F",
+     "share": 0.13
+    },
+    {
+     "hex": "#7370AF",
+     "share": 0.097
+    },
+    {
+     "hex": "#B1A6D9",
+     "share": 0.064
+    }
+   ]
+  },
+  "KF69": {
+   "video": "P6",
+   "t": 6.8,
+   "slug": "glass-vitrines",
+   "palette": [
+    {
+     "hex": "#111C2E",
+     "share": 0.319
+    },
+    {
+     "hex": "#070C13",
+     "share": 0.205
+    },
+    {
+     "hex": "#2A3845",
+     "share": 0.17
+    },
+    {
+     "hex": "#435460",
+     "share": 0.119
+    },
+    {
+     "hex": "#737B75",
+     "share": 0.093
+    },
+    {
+     "hex": "#94A8B7",
+     "share": 0.093
+    }
+   ]
+  },
+  "KF70": {
+   "video": "P6",
+   "t": 7.8,
+   "slug": "comet-logos",
+   "palette": [
+    {
+     "hex": "#111C2E",
+     "share": 0.317
+    },
+    {
+     "hex": "#070B12",
+     "share": 0.206
+    },
+    {
+     "hex": "#2B3946",
+     "share": 0.164
+    },
+    {
+     "hex": "#465761",
+     "share": 0.108
+    },
+    {
+     "hex": "#757D79",
+     "share": 0.106
+    },
+    {
+     "hex": "#92A8B7",
+     "share": 0.1
+    }
+   ]
+  },
+  "KF71": {
+   "video": "P6",
+   "t": 8.6,
+   "slug": "hyperspace-to-hero",
+   "palette": [
+    {
+     "hex": "#1E2B39",
+     "share": 0.263
+    },
+    {
+     "hex": "#334250",
+     "share": 0.207
+    },
+    {
+     "hex": "#091320",
+     "share": 0.205
+    },
+    {
+     "hex": "#5D6569",
+     "share": 0.124
+    },
+    {
+     "hex": "#687B9E",
+     "share": 0.11
+    },
+    {
+     "hex": "#9DA6AD",
+     "share": 0.091
+    }
+   ]
+  }
+ },
+ "accents_by_video": {
+  "C1": {
+   "hud_cyan": {
+    "hex": "#63DFED",
+    "pixels": 3079
+   },
+   "plasma_violet": {
+    "hex": "#8364CE",
+    "pixels": 140446
+   },
+   "core_white": {
+    "hex": "#F7E6FA",
+    "pixels": 26862
+   }
+  },
+  "C2": {
+   "hud_cyan": {
+    "hex": "#4FADC5",
+    "pixels": 28943
+   },
+   "plasma_violet": {
+    "hex": "#785FD1",
+    "pixels": 76613
+   },
+   "neon_pink": {
+    "hex": "#E374BC",
+    "pixels": 10
+   },
+   "core_white": {
+    "hex": "#EFE5FA",
+    "pixels": 16698
+   }
+  },
+  "VR": {
+   "hud_cyan": {
+    "hex": "#65BECF",
+    "pixels": 9004
+   },
+   "plasma_violet": {
+    "hex": "#876BCD",
+    "pixels": 84136
+   },
+   "neon_pink": {
+    "hex": "#D264AD",
+    "pixels": 60
+   },
+   "amber": {
+    "hex": "#E1A565",
+    "pixels": 1
+   },
+   "core_white": {
+    "hex": "#F7E8FB",
+    "pixels": 23663
+   }
+  },
+  "P1": {
+   "hud_cyan": {
+    "hex": "#5EA6C4",
+    "pixels": 4485
+   },
+   "plasma_violet": {
+    "hex": "#6853BB",
+    "pixels": 972
+   },
+   "amber": {
+    "hex": "#CA8B54",
+    "pixels": 43
+   },
+   "core_white": {
+    "hex": "#E6F6FB",
+    "pixels": 3284
+   }
+  },
+  "P2": {
+   "hud_cyan": {
+    "hex": "#619FB8",
+    "pixels": 675
+   },
+   "plasma_violet": {
+    "hex": "#7765AC",
+    "pixels": 4029
+   },
+   "neon_pink": {
+    "hex": "#A24664",
+    "pixels": 1
+   },
+   "amber": {
+    "hex": "#BE7A4A",
+    "pixels": 91
+   },
+   "core_white": {
+    "hex": "#EFF8FB",
+    "pixels": 638
+   }
+  },
+  "P3": {
+   "hud_cyan": {
+    "hex": "#60AAC5",
+    "pixels": 1149
+   },
+   "plasma_violet": {
+    "hex": "#6B5BBF",
+    "pixels": 378
+   },
+   "neon_pink": {
+    "hex": "#D05B7A",
+    "pixels": 49
+   },
+   "amber": {
+    "hex": "#E0A438",
+    "pixels": 2212
+   },
+   "core_white": {
+    "hex": "#F3F6FA",
+    "pixels": 541
+   }
+  },
+  "P4": {
+   "hud_cyan": {
+    "hex": "#619CB5",
+    "pixels": 167
+   },
+   "plasma_violet": {
+    "hex": "#8165D3",
+    "pixels": 774
+   },
+   "amber": {
+    "hex": "#E18D37",
+    "pixels": 539
+   },
+   "core_white": {
+    "hex": "#E0F3FA",
+    "pixels": 1567
+   }
+  },
+  "P5": {
+   "hud_cyan": {
+    "hex": "#5DA4BE",
+    "pixels": 5957
+   },
+   "plasma_violet": {
+    "hex": "#6755A8",
+    "pixels": 834
+   },
+   "amber": {
+    "hex": "#DE8528",
+    "pixels": 232
+   },
+   "core_white": {
+    "hex": "#F2F5F8",
+    "pixels": 544
+   }
+  },
+  "P6": {
+   "hud_cyan": {
+    "hex": "#66ADCE",
+    "pixels": 323
+   },
+   "plasma_violet": {
+    "hex": "#7F67C1",
+    "pixels": 7931
+   },
+   "neon_pink": {
+    "hex": "#C35892",
+    "pixels": 51
+   },
+   "amber": {
+    "hex": "#D48B43",
+    "pixels": 639
+   },
+   "core_white": {
+    "hex": "#E9F3FA",
+    "pixels": 3202
+   }
+  }
+ }
+}

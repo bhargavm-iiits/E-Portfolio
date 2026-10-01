@@ -1,0 +1,787 @@
+{
+ "videos": {
+  "C1": "download/Part_1_of_2__Cinematic_20261001052145.mp4",
+  "C2": "download (1)/Part_2_of_2__Cinematic_20261001052201.mp4",
+  "VR": "Player_entering_VR_portal_animation_20261001051526.mp4",
+  "P1": "portfolio_1.mp4",
+  "P2": "portfolio_2.mp4",
+  "P3": "portfolio_3.mp4",
+  "P4": "portfolio_4.mp4",
+  "P5": "portfolio_5.mp4",
+  "P6": "portfolio_6.mp4"
+ },
+ "keyframes": [
+  {
+   "id": "KF01",
+   "video": "C1",
+   "t": 0.0,
+   "slug": "gate-idle"
+  },
+  {
+   "id": "KF02",
+   "video": "C1",
+   "t": 3.0,
+   "slug": "hud-boot-particles"
+  },
+  {
+   "id": "KF03",
+   "video": "C1",
+   "t": 5.0,
+   "slug": "activation-portal-window"
+  },
+  {
+   "id": "KF04",
+   "video": "C1",
+   "t": 6.5,
+   "slug": "vortex-spin"
+  },
+  {
+   "id": "KF05",
+   "video": "C1",
+   "t": 7.8,
+   "slug": "charge-lightning"
+  },
+  {
+   "id": "KF06",
+   "video": "C1",
+   "t": 8.6,
+   "slug": "pass-figure-core-flare"
+  },
+  {
+   "id": "KF07",
+   "video": "C1",
+   "t": 9.6,
+   "slug": "white-out"
+  },
+  {
+   "id": "KF08",
+   "video": "C2",
+   "t": 1.5,
+   "slug": "world-entry-hud"
+  },
+  {
+   "id": "KF09",
+   "video": "C2",
+   "t": 2.8,
+   "slug": "threshold"
+  },
+  {
+   "id": "KF10",
+   "video": "C2",
+   "t": 3.5,
+   "slug": "nexus-hub-city"
+  },
+  {
+   "id": "KF11",
+   "video": "C2",
+   "t": 4.3,
+   "slug": "second-portal-burst"
+  },
+  {
+   "id": "KF12",
+   "video": "C2",
+   "t": 5.5,
+   "slug": "hyperspace-corridor"
+  },
+  {
+   "id": "KF13",
+   "video": "C2",
+   "t": 7.5,
+   "slug": "wormhole-lightning"
+  },
+  {
+   "id": "KF14",
+   "video": "C2",
+   "t": 9.3,
+   "slug": "ribbon-warp"
+  },
+  {
+   "id": "KF15",
+   "video": "VR",
+   "t": 0.5,
+   "slug": "rooftop-portal-idle"
+  },
+  {
+   "id": "KF16",
+   "video": "VR",
+   "t": 1.4,
+   "slug": "headset-lock-on"
+  },
+  {
+   "id": "KF17",
+   "video": "VR",
+   "t": 1.8,
+   "slug": "silhouette-pass"
+  },
+  {
+   "id": "KF18",
+   "video": "VR",
+   "t": 3.0,
+   "slug": "reticle-hud-streaks"
+  },
+  {
+   "id": "KF19",
+   "video": "VR",
+   "t": 5.0,
+   "slug": "reticle-expand"
+  },
+  {
+   "id": "KF20",
+   "video": "VR",
+   "t": 6.3,
+   "slug": "warp-bloom"
+  },
+  {
+   "id": "KF21",
+   "video": "VR",
+   "t": 7.5,
+   "slug": "city-flyover"
+  },
+  {
+   "id": "KF22",
+   "video": "P1",
+   "t": 0.0,
+   "slug": "home-hero"
+  },
+  {
+   "id": "KF23",
+   "video": "P1",
+   "t": 1.7,
+   "slug": "hero-push-text-slide"
+  },
+  {
+   "id": "KF24",
+   "video": "P1",
+   "t": 2.6,
+   "slug": "holo-hud-around-head"
+  },
+  {
+   "id": "KF25",
+   "video": "P1",
+   "t": 3.1,
+   "slug": "visor-mask-menu"
+  },
+  {
+   "id": "KF26",
+   "video": "P1",
+   "t": 3.4,
+   "slug": "vr-main-menu"
+  },
+  {
+   "id": "KF27",
+   "video": "P1",
+   "t": 3.7,
+   "slug": "menu-orb-lens"
+  },
+  {
+   "id": "KF28",
+   "video": "P1",
+   "t": 4.4,
+   "slug": "m01-vr-physics-lab"
+  },
+  {
+   "id": "KF29",
+   "video": "P1",
+   "t": 4.9,
+   "slug": "door-split"
+  },
+  {
+   "id": "KF30",
+   "video": "P1",
+   "t": 5.5,
+   "slug": "m02-terrain-path"
+  },
+  {
+   "id": "KF31",
+   "video": "P1",
+   "t": 6.1,
+   "slug": "whip-pan"
+  },
+  {
+   "id": "KF32",
+   "video": "P1",
+   "t": 6.6,
+   "slug": "m03-isro-hangar"
+  },
+  {
+   "id": "KF33",
+   "video": "P1",
+   "t": 7.1,
+   "slug": "shrink-orb-logos"
+  },
+  {
+   "id": "KF34",
+   "video": "P1",
+   "t": 7.8,
+   "slug": "tech-constellation"
+  },
+  {
+   "id": "KF35",
+   "video": "P1",
+   "t": 8.4,
+   "slug": "portal-burst"
+  },
+  {
+   "id": "KF36",
+   "video": "P1",
+   "t": 9.6,
+   "slug": "final-hero-cta-hover"
+  },
+  {
+   "id": "KF37",
+   "video": "P2",
+   "t": 2.9,
+   "slug": "into-headset-pov"
+  },
+  {
+   "id": "KF38",
+   "video": "P2",
+   "t": 3.3,
+   "slug": "droste-visor"
+  },
+  {
+   "id": "KF39",
+   "video": "P2",
+   "t": 4.6,
+   "slug": "labels-explode"
+  },
+  {
+   "id": "KF40",
+   "video": "P2",
+   "t": 5.7,
+   "slug": "terrain-extrude"
+  },
+  {
+   "id": "KF41",
+   "video": "P2",
+   "t": 9.0,
+   "slug": "particle-torus"
+  },
+  {
+   "id": "KF42",
+   "video": "P3",
+   "t": 1.6,
+   "slug": "vertical-slide-blur"
+  },
+  {
+   "id": "KF43",
+   "video": "P3",
+   "t": 2.5,
+   "slug": "daylight-glass-deck"
+  },
+  {
+   "id": "KF44",
+   "video": "P3",
+   "t": 4.0,
+   "slug": "featured-card-carousel"
+  },
+  {
+   "id": "KF45",
+   "video": "P3",
+   "t": 6.0,
+   "slug": "card-hover-glow"
+  },
+  {
+   "id": "KF46",
+   "video": "P3",
+   "t": 8.8,
+   "slug": "tech-tiles-light"
+  },
+  {
+   "id": "KF47",
+   "video": "P3",
+   "t": 9.5,
+   "slug": "tiles-dissolve-hero"
+  },
+  {
+   "id": "KF48",
+   "video": "P4",
+   "t": 0.8,
+   "slug": "mechanical-ring-portal"
+  },
+  {
+   "id": "KF49",
+   "video": "P4",
+   "t": 1.4,
+   "slug": "ring-fly-through"
+  },
+  {
+   "id": "KF50",
+   "video": "P4",
+   "t": 1.8,
+   "slug": "daylight-world-glass"
+  },
+  {
+   "id": "KF51",
+   "video": "P4",
+   "t": 4.0,
+   "slug": "glass-projects-dashboard"
+  },
+  {
+   "id": "KF52",
+   "video": "P4",
+   "t": 6.0,
+   "slug": "tirumala-row"
+  },
+  {
+   "id": "KF53",
+   "video": "P4",
+   "t": 8.9,
+   "slug": "tech-glass-tiles-hover"
+  },
+  {
+   "id": "KF54",
+   "video": "P5",
+   "t": 0.8,
+   "slug": "iris-reveal-daylight"
+  },
+  {
+   "id": "KF55",
+   "video": "P5",
+   "t": 2.2,
+   "slug": "dark-glass-card-grid"
+  },
+  {
+   "id": "KF56",
+   "video": "P5",
+   "t": 3.0,
+   "slug": "split-and-zoom"
+  },
+  {
+   "id": "KF57",
+   "video": "P5",
+   "t": 4.2,
+   "slug": "webgl-window-lab"
+  },
+  {
+   "id": "KF58",
+   "video": "P5",
+   "t": 4.9,
+   "slug": "panel-door-swing"
+  },
+  {
+   "id": "KF59",
+   "video": "P5",
+   "t": 6.6,
+   "slug": "terrain-glass-backplate"
+  },
+  {
+   "id": "KF60",
+   "video": "P5",
+   "t": 7.7,
+   "slug": "isro-glass-card"
+  },
+  {
+   "id": "KF61",
+   "video": "P5",
+   "t": 8.9,
+   "slug": "tech-tiles-dark"
+  },
+  {
+   "id": "KF62",
+   "video": "P6",
+   "t": 1.5,
+   "slug": "ring-assembly"
+  },
+  {
+   "id": "KF63",
+   "video": "P6",
+   "t": 2.2,
+   "slug": "glass-shatter"
+  },
+  {
+   "id": "KF64",
+   "video": "P6",
+   "t": 2.7,
+   "slug": "hologram-digitise"
+  },
+  {
+   "id": "KF65",
+   "video": "P6",
+   "t": 3.8,
+   "slug": "player-front-trails"
+  },
+  {
+   "id": "KF66",
+   "video": "P6",
+   "t": 4.2,
+   "slug": "neon-city-trails"
+  },
+  {
+   "id": "KF67",
+   "video": "P6",
+   "t": 4.7,
+   "slug": "world-to-panel"
+  },
+  {
+   "id": "KF68",
+   "video": "P6",
+   "t": 5.4,
+   "slug": "inception-fold-nodes"
+  },
+  {
+   "id": "KF69",
+   "video": "P6",
+   "t": 6.8,
+   "slug": "glass-vitrines"
+  },
+  {
+   "id": "KF70",
+   "video": "P6",
+   "t": 7.8,
+   "slug": "comet-logos"
+  },
+  {
+   "id": "KF71",
+   "video": "P6",
+   "t": 8.6,
+   "slug": "hyperspace-to-hero"
+  }
+ ],
+ "transitions": [
+  {
+   "id": "T01",
+   "slug": "hud-boot",
+   "title": "HUD boot + particle swarm",
+   "video": "C1",
+   "t0": 2.3,
+   "t1": 4.0
+  },
+  {
+   "id": "T02",
+   "slug": "portal-window",
+   "title": "Plasma membrane becomes a window",
+   "video": "C1",
+   "t0": 3.4,
+   "t1": 4.6
+  },
+  {
+   "id": "T03",
+   "slug": "vortex-push",
+   "title": "Vortex spin-up + ease-in push",
+   "video": "C1",
+   "t0": 4.5,
+   "t1": 7.9
+  },
+  {
+   "id": "T04",
+   "slug": "whiteout",
+   "title": "Pass the figure -> core flare -> white-out",
+   "video": "C1",
+   "t0": 7.8,
+   "t1": 9.9
+  },
+  {
+   "id": "T05",
+   "slug": "world-entry",
+   "title": "WORLD ENTRY HUD -> threshold crossing",
+   "video": "C2",
+   "t0": 0.0,
+   "t1": 3.2
+  },
+  {
+   "id": "T06",
+   "slug": "hub-title",
+   "title": "[ THE NEXUS HUB ] title + second portal",
+   "video": "C2",
+   "t0": 3.0,
+   "t1": 4.5
+  },
+  {
+   "id": "T07",
+   "slug": "hyperspace",
+   "title": "Hyperspace corridor -> ribbon warp",
+   "video": "C2",
+   "t0": 4.4,
+   "t1": 9.9
+  },
+  {
+   "id": "T08",
+   "slug": "silhouette-wipe",
+   "title": "Silhouette pass-through wipe",
+   "video": "VR",
+   "t0": 1.2,
+   "t1": 2.1
+  },
+  {
+   "id": "T09",
+   "slug": "reticle-bloom",
+   "title": "Reticle expand + white-core bloom",
+   "video": "VR",
+   "t0": 3.9,
+   "t1": 6.0
+  },
+  {
+   "id": "T10",
+   "slug": "warp-exit",
+   "title": "Warp exit -> city flyover",
+   "video": "VR",
+   "t0": 6.0,
+   "t1": 7.9
+  },
+  {
+   "id": "T11",
+   "slug": "hero-push",
+   "title": "Hero push-in + copy slides out",
+   "video": "P1",
+   "t0": 1.0,
+   "t1": 2.0
+  },
+  {
+   "id": "T12",
+   "slug": "holo-hud",
+   "title": "Holo HUD materialises around head",
+   "video": "P1",
+   "t0": 2.0,
+   "t1": 2.8
+  },
+  {
+   "id": "T13",
+   "slug": "visor-dive",
+   "title": "Visor dive + goggle mask",
+   "video": "P1",
+   "t0": 2.7,
+   "t1": 3.4
+  },
+  {
+   "id": "T14",
+   "slug": "droste",
+   "title": "Droste double-visor",
+   "video": "P2",
+   "t0": 2.8,
+   "t1": 3.9
+  },
+  {
+   "id": "T15",
+   "slug": "orb-lens",
+   "title": "Menu cube -> orb lens -> scene",
+   "video": "P1",
+   "t0": 3.4,
+   "t1": 4.0
+  },
+  {
+   "id": "T16",
+   "slug": "labels-explode",
+   "title": "Labels explode past camera",
+   "video": "P2",
+   "t0": 4.3,
+   "t1": 4.9
+  },
+  {
+   "id": "T17",
+   "slug": "door-split",
+   "title": "Centre-slit door split",
+   "video": "P1",
+   "t0": 4.6,
+   "t1": 5.2
+  },
+  {
+   "id": "T18",
+   "slug": "path-draw",
+   "title": "Route path draws to pin",
+   "video": "P1",
+   "t0": 5.0,
+   "t1": 5.8
+  },
+  {
+   "id": "T19",
+   "slug": "terrain-build",
+   "title": "Terrain wireframe extrusion build",
+   "video": "P2",
+   "t0": 5.3,
+   "t1": 6.3
+  },
+  {
+   "id": "T20",
+   "slug": "whip-pan",
+   "title": "Whip-pan horizontal blur",
+   "video": "P1",
+   "t0": 5.8,
+   "t1": 6.4
+  },
+  {
+   "id": "T21",
+   "slug": "hard-push",
+   "title": "Hard-edge push slide",
+   "video": "P2",
+   "t0": 6.3,
+   "t1": 6.8
+  },
+  {
+   "id": "T22",
+   "slug": "shrink-orb",
+   "title": "Shrink into orb + logos fly in",
+   "video": "P1",
+   "t0": 6.9,
+   "t1": 7.4
+  },
+  {
+   "id": "T23",
+   "slug": "portal-burst",
+   "title": "Portal burst energy ring -> hero",
+   "video": "P1",
+   "t0": 8.0,
+   "t1": 8.9
+  },
+  {
+   "id": "T24",
+   "slug": "particle-torus",
+   "title": "Particle torus burst -> hero",
+   "video": "P2",
+   "t0": 8.6,
+   "t1": 9.5
+  },
+  {
+   "id": "T25",
+   "slug": "final-settle",
+   "title": "Final hero settle + CTA reticle + hover",
+   "video": "P1",
+   "t0": 8.8,
+   "t1": 9.9
+  },
+  {
+   "id": "T26",
+   "slug": "iris-daylight",
+   "title": "Iris reveal into daylight",
+   "video": "P5",
+   "t0": 0.4,
+   "t1": 1.2
+  },
+  {
+   "id": "T27",
+   "slug": "cards-materialise",
+   "title": "Glass cards materialise over scene",
+   "video": "P5",
+   "t0": 1.5,
+   "t1": 2.2
+  },
+  {
+   "id": "T28",
+   "slug": "split-zoom",
+   "title": "Split-and-zoom card grid",
+   "video": "P5",
+   "t0": 2.6,
+   "t1": 3.6
+  },
+  {
+   "id": "T29",
+   "slug": "door-swing",
+   "title": "Panel door-swing",
+   "video": "P5",
+   "t0": 4.6,
+   "t1": 5.1
+  },
+  {
+   "id": "T30",
+   "slug": "card-into-scene",
+   "title": "Card shrinks into the next scene",
+   "video": "P5",
+   "t0": 6.9,
+   "t1": 7.4
+  },
+  {
+   "id": "T31",
+   "slug": "ring-assembly",
+   "title": "Mechanical ring assembles",
+   "video": "P6",
+   "t0": 1.1,
+   "t1": 1.9
+  },
+  {
+   "id": "T32",
+   "slug": "shatter-digitise",
+   "title": "Glass shatter + hologram digitise",
+   "video": "P6",
+   "t0": 1.9,
+   "t1": 3.1
+  },
+  {
+   "id": "T33",
+   "slug": "light-trails",
+   "title": "Neon light-trail ribbons",
+   "video": "P6",
+   "t0": 3.4,
+   "t1": 4.4
+  },
+  {
+   "id": "T34",
+   "slug": "world-to-panel",
+   "title": "World pulls back into a panel, then folds",
+   "video": "P6",
+   "t0": 4.4,
+   "t1": 5.7
+  },
+  {
+   "id": "T35",
+   "slug": "vitrines",
+   "title": "Glass vitrines + neon node connectors",
+   "video": "P6",
+   "t0": 5.6,
+   "t1": 6.4
+  },
+  {
+   "id": "T36",
+   "slug": "comet-logos",
+   "title": "Comet logo fly-in",
+   "video": "P6",
+   "t0": 7.4,
+   "t1": 8.3
+  },
+  {
+   "id": "T37",
+   "slug": "hyper-to-hero",
+   "title": "Hyperspace radial zoom to hero",
+   "video": "P6",
+   "t0": 8.2,
+   "t1": 8.9
+  },
+  {
+   "id": "T38",
+   "slug": "vertical-slide",
+   "title": "Vertical full-page slide with motion blur",
+   "video": "P3",
+   "t0": 1.1,
+   "t1": 2.1
+  },
+  {
+   "id": "T39",
+   "slug": "carousel",
+   "title": "Glass carousel slide + hover lift",
+   "video": "P3",
+   "t0": 2.8,
+   "t1": 7.0
+  },
+  {
+   "id": "T40",
+   "slug": "tile-dissolve",
+   "title": "Tiles dissolve into hero",
+   "video": "P3",
+   "t0": 9.0,
+   "t1": 9.9
+  },
+  {
+   "id": "T41",
+   "slug": "ring-daylight",
+   "title": "Ring fly-through to daylight + figure to glass",
+   "video": "P4",
+   "t0": 0.0,
+   "t1": 2.1
+  },
+  {
+   "id": "T42",
+   "slug": "glass-dolly",
+   "title": "Glass dashboard dolly + vertical scroll",
+   "video": "P4",
+   "t0": 2.0,
+   "t1": 5.7
+  },
+  {
+   "id": "T43",
+   "slug": "tile-hover-tint",
+   "title": "Glass tiles hover tint",
+   "video": "P4",
+   "t0": 8.3,
+   "t1": 9.9
+  }
+ ]
+}
