@@ -1,118 +1,69 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import dynamic from "next/dynamic";
-import { profile } from "@/data/portfolio";
-import { useIsFinePointer, useReducedMotion } from "@/lib/useMediaQuery";
-import type { Project } from "@/data/portfolio";
+/**
+ * 01 WORLD ENTRY (screenshot §4). Copy on the dark left half; the 3D world
+ * (portal machinery, the city through its aperture, the explorer on the
+ * ledge) renders through this section as a window. A poster frame of the same
+ * scene covers first paint, phones before the stage loads, and no-WebGL.
+ */
+import { hero } from "@/data/nexus";
+import { director } from "@/lib/director";
+import { onNavClick } from "@/lib/nav";
+import { useWindow } from "@/lib/windows";
+import { Icon } from "@/components/hud/Icons";
 
-const Scene = dynamic(() => import("@/components/three/Scene"), { ssr: false });
-
-const ICON_MAP: Record<string, string> = {
-  vr: "fa-solid fa-vr-cardboard",
-  brain: "fa-solid fa-brain",
-  code: "fa-solid fa-code",
-  rocket: "fa-solid fa-rocket",
-};
-
-export default function Hero({ onCubeSelect }: { onCubeSelect: (project: Project) => void }) {
-  const [hoveredProject, setHoveredProject] = useState<Project | null>(null);
-  const nameRef = useRef<HTMLHeadingElement>(null);
-  const hasFinePointer = useIsFinePointer();
-  const reducedMotion = useReducedMotion();
-
-  useEffect(() => {
-    if (!hasFinePointer || reducedMotion) return;
-    const nameEl = nameRef.current;
-    if (!nameEl) return;
-
-    const handleMove = (e: PointerEvent) => {
-      const dx = (e.clientX / window.innerWidth - 0.5) * 2;
-      const dy = (e.clientY / window.innerHeight - 0.5) * 2;
-      gsap.to(nameEl, {
-        rotateY: dx * 16,
-        rotateX: dy * -10,
-        duration: 0.6,
-        ease: "power2.out",
-        transformPerspective: 900,
-      });
-    };
-    const handleLeave = () => {
-      gsap.to(nameEl, { rotateX: 0, rotateY: 0, duration: 0.8, ease: "power2.out" });
-    };
-
-    window.addEventListener("pointermove", handleMove);
-    window.addEventListener("pointerleave", handleLeave);
-    return () => {
-      window.removeEventListener("pointermove", handleMove);
-      window.removeEventListener("pointerleave", handleLeave);
-    };
-  }, [hasFinePointer, reducedMotion]);
-
+function Chevrons() {
   return (
-    <section className="scene intro-scene" id="scene-intro">
-      <div id="webgl-canvas-wrap">
-        <Scene onCubeHover={setHoveredProject} onCubeSelect={onCubeSelect} />
+    <svg width="16" height="14" viewBox="0 0 16 14" aria-hidden="true" className="hero-hud__chev">
+      <path d="M2 1 L8 6 L14 1 M2 7 L8 12 L14 7" fill="none" stroke="currentColor" strokeWidth="1.6" />
+    </svg>
+  );
+}
+
+export default function Hero() {
+  const win = useWindow("hero");
+  return (
+    <section id="world" ref={win} className="hero" data-section="world" aria-labelledby="hero-title">
+      <div className="hero__poster" aria-hidden="true">
+        <picture>
+          <source media="(min-width: 768px)" srcSet="/nexus/entry-poster.webp" />
+          <img src="/nexus/entry-poster-sm.webp" alt="" width={720} height={1280} fetchPriority="high" />
+        </picture>
       </div>
-      <div id="cube-hud" className={hoveredProject ? "visible" : ""}>
-        {hoveredProject?.title}
+      <div className="hero__scrim" aria-hidden="true" />
+
+      <div id="hero-copy" className="hero__copy">
+        <p className="hero__eyebrow">{hero.eyebrow}</p>
+        <h1 id="hero-title" className="hero__title">
+          <span className="hero__name">{hero.name}</span>
+          <span className="hero__statement">{hero.statement}</span>
+        </h1>
+        <p className="hero__desc">{hero.description}</p>
+        <div className="hero__ctas">
+          <button id="enter-cta" type="button" className="plate plate--primary" onClick={() => director.playEntry()}>
+            ENTER THE NEXUS <Icon.chevron size={16} />
+          </button>
+          <a href="#missions" className="plate plate--outline" onClick={onNavClick}>
+            VIEW MISSIONS
+          </a>
+        </div>
       </div>
 
-      <div className="sticky-wrapper">
-        <div className="hero-grid">
-          <div className="hero-copy">
-            <span className="mono-tag eyebrow hero-reveal">
-              <i className="fa-solid fa-vr-cardboard orange-text" /> {profile.eyebrow}
-            </span>
-            <div className="hero-name-wrap hero-reveal">
-              <span className="name-glow" aria-hidden="true" />
-              <h1 className="hero-name-3d" ref={nameRef}>
-                <span className="name-line name-white">{profile.heroName}</span>
-              </h1>
-            </div>
-            <p className="mono-tag tagline hero-reveal">{profile.tagline}</p>
-            <p className="bio hero-reveal">{profile.bio}</p>
-
-            <div className="capability-row hero-reveal">
-              {profile.capabilities.map((c) => (
-                <div className="capability" key={c.label}>
-                  <i className={ICON_MAP[c.icon]} />
-                  <span className="mono-tag">{c.label}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="hero-buttons hero-reveal">
-              <button
-                className="btn-glow magnetic"
-                onClick={() => document.getElementById("section-featured")?.scrollIntoView({ behavior: "smooth" })}
-              >
-                EXPLORE PROJECTS
-              </button>
-              <a href={profile.github} target="_blank" rel="noopener" className="btn-ghost magnetic">
-                <i className="fa-brands fa-github" /> GITHUB
-              </a>
-            </div>
-
-            <div className="contact-array hero-reveal">
-              <a href={`tel:${profile.phone.replace(/\s/g, "")}`} className="mono-tag hover-orange magnetic">
-                <i className="fa-solid fa-phone" /> {profile.phone}
-              </a>
-              <a href={`mailto:${profile.email}`} className="mono-tag hover-orange magnetic">
-                <i className="fa-solid fa-envelope" /> {profile.email}
-              </a>
-              <a href={profile.linkedin} target="_blank" rel="noopener" className="mono-tag hover-orange magnetic">
-                <i className="fa-brands fa-linkedin" /> LINKEDIN
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="scroll-prompt">
-          <span className="mono-tag">
-            <i className="fa-solid fa-computer-mouse" /> SCROLL TO EXPLORE
-          </span>
-          <div className="scroll-line" />
-        </div>
+      <div id="hero-hud" className="hero-hud">
+        <svg className="hero-hud__rails" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true">
+          <path className="hero-hud__rail" d="M 0 2 H 700 L 712 12 H 1000" />
+          <path className="hero-hud__rail" d="M 0 38 H 640 L 652 30 H 1000" />
+        </svg>
+        <p className="hero-hud__label" aria-hidden="true">
+          <span className="hero-hud__code">01</span> / WORLD ENTRY
+        </p>
+        <span className="hero-hud__line" aria-hidden="true">
+          <i />
+          <i />
+          <i />
+        </span>
+        <a href="#missions" className="hero-hud__scroll" onClick={onNavClick}>
+          SCROLL TO EXPLORE <Chevrons />
+        </a>
       </div>
     </section>
   );
