@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Reference material and local analysis tooling (Node scripts, not app code).
+    "Docs/**",
+    ".analysis/**",
   ]),
   {
     // React Compiler's purity/immutability rules assume idempotent render
