@@ -1,0 +1,328 @@
+/* ─────────────────────────────────────────────────────────────
+   MISSION BRIEFING — video 4's two-column composition in the
+   screenshot's dark material: notched main window (live 3D or
+   system diagram) + dimmer contextual panel.
+   ───────────────────────────────────────────────────────────── */
+
+.briefing {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-dialog);
+  display: grid;
+  place-items: center;
+  padding: clamp(0px, 2.4vw, 28px);
+  background: rgba(2, 6, 12, 0.96);
+}
+.briefing__sheet {
+  position: relative;
+  width: min(1320px, 100%);
+  height: 100%;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
+  overflow: hidden;
+}
+.briefing__scroll {
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: clamp(20px, 2.6vw, 36px) clamp(18px, 3vw, 44px) 28px;
+}
+
+.briefing__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.briefing__head > div {
+  display: grid;
+  gap: 10px;
+}
+.briefing__tag {
+  margin-left: 12px;
+  color: var(--cyan);
+}
+.briefing__title {
+  font-family: var(--font-h);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f2f8ff;
+}
+
+.briefing__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  gap: clamp(16px, 2.4vw, 32px);
+  padding: 22px 0;
+}
+
+/* evidence: notched main window */
+.evidence {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+.evidence__frame {
+  --frame-fill: #02070d;
+  padding: 8px;
+}
+.evidence__notch {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  translate: -50% 0;
+  z-index: 2;
+  padding: 3px 26px 5px;
+  font-size: 0.66rem;
+  color: var(--cyan);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-top: 0;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 12px 100%);
+}
+.evidence__view {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+}
+.evidence__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.evidence__still {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+html[data-webgl="ok"] .evidence__view {
+  background: transparent;
+}
+.evidence__diagram {
+  background: #050b14;
+}
+.evidence__caption {
+  padding: 10px 14px 14px;
+  font-size: 0.88rem;
+  color: var(--text-2);
+  border-top: 1px solid var(--line-soft);
+}
+.evidence__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.evidence__tabs .tag {
+  cursor: pointer;
+  color: var(--text-2);
+}
+.evidence__tabs .tag[aria-pressed="true"],
+.evidence__tabs .tag:hover,
+.evidence__tabs .tag:focus-visible {
+  color: var(--cyan-hi);
+}
+
+.view-controls {
+  display: grid;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--line-soft);
+  background: rgba(7, 13, 20, 0.6);
+}
+.view-controls__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.view-controls__btn {
+  cursor: pointer;
+  color: var(--text-2);
+}
+.view-controls__btn[aria-pressed="true"] {
+  color: var(--text-ink);
+  background: var(--cyan);
+}
+.view-readout {
+  font-family: var(--font-h);
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  color: var(--cyan-hi);
+  font-variant-numeric: tabular-nums;
+}
+.view-note {
+  font-size: 0.82rem;
+  color: var(--text-3);
+}
+
+/* contextual panel */
+.brief-context {
+  --frame-fill: var(--card);
+  align-self: start;
+  padding: clamp(18px, 2vw, 26px);
+}
+.brief-fields {
+  display: grid;
+  gap: 18px;
+}
+.brief-field {
+  display: grid;
+  gap: 6px;
+}
+.brief-field dt {
+  color: var(--cyan);
+  font-size: 0.7rem;
+}
+.brief-field dd {
+  color: var(--text-2);
+  font-size: 0.96rem;
+  line-height: 1.62;
+}
+.brief-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.brief-links {
+  display: grid;
+  gap: 6px;
+}
+.brief-links .text-action {
+  font-size: 0.78rem;
+}
+.brief-links__note {
+  color: var(--text-3);
+  font-size: 0.88rem;
+}
+.brief-hud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line-soft);
+  font-family: var(--font-h);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--text-3);
+}
+.brief-hud li::before {
+  content: "▸ ";
+  color: var(--cyan);
+}
+
+.briefing__foot {
+  display: grid;
+  gap: 16px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-soft);
+}
+.briefing__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.briefing__pager {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.briefing__pager .text-action {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+}
+
+/* fact-derived system diagrams, dark */
+.diagram {
+  margin: 0;
+}
+.diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.diagram figcaption {
+  display: none;
+}
+.diagram__grid line {
+  stroke: rgba(120, 168, 214, 0.06);
+  stroke-width: 1;
+}
+.diagram__node path {
+  fill: #0a1624;
+  stroke: var(--cyan-dim);
+  stroke-width: 1.2;
+}
+.diagram__node[data-tone="violet"] path {
+  fill: rgba(139, 108, 255, 0.12);
+  stroke: var(--violet);
+}
+.diagram__node[data-tone="amber"] path {
+  fill: rgba(255, 194, 61, 0.1);
+  stroke: var(--amber);
+}
+.diagram__node text {
+  font-family: var(--font-h);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  fill: var(--text);
+}
+.diagram__edge {
+  fill: none;
+  stroke: var(--cyan);
+  stroke-width: 1.4;
+  opacity: 0.8;
+}
+.diagram__edge[data-tone="amber"] {
+  stroke: var(--amber);
+}
+.diagram__edge[data-dashed="true"] {
+  stroke-dasharray: 6 5;
+}
+.diagram__arrow {
+  fill: var(--cyan);
+}
+.diagram__arrow--amber {
+  fill: var(--amber);
+}
+.diagram__callout circle {
+  fill: var(--violet-hi);
+}
+.diagram__callout path {
+  fill: none;
+  stroke: var(--violet-hi);
+  stroke-width: 1;
+}
+.diagram__callout text {
+  font-family: var(--font-h);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  fill: var(--violet-hi);
+}
+
+@media (max-width: 900px) {
+  .briefing {
+    padding: 0;
+  }
+  .briefing__sheet {
+    clip-path: none;
+    border: 0;
+  }
+  .briefing__grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .briefing__head {
+    flex-direction: column-reverse;
+  }
+}
