@@ -1,5 +1,5 @@
-import { initializeApp, getApps, type FirebaseOptions } from "firebase/app";
-import { getFirestore, collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { initializeApp, getApps, type FirebaseApp, type FirebaseOptions } from "firebase/app";
+import { CONTACT_LIMITS } from "@/config/site";
 
 const firebaseConfig: FirebaseOptions = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -10,15 +10,11 @@ const firebaseConfig: FirebaseOptions = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
+const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
 export const isFirebaseConfigured = Boolean(
   firebaseConfig.apiKey && firebaseConfig.projectId && firebaseConfig.appId
 );
-
-const app = isFirebaseConfigured
-  ? getApps()[0] ?? initializeApp(firebaseConfig)
-  : null;
-
-const db = app ? getFirestore(app) : null;
 
 export interface ContactMessage {
   name: string;
@@ -26,19 +22,38 @@ export interface ContactMessage {
   message: string;
 }
 
+const LIMITS = CONTACT_LIMITS;
+
+let appPromise: Promise<FirebaseApp> | null = null;
+
+/** Lazily initialises Firebase (+ App Check when a reCAPTCHA v3 key is set). */
+function getApp(): Promise<FirebaseApp> {
+  appPromise ??= (async () => {
+    const app = getApps()[0] ?? initializeApp(firebaseConfig);
+    if (recaptchaKey && typeof window !== "undefined") {
+      const { initializeAppCheck, ReCaptchaV3Provider } = await import("firebase/app-check");
+      initializeAppCheck(app, {
+        provider: new ReCaptchaV3Provider(recaptchaKey),
+        isTokenAutoRefreshEnabled: true,
+      });
+    }
+    return app;
+  })();
+  return appPromise;
+}
+
 /**
- * Writes a contact form submission to the "messages" collection.
- * Requires NEXT_PUBLIC_FIREBASE_* env vars and Firestore rules that
- * allow client-side create on "messages" (see README for setup).
+ * Writes a transmission to the Firestore "messages" collection. Firestore rules
+ * should allow `create` only, with field/type/length checks matching LIMITS.
  */
 export async function submitContactMessage(payload: ContactMessage): Promise<void> {
-  if (!db) {
-    throw new Error(
-      "Firebase is not configured. Add NEXT_PUBLIC_FIREBASE_* env vars to enable the contact form."
-    );
-  }
-  await addDoc(collection(db, "messages"), {
-    ...payload,
+  if (!isFirebaseConfigured) throw new Error("NOT_CONFIGURED");
+  const app = await getApp();
+  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  await addDoc(collection(getFirestore(app), "messages"), {
+    name: payload.name.slice(0, LIMITS.name),
+    email: payload.email.slice(0, LIMITS.email),
+    message: payload.message.slice(0, LIMITS.message),
     createdAt: serverTimestamp(),
   });
 }
