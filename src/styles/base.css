@@ -1,0 +1,382 @@
+/* ───────────── Base, typography roles, shared HUD primitives ───────────── */
+
+html {
+  background: var(--void);
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 12px);
+}
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped,
+html.is-locked {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--void);
+  color: var(--text);
+  font-family: var(--font-b);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(75, 220, 253, 0.32);
+  color: var(--text);
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1d3047 transparent;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.1;
+}
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+dl,
+dd {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus: always visible for keyboard users, shaped like the HUD. */
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+[tabindex="-1"]:focus,
+[tabindex="-1"]:focus-visible {
+  outline: none;
+}
+
+.skip-link {
+  position: fixed;
+  left: 16px;
+  top: -80px;
+  z-index: 110;
+  padding: 12px 18px;
+  background: var(--cyan);
+  color: var(--text-ink);
+  font-family: var(--font-h);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  transition: top var(--t-hover) var(--ease-out);
+}
+.skip-link:focus {
+  top: 16px;
+}
+
+.wrap {
+  width: min(100% - var(--gutter) * 2, var(--wrap));
+  margin-inline: auto;
+}
+
+/* ───────────── Type roles ───────────── */
+
+.t-meta {
+  font-family: var(--font-h);
+  font-size: var(--fs-meta);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.t-heading {
+  font-family: var(--font-h);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #dcebfa;
+}
+.t-prose {
+  color: var(--text-2);
+  line-height: 1.65;
+}
+
+/* ───────────── Plates (CTAs): clipped upper-right / lower-left ───────────── */
+
+.plate {
+  --c: 13px;
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 56px;
+  padding: 0 30px;
+  font-family: var(--font-h);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  clip-path: polygon(0 0, calc(100% - var(--c)) 0, 100% var(--c), 100% 100%, var(--c) 100%, 0 calc(100% - var(--c)));
+  transition:
+    transform var(--t-hover) var(--ease-out),
+    filter var(--t-hover) var(--ease-out),
+    background-color var(--t-hover) var(--ease-out);
+}
+.plate:active {
+  transform: translateY(1px) scale(0.985);
+}
+.plate svg {
+  flex: none;
+  transition: transform var(--t-hover) var(--ease-out);
+}
+.plate:hover svg,
+.plate:focus-visible svg {
+  transform: translateX(4px);
+}
+.plate:focus-visible {
+  outline-offset: 4px;
+}
+
+.plate--primary {
+  color: var(--text-ink);
+  background: linear-gradient(180deg, #74e7ff 0%, var(--cyan) 46%, #2fc6ef 100%);
+  filter: drop-shadow(0 0 18px rgba(75, 220, 253, 0.45));
+}
+.plate--primary:hover,
+.plate--primary:focus-visible {
+  filter: drop-shadow(0 0 26px rgba(75, 220, 253, 0.7)) brightness(1.06);
+}
+.plate--primary[data-state="engaged"] {
+  filter: drop-shadow(0 0 32px rgba(143, 239, 255, 0.85)) brightness(1.12);
+}
+
+/* outlined: a 1px frame drawn by layering the face inside the clipped edge */
+.plate--outline {
+  color: var(--text);
+  background: var(--line-strong);
+}
+.plate--outline::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  background: rgba(5, 12, 22, 0.88);
+  clip-path: polygon(0 0, calc(100% - var(--c) + 0.5px) 0, 100% calc(var(--c) - 0.5px), 100% 100%, calc(var(--c) - 0.5px) 100%, 0 calc(100% - var(--c) + 0.5px));
+  transition: background-color var(--t-hover) var(--ease-out);
+}
+.plate--outline:hover,
+.plate--outline:focus-visible {
+  background: var(--cyan);
+}
+.plate--outline:hover::before,
+.plate--outline:focus-visible::before {
+  background: rgba(8, 26, 40, 0.9);
+}
+
+.plate--sm {
+  --c: 9px;
+  min-height: 40px;
+  padding: 0 18px;
+  gap: 10px;
+  font-size: 0.8rem;
+}
+
+/* text action (VIEW BRIEF →): cyan, light, never another solid button */
+.text-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-h);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  transition: color var(--t-hover) var(--ease-out);
+}
+.text-action svg {
+  transition: transform var(--t-hover) var(--ease-out);
+}
+.text-action:hover,
+.text-action:focus-visible {
+  color: var(--cyan-hi);
+}
+.text-action:hover svg,
+.text-action:focus-visible svg {
+  transform: translateX(4px);
+}
+
+/* tags: small chamfered outline labels */
+.tag {
+  --c: 6px;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  font-family: var(--font-h);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  background:
+    linear-gradient(var(--card), var(--card)) padding-box,
+    linear-gradient(var(--cyan-dim), var(--cyan-dim)) border-box;
+  border: 1px solid transparent;
+  clip-path: polygon(0 0, calc(100% - var(--c)) 0, 100% var(--c), 100% 100%, var(--c) 100%, 0 calc(100% - var(--c)));
+}
+.tag--violet {
+  color: var(--violet-hi);
+  background:
+    linear-gradient(var(--card), var(--card)) padding-box,
+    linear-gradient(rgba(139, 108, 255, 0.6), rgba(139, 108, 255, 0.6)) border-box;
+}
+
+/* ───────────── Frames (components/hud/HudFrame) ───────────── */
+
+.hud-frame {
+  position: relative;
+  isolation: isolate;
+}
+.hud-frame__svg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+.hud-frame__fill {
+  fill: var(--frame-fill, var(--card));
+}
+.hud-frame__outer {
+  fill: none;
+  stroke: var(--frame-line, var(--line));
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  transition: stroke var(--t-hover) var(--ease-out);
+}
+.hud-frame__inner {
+  fill: none;
+  stroke: var(--frame-inner, var(--line-soft));
+  stroke-width: 1;
+}
+.hud-frame__accent {
+  fill: none;
+  stroke: var(--frame-accent, var(--cyan));
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 3px rgba(75, 220, 253, 0.6));
+  opacity: var(--frame-accent-o, 0.85);
+  transition: opacity var(--t-hover) var(--ease-out);
+}
+.hud-frame__dot {
+  fill: var(--frame-accent, var(--cyan));
+  filter: drop-shadow(0 0 3px rgba(75, 220, 253, 0.8));
+}
+
+/* ───────────── Section heading rail ───────────── */
+
+.rail-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: end;
+  gap: clamp(14px, 2vw, 28px);
+}
+.rail-head__line {
+  height: 18px;
+  align-self: center;
+  margin-top: 6px;
+}
+.rail-head__line path {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.rail-head__sub {
+  padding-bottom: 4px;
+}
+
+@media (max-width: 767px) {
+  .rail-head {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .rail-head__line {
+    display: none;
+  }
+}
+
+/* Reduced motion (system setting or the header toggle): state changes stay,
+   travel and loops go. */
+html[data-motion="reduced"] *,
+html[data-motion="reduced"] *::before,
+html[data-motion="reduced"] *::after {
+  transition-duration: 0.01ms !important;
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  scroll-behavior: auto !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

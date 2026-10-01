@@ -1,0 +1,76 @@
+/* ─────────────────────────────────────────────────────────────
+   NEXUS design tokens — from the reference screenshot (Docs/Game).
+   Near-black navy reading surfaces, one cyan action colour, violet for
+   portal / AI / media energy, amber only for achievements. Glow stays
+   local to emitters, the cyan plates and selected edges.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  /* surfaces */
+  --void: #030910;
+  --void-2: #050c16;
+  --panel: #040a12;
+  --card: #070d14;
+  --card-2: #0a121c;
+
+  /* lines (thin outer strokes, inset strokes, seams) */
+  --line: rgba(120, 168, 214, 0.32);
+  --line-soft: rgba(120, 168, 214, 0.16);
+  --line-strong: rgba(150, 200, 240, 0.55);
+
+  /* accents */
+  --cyan: #4bdcfd;
+  --cyan-hi: #8fefff;
+  --cyan-dim: rgba(75, 220, 253, 0.55);
+  --violet: #8b6cff;
+  --violet-hi: #b49bff;
+  --amber: #ffc23d;
+  --amber-dim: rgba(255, 194, 61, 0.55);
+
+  /* text */
+  --text: #eef6ff;
+  --text-2: #a9b9cf;
+  --text-3: #7488a3;
+  --text-ink: #04111a;
+
+  /* type roles: identity · technical headings / metadata · prose */
+  --font-id: var(--font-identity), "Oxanium", system-ui, sans-serif;
+  --font-h: var(--font-tech), "Chakra Petch", system-ui, sans-serif;
+  --font-b: var(--font-body), "Inter", system-ui, sans-serif;
+
+  --fs-name: clamp(2.9rem, 6.4vw, 6.1rem);
+  --fs-statement: clamp(1.02rem, 1.95vw, 1.8rem);
+  --fs-h2: clamp(1.35rem, 2.35vw, 2.15rem);
+  --fs-h3: clamp(1.02rem, 1.25vw, 1.2rem);
+  --fs-body: clamp(1rem, 0.25vw + 0.94rem, 1.1rem);
+  --fs-meta: 0.78rem;
+  --fs-micro: 0.7rem;
+
+  /* geometry */
+  --gutter: clamp(16px, 3.2vw, 46px);
+  --wrap: 1400px;
+  --header-h: 76px;
+  --cut: 14px;
+  --cut-sm: 9px;
+
+  /* motion (authored tuning values, spec §19) */
+  --t-hover: 220ms;
+  --t-node: 260ms;
+  --t-brief: 420ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+
+  /* layers */
+  --z-content: 1;
+  --z-veil: 45;
+  --z-header: 50;
+  --z-menu: 60;
+  --z-dialog: 70;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --header-h: 62px;
+    --cut: 10px;
+    --cut-sm: 7px;
+  }
+}
