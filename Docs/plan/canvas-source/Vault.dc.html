@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Vault</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=Inter:wght@400;500&amp;family=Oxanium:wght@700&amp;family=Share+Tech+Mono&amp;family=Sora:wght@500;600&amp;display=swap">
+<style>
+body{margin:0;background:#030714}
+a{color:#D5DCEA;text-decoration:none}a:hover{color:#ffffff}
+</style>
+</helmet>
+<div style="position: relative; width: 1280px; height: 720px; overflow: hidden; background: radial-gradient(ellipse at 55% 45%, #0e1a3a 0%, #070d22 45%, #02040c 100%); font-family: 'Chakra Petch', sans-serif; color: #FAFCFF">
+  <sc-for list="{{stars}}" as="s" hint-placeholder-count="0">
+    <div style="position: absolute; border-radius: 50%; background: #ffffff; {{s.css}}"></div>
+  </sc-for>
+  <div style="position: absolute; left: 0; right: 0; top: 640px; height: 80px; background: linear-gradient(180deg, rgba(97,226,235,0), rgba(97,226,235,.05))"></div>
+
+  <nav aria-label="Primary" style="position: absolute; left: 35px; right: 32px; top: 22px; height: 44px; display: flex; align-items: center; justify-content: space-between">
+    <a href="Home.dc.html" style="display: flex; align-items: center; gap: 10px"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke-width="2.2"><path d="M16 2.5 L28 9.3 V22.7 L16 29.5 L4 22.7 V9.3 Z" stroke="#5f8ff0"></path><path d="M16 9 L22 12.5 V19.5 L16 23 L10 19.5 V12.5 Z" stroke="#9fd0ff" stroke-width="1.6"></path></svg><span style="font-family: 'Oxanium', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: .06em; color: #FAFCFF">NEXUS</span></a>
+    <div style="display: flex; align-items: center; gap: 34px; font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: .06em">
+      <a href="Home.dc.html" style="padding: 12px 0">HOME</a><a href="Menu.dc.html" style="padding: 12px 0">MISSIONS</a><a href="Abilities.dc.html" style="padding: 12px 0">ABILITIES</a><a href="PlayerLog.dc.html" style="padding: 12px 0">PLAYER LOG</a><a href="Archive.dc.html" style="padding: 12px 0">ARCHIVE</a>
+      <a href="Comms.dc.html" style="height: 38px; width: 122px; border-radius: 999px; background: linear-gradient(90deg, #496FE0, #469EDA); display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 700; letter-spacing: .1em">COMMS</a>
+    </div>
+  </nav>
+  <h2 style="position: absolute; left: 40px; top: 84px; margin: 0; font-family: 'Share Tech Mono', monospace; font-weight: 400; font-size: 12px; letter-spacing: .3em; color: #A5BFD3">THE VAULT · ALL MISSIONS</h2>
+
+  <svg aria-hidden="true" width="1280" height="720" viewBox="0 0 1280 720" style="position: absolute; left: 0; top: 0">
+    <defs><filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"></feGaussianBlur><feMerge><feMergeNode in="b"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs>
+    <g fill="none" stroke-linecap="round" filter="url(#glow)">
+      <path d="M210 676 C 260 640, 300 640, 330 612" stroke="#FF5FD2" stroke-width="2.4" stroke-opacity=".8"></path>
+      <path d="M470 676 C 520 650, 600 620, 640 380" stroke="#61E2EB" stroke-width="2.4" stroke-opacity=".8"></path>
+      <path d="M690 676 C 700 640, 700 600, 702 584" stroke="#8A6CFF" stroke-width="2.4" stroke-opacity=".8"></path>
+    </g>
+    <g fill="#0b1226" stroke-width="2"><circle cx="330" cy="612" r="6" stroke="#FF5FD2"></circle><circle cx="640" cy="380" r="6" stroke="#61E2EB"></circle><circle cx="702" cy="584" r="6" stroke="#8A6CFF"></circle></g>
+  </svg>
+
+  <article style="position: absolute; left: 96px; top: 116px; width: 520px; height: 496px; transform: perspective(1400px) rotateY(16deg); transform-origin: 0 50%">
+    <div style="position: absolute; left: 14px; top: 14px; right: -14px; bottom: -14px; border-radius: 14px; border: 1px solid rgba(180,225,255,.28); background: rgba(120,170,240,.05)"></div>
+    <div style="position: absolute; inset: 0; border-radius: 14px; border: 1px solid rgba(190,230,255,.6); background: linear-gradient(140deg, rgba(160,205,255,.16), rgba(60,90,160,.06) 50%, rgba(160,205,255,.1)); backdrop-filter: blur(6px); box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 30px 80px rgba(0,0,0,.5)"></div>
+    <div style="position: absolute; left: 22px; top: 22px; right: 22px; height: 58px; box-sizing: border-box; display: flex; align-items: center; padding: 0 18px; border: 1px solid rgba(127,230,255,.55); background: rgba(14,26,50,.7)">
+      <span style="position: absolute; left: -3px; top: -3px; width: 12px; height: 12px; border-left: 3px solid #61E2EB; border-top: 3px solid #61E2EB"></span>
+      <span style="position: absolute; right: -3px; bottom: -3px; width: 12px; height: 12px; border-right: 3px solid #61E2EB; border-bottom: 3px solid #61E2EB"></span>
+      <h3 style="margin: 0; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 25px; color: #F1F8FF">Game-Based Physics Learning</h3>
+    </div>
+    <div style="position: absolute; left: 22px; top: 96px; width: 230px; height: 140px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(127,230,255,.45)"><img src="/_blob/57c5d83143e29d845810d978a9e62113" alt="Lab render: pedestal with the glass cube" style="width: 230px; height: 140px; object-fit: cover; object-position: 50% 60%"><span style="position: absolute; left: 8px; top: 6px; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 12px; color: #fff; text-shadow: 0 1px 4px #000">Physics</span></div>
+    <div style="position: absolute; left: 22px; top: 248px; width: 230px; height: 140px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(127,230,255,.45)"><img src="/_blob/57c5d83143e29d845810d978a9e62113" alt="Lab render: molecules and the gold cube" style="width: 230px; height: 140px; object-fit: cover; object-position: 18% 40%; transform: scale(1.4)"><span style="position: absolute; left: 8px; top: 6px; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 12px; color: #fff; text-shadow: 0 1px 4px #000">Kinematics</span></div>
+    <div style="position: absolute; left: 266px; top: 96px; right: 22px; height: 292px; box-sizing: border-box; padding: 12px; border-radius: 10px; border: 1px solid rgba(127,230,255,.35); background: rgba(10,18,40,.55)">
+      <div style="font-family: 'Sora', sans-serif; font-weight: 600; font-size: 13px; color: #EAF6FF">Game design</div>
+      <svg width="200" height="90" viewBox="0 0 200 90" style="margin-top: 6px"><g stroke="#9fe8ff" stroke-opacity=".7"><path d="M40 20 L100 46 L160 20 M100 46 L70 78 M100 46 L130 78"></path></g><g fill="#0c1a34" stroke="#61E2EB"><rect x="10" y="10" width="60" height="18" rx="4"></rect><rect x="130" y="10" width="60" height="18" rx="4"></rect><circle cx="100" cy="46" r="10"></circle><rect x="46" y="70" width="48" height="16" rx="4" stroke="#FFB45A"></rect><rect x="106" y="70" width="48" height="16" rx="4" stroke="#FFB45A"></rect></g><g font-family="Share Tech Mono, monospace" font-size="8" fill="#D7F4FF" text-anchor="middle"><text x="40" y="22">velocity</text><text x="160" y="22">time</text><text x="70" y="81">level</text><text x="130" y="81">score</text></g></svg>
+      <p style="margin: 6px 0 0 0; font-family: 'Inter', sans-serif; font-size: 11.5px; line-height: 1.45; color: #C9D2E6">Straight-line kinematics taught through play instead of formulas.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px"><span style="padding: 3px 8px; border-radius: 6px; border: 1px solid rgba(127,230,255,.45); font-family: 'Share Tech Mono', monospace; font-size: 9.5px; color: #D7F4FF">UNITY</span><span style="padding: 3px 8px; border-radius: 6px; border: 1px solid rgba(127,230,255,.45); font-family: 'Share Tech Mono', monospace; font-size: 9.5px; color: #D7F4FF">C#</span><span style="padding: 3px 8px; border-radius: 6px; border: 1px solid rgba(127,230,255,.45); font-family: 'Share Tech Mono', monospace; font-size: 9.5px; color: #D7F4FF">GAME DESIGN</span></div>
+    </div>
+    <div style="position: absolute; left: 22px; right: 22px; bottom: 26px; display: flex; gap: 10px">
+      <a href="CaseFile.dc.html" style="flex-grow: 1; height: 44px; border-radius: 999px; border: 1px solid rgba(190,230,255,.55); background: rgba(14,26,50,.65); display: flex; align-items: center; justify-content: center; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: .1em">◎ CASE FILE</a>
+      <a href="https://github.com/bhargavm-iiits/Teaching-and-Learning" style="flex-grow: 1; height: 44px; border-radius: 999px; border: 1px solid rgba(190,230,255,.55); background: rgba(14,26,50,.65); display: flex; align-items: center; justify-content: center; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: .1em">SOURCE ↗</a>
+      <span style="flex-grow: 1; height: 44px; border-radius: 999px; border: 1px solid rgba(190,230,255,.35); display: flex; align-items: center; justify-content: center; font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .08em; color: #A5BFD3">5 PROJECTS</span>
+    </div>
+  </article>
+
+  <div style="position: absolute; left: 620px; top: 352px; width: 54px; height: 54px; border-radius: 12px; border: 1px solid rgba(190,230,255,.6); background: linear-gradient(140deg, rgba(160,205,255,.2), rgba(60,90,160,.08)); display: flex; align-items: center; justify-content: center; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 18px; color: #EAF6FF; box-shadow: 0 0 20px rgba(97,226,235,.25)">C#</div>
+
+  <sc-for list="{{side}}" as="v" hint-placeholder-count="3">
+    <article style="position: absolute; left: 700px; width: 470px; height: 170px; transform: perspective(1400px) rotateY(-14deg); transform-origin: 100% 50%; {{v.css}}">
+      <div style="position: absolute; left: 10px; top: 10px; right: -10px; bottom: -10px; border-radius: 12px; border: 1px solid rgba(180,225,255,.25)"></div>
+      <div style="position: absolute; inset: 0; border-radius: 12px; border: 1px solid rgba(190,230,255,.6); background: linear-gradient(140deg, rgba(160,205,255,.14), rgba(60,90,160,.05)); backdrop-filter: blur(6px); box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 24px 60px rgba(0,0,0,.45)"></div>
+      <div style="position: absolute; left: 14px; top: 14px; height: 40px; box-sizing: border-box; display: flex; align-items: center; padding: 0 14px; border: 1px solid rgba(127,230,255,.55); background: rgba(14,26,50,.72)">
+        <span style="position: absolute; left: -3px; top: -3px; width: 10px; height: 10px; border-left: 2px solid #61E2EB; border-top: 2px solid #61E2EB"></span>
+        <h3 style="margin: 0; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 18px; color: #F1F8FF; white-space: nowrap">{{v.title}}</h3>
+      </div>
+      <img src="{{v.img}}" alt="{{v.alt}}" style="position: absolute; right: 14px; top: 14px; width: 220px; height: 142px; border-radius: 8px; object-fit: cover; border: 1px solid rgba(127,230,255,.4)">
+      <p style="position: absolute; left: 14px; top: 64px; width: 210px; margin: 0; font-family: 'Inter', sans-serif; font-size: 11px; line-height: 1.45; color: #C9D2E6">{{v.summary}}</p>
+      <div style="position: absolute; left: 14px; bottom: 12px; font-family: 'Share Tech Mono', monospace; font-size: 9.5px; letter-spacing: .1em; color: #61E2EB">{{v.tag}}</div>
+    </article>
+  </sc-for>
+
+  <div role="group" aria-label="Filter missions by domain" style="position: absolute; left: 40px; bottom: 22px; display: flex; align-items: center; gap: 10px">
+    <span style="font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .2em; color: #A5BFD3">FILTER</span>
+    <button type="button" aria-pressed="true" style="height: 34px; padding: 0 14px; border-radius: 10px; border: 1px solid #61E2EB; background: rgba(97,226,235,.15); color: #EAF6FF; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: .1em">ALL</button>
+    <button type="button" aria-pressed="false" style="height: 34px; padding: 0 14px; border-radius: 10px; border: 1px solid rgba(255,95,210,.5); background: rgba(16,24,44,.55); color: #D5DCEA; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: .1em">XR / VR / AR</button>
+    <button type="button" aria-pressed="false" style="height: 34px; padding: 0 14px; border-radius: 10px; border: 1px solid rgba(97,226,235,.5); background: rgba(16,24,44,.55); color: #D5DCEA; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: .1em">GAME DESIGN</button>
+    <button type="button" aria-pressed="false" style="height: 34px; padding: 0 14px; border-radius: 10px; border: 1px solid rgba(138,108,255,.5); background: rgba(16,24,44,.55); color: #D5DCEA; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: .1em">3D &amp; SIMULATION</button>
+    <a href="SideQuests.dc.html" style="height: 34px; padding: 0 14px; border-radius: 10px; border: 1px solid rgba(150,200,240,.35); display: flex; align-items: center; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: .1em">SIDE QUESTS →</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":720}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const side = [
+      { title: 'Tirumala AR Navigation', summary: 'Offline augmented-reality guidance for pilgrims on the Alipiri steps route to Tirumala.', tag: '001 · AR NAVIGATION', img: '/_blob/23f7413a6498ac6ad6dff367bcfc881f', alt: 'Terrain diorama with the amber route', css: 'top: 104px' },
+      { title: 'VR Cinema Platform', summary: 'A secure, immersive VR cinema for streamed media: 360° playback and stereoscopic 3D.', tag: '003 · IMMERSIVE MEDIA', img: '/_blob/f13081d4da7f436b6e8b88230c8a63dd', alt: 'Cinema dome diorama', css: 'top: 290px' },
+      { title: 'ISRO Launch Pad Simulation', summary: 'Launch-pad simulation from the ISRO project line.', tag: '004 · 3D SIMULATION', img: '/_blob/9f29054390c6022bbf6ff4702658917a', alt: 'Hangar diorama with the launch vehicle', css: 'top: 476px' },
+    ];
+    let s = 31; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+    const stars = [];
+    for (let i = 0; i < 120; i++) { const size = r() < 0.88 ? 1 + r() * 1.2 : 2 + r() * 1.8; stars.push({ css: 'left: ' + Math.round(r() * 1280) + 'px; top: ' + Math.round(r() * 720) + 'px; width: ' + size.toFixed(1) + 'px; height: ' + size.toFixed(1) + 'px; opacity: ' + (0.3 + r() * 0.6).toFixed(2) }); }
+    return { side, stars };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>NEXUS design system</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=Inter:wght@400;500&amp;family=Michroma&amp;family=Oxanium:wght@700;800&amp;family=Saira:wdth,wght@125,700&amp;family=Share+Tech+Mono&amp;family=Sora:wght@500;600&amp;display=swap">
+<style>
+body{margin:0;background:#050912}
+a{color:#D5DCEA;text-decoration:none}a:hover{color:#ffffff}
+</style>
+</helmet>
+<div style="position: relative; width: 1280px; height: 1300px; overflow: hidden; background: #060a16; font-family: 'Inter', sans-serif; color: #FAFCFF">
+  <header style="position: absolute; left: 40px; top: 30px">
+    <div style="font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .28em; color: #61E2EB">00 · DESIGN SYSTEM</div>
+    <h1 style="margin: 6px 0 0 0; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 30px">NEXUS tokens &amp; components</h1>
+    <p style="margin: 6px 0 0 0; font-size: 13px; color: #A5BFD3">Colours measured from the reference frames (MASTER-PROMPT §3). Every artboard on this canvas uses these values.</p>
+  </header>
+
+  <section aria-label="Colour" style="position: absolute; left: 40px; top: 128px; width: 1200px; display: flex; flex-direction: column; gap: 18px">
+    <sc-for list="{{groups}}" as="g" hint-placeholder-count="4">
+      <div style="display: flex; align-items: flex-start; gap: 16px">
+        <div style="width: 120px; padding-top: 18px; font-family: 'Share Tech Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #A5BFD3">{{g.name}}</div>
+        <div style="display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 12px; flex-grow: 1">
+          <sc-for list="{{g.items}}" as="c" hint-placeholder-count="8">
+            <div style="display: flex; flex-direction: column; gap: 5px">
+              <div style="height: 50px; border-radius: 8px; border: 1px solid rgba(255,255,255,.12); {{c.fill}}"></div>
+              <div style="font-family: 'Share Tech Mono', monospace; font-size: 10px; color: #D5DCEA">{{c.name}}</div>
+              <div style="font-family: 'Share Tech Mono', monospace; font-size: 9.5px; color: #7E8AA6">{{c.hex}}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </section>
+
+  <section aria-label="Typography" style="position: absolute; left: 40px; top: 560px; width: 600px">
+    <div style="font-family: 'Share Tech Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #A5BFD3; padding-bottom: 8px; border-bottom: 1px solid rgba(150,200,240,.15)">TYPE</div>
+    <div style="display: grid; grid-template-columns: 120px 1fr; row-gap: 12px; align-items: baseline; margin-top: 12px">
+      <span style="font-family: 'Share Tech Mono', monospace; font-size: 10px; color: #61E2EB">display</span><span><span style="font-family: 'Saira', sans-serif; font-stretch: 125%; font-weight: 700; font-size: 38px; background: linear-gradient(90deg, #59B0F0, #4E84EB 50%, #6853EE); -webkit-background-clip: text; background-clip: text; color: transparent">IMMERSIVE</span> <span style="font-family: 'Michroma', sans-serif; font-size: 28px; color: #F6F8FB">WORLDS</span></span>
+      <span style="font-family: 'Share Tech Mono', monospace; font-size: 10px; color: #61E2EB">identity</span><span style="font-family: 'Oxanium', sans-serif; font-weight: 800; font-size: 36px; letter-spacing: .03em">BHARGAV M</span>
+      <span style="font-family: 'Share Tech Mono', monospace; font-size: 10px; color: #61E2EB">wide</span><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 500; font-size: 20px; letter-spacing: .42em">I CREATE</span>
+      <span style="font-family: 'Share Tech Mono', monospace; font-size: 10px; color: #61E2EB">role</span><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 16px; letter-spacing: .04em; color: #A5BFD3">UNITY • XR • AR/VR • GAME DEVELOPMENT</span>
+      <span style="font-family: 'Share Tech Mono', monospace; font-size: 10px; color: #61E2EB">hud-title / hub</span><span><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 16px; letter-spacing: .08em; color: #61E2EB">ACTIVATION [01]</span> &#160; <span style="font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: .12em; color: #78D8EF; text-shadow: 0 0 10px rgba(120,216,239,.6)">[ THE NEXUS HUB ]</span></span>
+      <span style="font-family: 'Share Tech Mono', monospace; font-size: 10px; color: #61E2EB">card-title</span><span style="font-family: 'Sora', sans-serif; font-weight: 600; font-size: 22px">Tirumala AR Navigation</span>
+      <span style="font-family: 'Share Tech Mono', monospace; font-size: 10px; color: #61E2EB">body</span><span style="font-size: 14px; line-height: 1.55; color: #AEB6CC">Blending real and virtual worlds through interactive experiences, intelligent systems and immersive gameplay.</span>
+      <span style="font-family: 'Share Tech Mono', monospace; font-size: 10px; color: #61E2EB">label / cta</span><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: .06em">MISSIONS · PLAYER LOG &#160; <b style="font-weight: 700; letter-spacing: .04em">EXPLORE PORTFOLIO →</b></span>
+      <span style="font-family: 'Share Tech Mono', monospace; font-size: 10px; color: #61E2EB">micro</span><span style="font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .08em; color: #78D8EF">BUILD 2026.10 · UNITY 6 · URP · NODE 13.55N 80.02E</span>
+    </div>
+  </section>
+
+  <section aria-label="Glass" style="position: absolute; left: 40px; top: 1010px; width: 600px">
+    <div style="font-family: 'Share Tech Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #A5BFD3; padding-bottom: 8px; border-bottom: 1px solid rgba(150,200,240,.15)">GLASS</div>
+    <div style="display: flex; gap: 20px; margin-top: 14px">
+      <div style="position: relative; width: 290px; height: 196px; border-radius: 14px; overflow: hidden; background: linear-gradient(130deg, #1d1a4a, #0b1636)">
+        <div style="position: absolute; left: 18px; top: 18px; right: 18px; bottom: 18px; box-sizing: border-box; padding: 14px; border-radius: 14px; border: 1px solid rgba(150,200,240,.28); background: rgba(16,24,44,.55); backdrop-filter: blur(18px) saturate(140%); box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 20px 60px rgba(0,0,0,.45)">
+          <div style="font-family: 'Share Tech Mono', monospace; font-size: 9.5px; letter-spacing: .14em; color: #61E2EB">DARK GLASS · CARD 14</div>
+          <div style="margin-top: 8px; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 17px">VR Cinema Platform</div>
+          <div style="margin-top: 4px; font-size: 11.5px; color: #C9D2E6">fill .55 · blur 18 · border rgba(150,200,240,.28)</div>
+        </div>
+      </div>
+      <div style="position: relative; width: 290px; height: 196px; border-radius: 14px; overflow: hidden; background: linear-gradient(180deg, #E4E7EC, #CDD3DD)">
+        <div style="position: absolute; left: 18px; top: 18px; right: 18px; bottom: 18px; box-sizing: border-box; padding: 14px; border-radius: 18px; border: 1px solid rgba(255,255,255,.75); background: rgba(255,255,255,.45); backdrop-filter: blur(24px) saturate(160%); box-shadow: 0 10px 40px rgba(31,40,72,.12)">
+          <div style="font-family: 'Share Tech Mono', monospace; font-size: 9.5px; letter-spacing: .14em; color: #5070CC">LIGHT GLASS · CARD 18</div>
+          <div style="margin-top: 8px; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 17px; color: #1F2848">Game-Based Physics Learning</div>
+          <div style="margin-top: 10px; display: inline-block; padding: 8px 16px; border-radius: 999px; background: linear-gradient(90deg, #6d93e8, #5070CC); font-size: 12px; color: #ffffff">Learn More</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Components" style="position: absolute; left: 680px; top: 560px; width: 560px">
+    <div style="font-family: 'Share Tech Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #A5BFD3; padding-bottom: 8px; border-bottom: 1px solid rgba(150,200,240,.15)">CTA PILL · REST · HOVER · FOCUS · ACTIVE · DISABLED</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px">
+      <span style="height: 46px; width: 232px; box-sizing: border-box; border-radius: 999px; padding: 1.5px; background: linear-gradient(90deg, rgba(214,222,236,.75), #6E62E8); display: flex"><span style="flex-grow: 1; border-radius: 999px; background: #1B2634; display: flex; align-items: center; justify-content: center; gap: 10px; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 14px">EXPLORE PORTFOLIO →</span></span>
+      <span style="height: 46px; width: 232px; box-sizing: border-box; border-radius: 999px; padding: 1.5px; background: linear-gradient(90deg, rgba(240,245,255,.95), #8d84ff); display: flex"><span style="flex-grow: 1; border-radius: 999px; background: #556475; display: flex; align-items: center; justify-content: center; gap: 14px; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 14px">EXPLORE PORTFOLIO →</span></span>
+      <span style="height: 46px; width: 232px; box-sizing: border-box; border-radius: 999px; padding: 1.5px; background: linear-gradient(90deg, rgba(214,222,236,.75), #6E62E8); display: flex; outline: 2px solid #61E2EB; outline-offset: 3px"><span style="flex-grow: 1; border-radius: 999px; background: #556475; display: flex; align-items: center; justify-content: center; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 14px">FOCUS · RING 2PX</span></span>
+      <span style="position: relative; height: 46px; width: 232px; box-sizing: border-box; border-radius: 999px; padding: 1.5px; background: linear-gradient(90deg, rgba(214,222,236,.75), #6E62E8); display: flex; transform: scale(.98)"><span style="flex-grow: 1; border-radius: 999px; background: #1B2634; display: flex; align-items: center; justify-content: center; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 14px">ACTIVE · RIPPLE</span><span style="position: absolute; left: 150px; top: 3px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,.6)"></span><span style="position: absolute; left: 160px; top: 13px; width: 20px; height: 20px; border-radius: 50%; border: 1px solid rgba(255,255,255,.8)"></span></span>
+      <span style="height: 46px; width: 232px; box-sizing: border-box; border-radius: 999px; padding: 1.5px; background: linear-gradient(90deg, rgba(214,222,236,.75), #6E62E8); display: flex; opacity: .4"><span style="flex-grow: 1; border-radius: 999px; background: #1B2634; display: flex; align-items: center; justify-content: center; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 14px">DISABLED</span></span>
+    </div>
+
+    <div style="margin-top: 24px; font-family: 'Share Tech Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #A5BFD3; padding-bottom: 8px; border-bottom: 1px solid rgba(150,200,240,.15)">MENU CHIP · DEFAULT · HOVER   ·   NAV</div>
+    <div style="display: flex; align-items: center; gap: 18px; margin-top: 14px">
+      <span style="position: relative; height: 52px; padding: 0 22px; box-sizing: border-box; display: flex; align-items: center; border: 1px solid rgba(112,163,207,.35); background: linear-gradient(180deg, rgba(22,34,62,.82), rgba(12,20,42,.82)); font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 20px; color: #E6ECF5"><span style="position: absolute; left: -2px; top: -2px; width: 10px; height: 10px; border-left: 2px solid #61E2EB; border-top: 2px solid #61E2EB"></span><span style="position: absolute; right: -2px; bottom: -2px; width: 10px; height: 10px; border-right: 2px solid #61E2EB; border-bottom: 2px solid #61E2EB"></span>PROJECTS</span>
+      <span style="position: relative; height: 52px; padding: 0 22px; box-sizing: border-box; display: flex; align-items: center; border: 1px solid rgba(112,163,207,.85); background: linear-gradient(180deg, rgba(22,34,62,.82), rgba(12,20,42,.82)); font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 20px; color: #ffffff; transform: translateY(-4px); box-shadow: 0 0 0 1px rgba(97,226,235,.6), 0 12px 40px rgba(97,226,235,.25)"><span style="position: absolute; left: -2px; top: -2px; width: 10px; height: 10px; border-left: 2px solid #61E2EB; border-top: 2px solid #61E2EB"></span><span style="position: absolute; right: -2px; bottom: -2px; width: 10px; height: 10px; border-right: 2px solid #61E2EB; border-bottom: 2px solid #61E2EB"></span>EXPERIENCE</span>
+      <span style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: .06em; padding: 10px 0; border-bottom: 2px solid #4B8BF5">HOME</span>
+      <span style="height: 36px; width: 110px; border-radius: 999px; background: linear-gradient(90deg, #496FE0, #469EDA); display: flex; align-items: center; justify-content: center; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: .1em">COMMS</span>
+    </div>
+
+    <div style="margin-top: 26px; font-family: 'Share Tech Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #A5BFD3; padding-bottom: 8px; border-bottom: 1px solid rgba(150,200,240,.15)">HUD MODULES · TL TITLE + BARS · BR COUNTER · TAG</div>
+    <div style="display: flex; align-items: center; gap: 30px; margin-top: 14px">
+      <div style="display: flex; flex-direction: column; gap: 5px">
+        <span style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 16px; letter-spacing: .08em; color: #61E2EB; text-shadow: 0 0 10px rgba(97,226,235,.55)">WORLD ENTRY - [02]</span>
+        <span style="width: 160px; height: 3px; background: linear-gradient(90deg, #61E2EB 40%, rgba(97,226,235,.15) 40%)"></span>
+        <span style="width: 160px; height: 3px; background: linear-gradient(90deg, #61E2EB 60%, rgba(97,226,235,.15) 60%)"></span>
+        <span style="width: 160px; height: 3px; background: linear-gradient(90deg, #61E2EB 75%, rgba(97,226,235,.15) 75%)"></span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-end"><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 28px; color: #61E2EB; text-shadow: 0 0 12px rgba(97,226,235,.6); line-height: 1">003</span><span style="font-family: 'Share Tech Mono', monospace; font-size: 10px; color: rgba(120,216,239,.7)">0/003</span></div>
+      <span style="padding: 5px 10px; border-radius: 8px; border: 1px solid rgba(97,226,235,.6); background: rgba(10,22,44,.7); font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: .12em; color: #61E2EB">MISSION 001</span>
+      <span style="padding: 4px 9px; border-radius: 6px; background: linear-gradient(90deg, #DE8528, #FFB45A); font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: .1em; color: #1a0f04">TOP 8 / 150+</span>
+    </div>
+
+    <div style="margin-top: 26px; font-family: 'Share Tech Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #A5BFD3; padding-bottom: 8px; border-bottom: 1px solid rgba(150,200,240,.15)">TECH TILE · DARK · DARK HOVER (T43) · LIGHT · LIGHT HOVER</div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 14px">
+      <div style="height: 104px; border-radius: 14px; border: 1px solid rgba(150,200,240,.28); background: rgba(16,24,44,.55); box-shadow: 0 0 18px rgba(78,132,235,.3); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px"><svg width="34" height="34" viewBox="0 0 24 24" fill="#F5792A"><circle cx="15.7" cy="13.3" r="3.2"></circle><path d="M13.5 2.5 L22 9.3 A7.3 7.3 0 1 1 9.4 19 L4 14.6 L11.7 8.8 H5 C3.5 8.8 3.6 7.2 5.2 7.2 H14.7 L11.6 4.6 C11.1 4.2 11.2 3.6 11.7 3.2 C12.2 2.8 13 2.8 13.5 2.5 Z" fill="none" stroke="#F5792A" stroke-width="1.6"></path></svg><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 13px">Blender</span></div>
+      <div style="height: 104px; border-radius: 14px; border: 1px solid rgba(245,121,42,.7); background: linear-gradient(rgba(245,121,42,.25), rgba(245,121,42,.25)), rgba(16,24,44,.55); box-shadow: 0 0 26px rgba(245,121,42,.45); transform: translateY(-4px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px"><svg width="36" height="36" viewBox="0 0 24 24"><circle cx="15.7" cy="13.3" r="3.2" fill="#F5792A"></circle><path d="M13.5 2.5 L22 9.3 A7.3 7.3 0 1 1 9.4 19 L4 14.6 L11.7 8.8 H5 C3.5 8.8 3.6 7.2 5.2 7.2 H14.7 L11.6 4.6 C11.1 4.2 11.2 3.6 11.7 3.2 C12.2 2.8 13 2.8 13.5 2.5 Z" fill="none" stroke="#F5792A" stroke-width="1.6"></path></svg><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 13px">Blender</span></div>
+      <div style="height: 104px; border-radius: 16px; border: 1px solid rgba(255,255,255,.75); background: linear-gradient(180deg, #EEF0F4, #DCE1E8); box-shadow: 0 10px 30px rgba(31,40,72,.12); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px"><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 24px; color: #68217A">C#</span><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 13px; color: #1F2848">C#</span></div>
+      <div style="height: 104px; border-radius: 16px; border: 1px solid rgba(104,33,122,.5); background: linear-gradient(rgba(104,33,122,.35), rgba(104,33,122,.35)), linear-gradient(180deg, #EEF0F4, #DCE1E8); box-shadow: 0 0 0 1px rgba(80,112,204,.5), 0 12px 32px rgba(80,112,204,.2); transform: translateY(-4px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px"><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 26px; color: #ffffff">C#</span><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 13px; color: #ffffff">C#</span></div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1300}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const sw = (name, hex, fill) => ({ name, hex, fill: 'background: ' + (fill || hex) });
+    const groups = [
+      { name: 'DARK WORLD', items: [sw('void-0', '#02030A'), sw('void-1', '#030B18'), sw('navy-1', '#08162F'), sw('navy-2', '#0C1026'), sw('nebula-1', '#181C40'), sw('city-2', '#212D45'), sw('fog-lit', '#6E6A9A'), sw('hero-sky-4', '#304C96')] },
+      { name: 'ENERGY · LIGHT', items: [sw('plasma-deep', '#302973'), sw('plasma-mid', '#6059AC'), sw('plasma-hot', '#BDA6EF'), sw('core-white', '#F7E6FA'), sw('hud-cyan', '#61E2EB'), sw('hud-cyan-2', '#78D8EF'), sw('neon-pink', '#E374BC'), sw('route-glow', '#FFB45A')] },
+      { name: 'UI ON DARK', items: [sw('text-hi', '#FAFCFF'), sw('text-sub', '#A5BFD3'), sw('text-muted', '#AEB6CC'), sw('tagline-violet', '#8A7CF0'), sw('nav-active', '#4B8BF5'), sw('cta-fill', '#1B2634'), sw('cta-hover', '#556475'), sw('grad-immersive', '#59B0F0 → #6853EE', 'linear-gradient(90deg, #59B0F0, #4E84EB 50%, #6853EE)')] },
+      { name: 'DAYLIGHT', items: [sw('day-1', '#DEE1E6'), sw('day-2', '#CDD3DD'), sw('day-3', '#B7BCC7'), sw('day-ink', '#1F2848'), sw('day-accent', '#5070CC'), sw('day-warm', '#E0965D'), sw('day-sky', '#A9C8F2'), sw('nav-pill', '#496FE0 → #469EDA', 'linear-gradient(90deg, #496FE0, #469EDA)')] },
+    ];
+    return { groups };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800&family=Michroma&family=Audiowide&family=Exo+2:wght@700;800&family=Oxanium:wght@700;800&family=Saira:wdth,wght@125,700&family=Chakra+Petch:wght@700&family=Russo+One&family=Syncopate:wght@700&family=Tomorrow:wght@600;700&display=block" rel="stylesheet">
+<style>body{margin:0;background:#0b0d22;color:#fff;width:1400px}
+.r{display:flex;align-items:center;gap:30px;height:118px;border-bottom:1px solid #223;padding-left:20px}
+.n{width:150px;font:12px monospace;color:#9ab}
+.i{font-size:66px;letter-spacing:.01em;background:linear-gradient(90deg,#59B0F0,#4E84EB 50%,#6853EE);-webkit-background-clip:text;color:transparent;line-height:1}
+.w{font-size:66px;line-height:1;color:#F6F8FB;font-weight:400}
+img{display:block}</style></head><body>
+<div class="r"><div class="n">KF22 crop</div><img src="/docs/NEXUS-Cinematic/reference/keyframes/KF22_P1_0.0s_home-hero.jpg" style="width:1280px;height:720px;object-fit:none;object-position:-40px -200px;width:520px;height:160px"></div>
+<script>
+const F=[["Orbitron",800],["Michroma",400],["Audiowide",400],["Exo 2",800],["Oxanium",800],["Saira",700],["Chakra Petch",700],["Russo One",400],["Syncopate",700],["Tomorrow",700]];
+for(const [f,w] of F){document.write(`<div class="r"><div class="n">${f} ${w}</div><div class="i" style="font-family:'${f}';font-weight:${w};${f==='Saira'?'font-stretch:125%;':''}">IMMERSIVE</div><div class="w" style="font-family:'${f}';font-weight:400;${f==='Saira'?'font-stretch:125%;':''}">WORLDS</div></div>`)}
+document.fonts.ready.then(()=>setTimeout(()=>window.__done=true,400));
+</script></body></html>

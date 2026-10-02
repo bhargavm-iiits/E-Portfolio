@@ -1,0 +1,73 @@
+<!doctype html><html><head><style>html,body{margin:0;background:transparent;overflow:hidden}canvas{display:block}</style></head><body>
+<script type="importmap">{"imports":{"three":"/three/build/three.module.js","three/addons/":"/three/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from "three";
+import { FBXLoader } from "three/addons/loaders/FBXLoader.js";
+import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+const q = new URLSearchParams(location.search);
+const W = +q.get("w") || 1024, H = +q.get("h") || 1024;
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(W, H);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = +q.get("exp") || 1.0;
+renderer.setClearColor(0x000000, 0);
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+const cam = new THREE.PerspectiveCamera(+q.get("fov") || 30, W / H, 1, 5000);
+const tl = new THREE.TextureLoader();
+const base = "/char/Meshy_AI_Neon_Virtual_Vanguard_1001191442_texture";
+const load = (s, srgb) => new Promise((r) => tl.load(base + s, (t) => { if (srgb) t.colorSpace = THREE.SRGBColorSpace; t.flipY = true; t.anisotropy = 8; r(t); }));
+const [map, nrm, rough, metal] = await Promise.all([load(".png", true), load("_normal.png"), load("_roughness.png"), load("_metallic.png")]);
+// emissive mask: saturated blue texels (controller rings, headset LEDs) glow
+const img = map.image; const cv = document.createElement("canvas"); cv.width = img.width; cv.height = img.height;
+const cx = cv.getContext("2d"); cx.drawImage(img, 0, 0); const d = cx.getImageData(0, 0, cv.width, cv.height); const p = d.data;
+for (let i = 0; i < p.length; i += 4) { const r = p[i], g = p[i + 1], b = p[i + 2]; const sat = b - Math.max(r, g); const on = b > 110 && sat > 45 ? Math.min(1, (sat - 45) / 80) : 0; p[i] = r * on; p[i + 1] = g * on; p[i + 2] = b * on; }
+cx.putImageData(d, 0, 0); const emi = new THREE.CanvasTexture(cv); emi.colorSpace = THREE.SRGBColorSpace; emi.flipY = true;
+const mat = new THREE.MeshStandardMaterial({ map, normalMap: nrm, roughnessMap: rough, metalnessMap: metal, roughness: 1, metalness: 1, emissive: new THREE.Color(q.get("emiCol") || "#7fb2ff"), emissiveMap: emi, emissiveIntensity: +(q.get("emi") ?? 2.2) });
+mat.normalScale.set(1, 1);
+const obj = await new Promise((r) => new FBXLoader().load(base + ".fbx", r));
+obj.traverse((o) => { if (o.isMesh) { o.material = mat; } });
+scene.add(obj);
+// camera: yaw (deg, 0 = front), pitch, target height (cm), distance
+const yaw = THREE.MathUtils.degToRad(+q.get("yaw") || 0), pitch = THREE.MathUtils.degToRad(+q.get("pitch") || 0);
+const ty = +(q.get("ty") ?? 0), dist = +q.get("dist") || 560, tx = +(q.get("tx") ?? 0);
+const target = new THREE.Vector3(tx, ty, 0);
+cam.position.set(target.x + Math.sin(yaw) * Math.cos(pitch) * dist, target.y + Math.sin(pitch) * dist, Math.cos(yaw) * Math.cos(pitch) * dist);
+cam.lookAt(target);
+if (q.get("vshift")) { cam.setViewOffset(W, H, 0, +q.get("vshift"), W, H); }
+// lighting presets; directions given in camera-relative terms via yaw
+const preset = q.get("light") || "neutral";
+const pmrem = new THREE.PMREMGenerator(renderer);
+const envTex = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+const camDir = (ax, ay, az) => { // ax: +right, ay: up, az: toward camera
+  const right = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw)), fwd = new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw));
+  return new THREE.Vector3().addScaledVector(right, ax).addScaledVector(fwd, az).add(new THREE.Vector3(0, ay, 0)).multiplyScalar(400);
+};
+const dl = (col, inten, ax, ay, az) => { const l = new THREE.DirectionalLight(col, inten); l.position.copy(camDir(ax, ay, az)); scene.add(l); return l; };
+const P = {
+  neutral() { scene.environment = envTex; scene.environmentIntensity = 0.7; dl("#ffffff", 2.0, 0.5, 1, 1); scene.add(new THREE.HemisphereLight("#ffffff", "#444466", 0.6)); },
+  gate() { // portal in front of character = behind from camera: violet rim, near-black front
+    scene.environment = envTex; scene.environmentIntensity = 0.06;
+    dl("#b58cff", 16, -1, 0.2, -0.45); dl("#a77dff", 16, 1, 0.2, -0.45); dl("#d7c2ff", 6.0, 0, 1.2, -0.7); dl("#9b7bff", 4, 0, 0.1, -1);
+    dl("#4ad7e6", 0.35, 0.0, -0.4, 1); scene.add(new THREE.HemisphereLight("#2b2a66", "#0a0b1c", 0.35)); },
+  home() { // city vista in front of the player: blue-violet rim + cool sky fill from the top
+    scene.environment = envTex; scene.environmentIntensity = 0.12;
+    dl("#8ea6ff", 13, 1, 0.35, -0.45); dl("#9a7cff", 10, -1, 0.3, -0.45); dl("#c9d6ff", 3.0, 0.2, 1.5, -0.2);
+    dl("#5a4bd0", 0.5, -0.4, 0.2, 1); scene.add(new THREE.HemisphereLight("#3d4a90", "#0b0c1d", 0.45)); },
+  dive() { scene.environment = envTex; scene.environmentIntensity = 0.15;
+    dl("#9fb8ff", 14, 1, 0.45, -0.45); dl("#a684ff", 14, -1, 0.45, -0.45); dl("#dfe6ff", 4.0, 0, 1.6, -0.3); dl("#6b5cff", 0.8, 0, 0, 1);
+    scene.add(new THREE.HemisphereLight("#4a5aa8", "#0b0c1d", 0.5)); },
+  log() { // front-facing: soft cool key, pink rim left, cyan rim right
+    scene.environment = envTex; scene.environmentIntensity = 0.35;
+    dl("#c8d2ff", 1.6, 0.25, 0.7, 1); dl("#ff5fd2", 4.2, -1, 0.3, -0.5); dl("#5fd8ff", 4.2, 1, 0.3, -0.5); dl("#8a6cff", 1.5, 0, 1, -1);
+    scene.add(new THREE.HemisphereLight("#5a4fb0", "#120c2a", 0.5)); },
+  hero() { scene.environment = envTex; scene.environmentIntensity = 0.3;
+    dl("#d6dcff", 1.8, 0.4, 0.8, 1); dl("#61e2eb", 3.5, 1, 0.2, -0.6); dl("#9a7cff", 3.5, -1, 0.2, -0.6);
+    scene.add(new THREE.HemisphereLight("#4a5aa8", "#0b0c1d", 0.5)); },
+  holo() { scene.environment = envTex; scene.environmentIntensity = 0.0;
+    dl("#7fb2ff", 3.0, 0, 0.5, 1); dl("#6b8bff", 6, -1, 0.3, -0.5); dl("#6b8bff", 6, 1, 0.3, -0.5); },
+};
+(P[preset] || P.neutral)();
+renderer.render(scene, cam);
+requestAnimationFrame(() => { renderer.render(scene, cam); window.__done = true; });
+</script></body></html>

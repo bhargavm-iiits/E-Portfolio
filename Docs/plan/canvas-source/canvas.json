@@ -1,0 +1,270 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Abilities.dc.html": {
+      "h": 720,
+      "title": "CH12 · Abilities (KF34)",
+      "w": 1280,
+      "x": 0,
+      "y": 4860
+    },
+    "Archive.dc.html": {
+      "h": 720,
+      "is_interactive": true,
+      "title": "/archive · Daylight glass carousel (KF44) — clickable",
+      "w": 1280,
+      "x": 0,
+      "y": 5960
+    },
+    "CaseFile.dc.html": {
+      "h": 720,
+      "title": "CH08 · Case-file state (KF57)",
+      "w": 1280,
+      "x": 1360,
+      "y": 3760
+    },
+    "Character.dc.html": {
+      "h": 720,
+      "title": "00 · Character — Neon Shadow VR Gamer (your FBX, rendered)",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "Cinema.dc.html": {
+      "h": 720,
+      "title": "CH10 · Mission 003 — VR Cinema (no reference)",
+      "w": 1280,
+      "x": 4080,
+      "y": 3760
+    },
+    "Comms.dc.html": {
+      "h": 720,
+      "title": "CH15 · Comms terminal (flow)",
+      "w": 1280,
+      "x": 6800,
+      "y": 4860
+    },
+    "Dive.dc.html": {
+      "h": 720,
+      "title": "CH06 · Dive — holo HUD (KF24)",
+      "w": 1280,
+      "x": 1360,
+      "y": 2660
+    },
+    "Entry.dc.html": {
+      "h": 720,
+      "title": "CH02 · World Entry (KF08)",
+      "w": 1280,
+      "x": 1360,
+      "y": 1560
+    },
+    "Finale.dc.html": {
+      "h": 720,
+      "title": "CH15 · Finale (KF36)",
+      "w": 1280,
+      "x": 5440,
+      "y": 4860
+    },
+    "Hangar.dc.html": {
+      "h": 720,
+      "title": "CH11 · Mission 004 — ISRO Hangar (KF32)",
+      "w": 1280,
+      "x": 5440,
+      "y": 3760
+    },
+    "Home.dc.html": {
+      "h": 720,
+      "title": "CH05 · Home (KF22)",
+      "w": 1280,
+      "x": 0,
+      "y": 2660
+    },
+    "Hub.dc.html": {
+      "h": 720,
+      "title": "CH03 · The Nexus Hub (KF10)",
+      "w": 1280,
+      "x": 2720,
+      "y": 1560
+    },
+    "Lab.dc.html": {
+      "h": 720,
+      "title": "CH08 · Mission 002 — Physics Lab (KF28)",
+      "w": 1280,
+      "x": 0,
+      "y": 3760
+    },
+    "Main.dc.html": {
+      "h": 720,
+      "title": "CH01 · The Gate (KF02)",
+      "w": 1280,
+      "x": 0,
+      "y": 1560
+    },
+    "Menu.dc.html": {
+      "h": 720,
+      "is_interactive": true,
+      "title": "CH07 · VR Main Menu (KF26) — clickable",
+      "w": 1280,
+      "x": 2720,
+      "y": 2660
+    },
+    "MobileHome.dc.html": {
+      "h": 844,
+      "title": "Phone · Home",
+      "w": 390,
+      "x": 1360,
+      "y": 5960
+    },
+    "MobileMission.dc.html": {
+      "h": 844,
+      "title": "Phone · Mission + bottom sheet",
+      "w": 390,
+      "x": 1830,
+      "y": 5960
+    },
+    "PlayerLog.dc.html": {
+      "h": 720,
+      "title": "CH13 · Player Log (KF65)",
+      "w": 1280,
+      "x": 1360,
+      "y": 4860
+    },
+    "ShortEntry.dc.html": {
+      "h": 720,
+      "title": "SE · Short Entry — reticle (KF18)",
+      "w": 1280,
+      "x": 5440,
+      "y": 1560
+    },
+    "SideQuests.dc.html": {
+      "h": 720,
+      "title": "CH14 · Side quests grid (KF55)",
+      "w": 1280,
+      "x": 4080,
+      "y": 4860
+    },
+    "Storyboard.dc.html": {
+      "h": 1047,
+      "title": "00 · Reference storyboard (footage — layout only)",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "System.dc.html": {
+      "h": 1300,
+      "title": "00 · Design system — tokens & components",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "Terrain.dc.html": {
+      "h": 720,
+      "title": "CH09 · Mission 001 — Tirumala AR (KF30)",
+      "w": 1280,
+      "x": 2720,
+      "y": 3760
+    },
+    "Vault.dc.html": {
+      "h": 720,
+      "title": "CH14 · The Vault — vitrines (KF69)",
+      "w": 1280,
+      "x": 2720,
+      "y": 4860
+    },
+    "Warp.dc.html": {
+      "h": 720,
+      "title": "CH04 · Warp (KF12)",
+      "w": 1280,
+      "x": 4080,
+      "y": 1560
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-02T09:40:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "row0": {
+      "kind": "title1",
+      "maxW": 4000,
+      "text": "00 · Reference & system",
+      "w": 240,
+      "x": 0,
+      "y": -270
+    },
+    "row1": {
+      "kind": "title1",
+      "maxW": 6720,
+      "text": "01 · Entry — CH00–CH04 · Short Entry",
+      "w": 240,
+      "x": 0,
+      "y": 1322
+    },
+    "row2": {
+      "kind": "title1",
+      "maxW": 4000,
+      "text": "02 · Home → Dive → VR Main Menu",
+      "w": 240,
+      "x": 0,
+      "y": 2390
+    },
+    "row3": {
+      "kind": "title1",
+      "maxW": 6720,
+      "text": "03 · Missions — CH08–CH11",
+      "w": 240,
+      "x": 0,
+      "y": 3490
+    },
+    "row4": {
+      "kind": "title1",
+      "maxW": 8000,
+      "text": "04 · Abilities → Player Log → Vault → Finale / Comms",
+      "w": 240,
+      "x": 0,
+      "y": 4590
+    },
+    "row5": {
+      "kind": "title1",
+      "maxW": 2220,
+      "text": "05 · /archive · Phone",
+      "w": 240,
+      "x": 0,
+      "y": 5690
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Character.dc.html",
+    "System.dc.html",
+    "Storyboard.dc.html",
+    "Entry.dc.html",
+    "Hub.dc.html",
+    "Warp.dc.html",
+    "ShortEntry.dc.html",
+    "Home.dc.html",
+    "Dive.dc.html",
+    "Menu.dc.html",
+    "Lab.dc.html",
+    "CaseFile.dc.html",
+    "Terrain.dc.html",
+    "Cinema.dc.html",
+    "Hangar.dc.html",
+    "Abilities.dc.html",
+    "PlayerLog.dc.html",
+    "Vault.dc.html",
+    "SideQuests.dc.html",
+    "Finale.dc.html",
+    "Comms.dc.html",
+    "Archive.dc.html",
+    "MobileHome.dc.html",
+    "MobileMission.dc.html"
+  ],
+  "pages": [],
+  "title": "NEXUS Cinematic"
+}

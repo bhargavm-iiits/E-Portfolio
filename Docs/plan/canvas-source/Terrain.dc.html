@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mission 001 — Tirumala AR Navigation</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=Inter:wght@400;500&amp;family=Oxanium:wght@700&amp;family=Share+Tech+Mono&amp;family=Sora:wght@500;600&amp;display=swap">
+<style>
+body{margin:0;background:#040916}
+a{color:#D5DCEA;text-decoration:none}a:hover{color:#ffffff}
+</style>
+</helmet>
+<div style="position: relative; width: 1280px; height: 720px; overflow: hidden; background: #040916; font-family: 'Chakra Petch', sans-serif; color: #FAFCFF">
+  <img src="/_blob/23f7413a6498ac6ad6dff367bcfc881f" alt="Hologram terrain slab of the Alipiri to Tirumala hills with the walking route drawn in amber up to the summit pin" style="position: absolute; left: 0; top: 30px; width: 1280px; height: 720px; object-fit: cover; filter: contrast(1.08) saturate(1.1)">
+  <div style="position: absolute; left: 0; top: 0; width: 1280px; height: 250px; background: linear-gradient(180deg, rgba(4,9,22,1) 0%, rgba(4,9,22,.85) 45%, rgba(4,9,22,0))"></div>
+
+  <nav aria-label="Primary" style="position: absolute; left: 35px; right: 32px; top: 22px; height: 44px; display: flex; align-items: center; justify-content: space-between">
+    <a href="Home.dc.html" style="display: flex; align-items: center; gap: 10px"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke-width="2.2"><path d="M16 2.5 L28 9.3 V22.7 L16 29.5 L4 22.7 V9.3 Z" stroke="#5f8ff0"></path><path d="M16 9 L22 12.5 V19.5 L16 23 L10 19.5 V12.5 Z" stroke="#9fd0ff" stroke-width="1.6"></path></svg><span style="font-family: 'Oxanium', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: .06em; color: #FAFCFF">NEXUS</span></a>
+    <div style="display: flex; align-items: center; gap: 34px; font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: .06em">
+      <a href="Home.dc.html" style="padding: 12px 0">HOME</a><a href="Menu.dc.html" aria-current="page" style="padding: 12px 0; color: #ffffff; border-bottom: 2px solid #4B8BF5">MISSIONS</a><a href="Abilities.dc.html" style="padding: 12px 0">ABILITIES</a><a href="PlayerLog.dc.html" style="padding: 12px 0">PLAYER LOG</a><a href="Archive.dc.html" style="padding: 12px 0">ARCHIVE</a>
+      <a href="Comms.dc.html" style="height: 38px; width: 122px; border-radius: 999px; background: linear-gradient(90deg, #496FE0, #469EDA); display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 700; letter-spacing: .1em">COMMS</a>
+    </div>
+  </nav>
+
+  <div style="position: absolute; left: 0; right: 0; top: 92px; text-align: center">
+    <h2 style="margin: 0; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 40px; color: #CDEBFF; text-shadow: 0 0 20px rgba(127,210,255,.6), 0 0 2px rgba(255,255,255,.6)">Tirumala AR Navigation</h2>
+    <div style="margin-top: 10px; font-family: 'Sora', sans-serif; font-weight: 500; font-size: 21px; color: #BFE4FF; text-shadow: 0 0 12px rgba(127,210,255,.45)">Unity 6 • AR Foundation 6.5 • ARCore • URP • C# • A* pathfinding</div>
+  </div>
+
+  <div style="position: absolute; left: 52px; top: 262px; width: 236px; box-sizing: border-box; padding: 10px 12px; border-radius: 6px; border: 1px solid rgba(127,230,255,.55); background: rgba(8,22,40,.72); transform: perspective(900px) rotateY(18deg); box-shadow: 0 0 20px rgba(97,226,235,.18)">
+    <div style="display: flex; justify-content: space-between; font-family: 'Share Tech Mono', monospace; font-size: 9.5px; letter-spacing: .12em; color: #61E2EB"><span>LOCALISATION</span><span>OFFLINE</span></div>
+    <div style="display: flex; align-items: center; gap: 12px; margin-top: 10px">
+      <svg width="46" height="46" viewBox="0 0 46 46" fill="none" stroke="#9fe8ff" stroke-width="1.4"><circle cx="23" cy="23" r="19" stroke-opacity=".4"></circle><path d="M23 4 A19 19 0 1 1 6 31" stroke-width="3.5"></path></svg>
+      <svg width="46" height="46" viewBox="0 0 46 46" fill="none" stroke="#9fe8ff" stroke-width="1.4"><circle cx="23" cy="23" r="19" stroke-opacity=".4"></circle><path d="M23 4 A19 19 0 0 1 40 30" stroke-width="3.5"></path></svg>
+      <svg width="56" height="50" viewBox="0 0 56 50" fill="none" stroke="#9fe8ff" stroke-width="1.2"><path d="M8 14 L28 4 L48 14 V36 L28 46 L8 36 Z M8 14 L28 24 L48 14 M28 24 V46"></path></svg>
+    </div>
+    <div style="display: flex; gap: 22px; margin-top: 4px; font-family: 'Share Tech Mono', monospace; font-size: 9px; color: #BFE4FF"><span>VIO</span><span>GPS · KALMAN</span></div>
+    <div style="margin-top: 6px; font-family: 'Share Tech Mono', monospace; font-size: 9px; line-height: 1.5; color: #9EC9DC">+ COMPASS + LANDMARKS</div>
+  </div>
+  <div style="position: absolute; right: 52px; top: 252px; width: 236px; box-sizing: border-box; padding: 10px 12px; border-radius: 6px; border: 1px solid rgba(127,230,255,.55); background: rgba(8,22,40,.72); transform: perspective(900px) rotateY(-18deg); box-shadow: 0 0 20px rgba(97,226,235,.18)">
+    <div style="display: flex; justify-content: space-between; font-family: 'Share Tech Mono', monospace; font-size: 9.5px; letter-spacing: .12em; color: #61E2EB"><span>ROUTING · A*</span><span>STEPS ROUTE</span></div>
+    <svg width="210" height="62" viewBox="0 0 210 62" style="margin-top: 8px"><path d="M2 58 L30 52 L60 46 L86 40 L104 30 L130 24 L160 14 L206 4" fill="none" stroke="#FFB45A" stroke-width="2"></path><path d="M104 30 L130 24" stroke="#FFB45A" stroke-width="2" stroke-dasharray="3 4"></path><path d="M2 60 H208" stroke="#9fe8ff" stroke-opacity=".4"></path></svg>
+    <div style="font-family: 'Share Tech Mono', monospace; font-size: 9px; line-height: 1.6; color: #BFE4FF">ELEVATION PROFILE · ILLUSTRATIVE<br>TURN INSTRUCTIONS · VOICE GUIDANCE<br>POI · LANDMARK RECOGNITION</div>
+  </div>
+
+  <div style="position: absolute; left: 168px; top: 446px; display: flex; align-items: center; gap: 6px; font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .14em; color: #FFD9A0; text-shadow: 0 0 8px rgba(255,180,90,.8)">ALIPIRI <span style="color: #9EC9DC; letter-spacing: .06em">· START</span></div>
+  <div style="position: absolute; left: 864px; top: 214px; font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .14em; color: #FFD9A0; text-shadow: 0 0 8px rgba(255,180,90,.8)">TIRUMALA</div>
+  <svg aria-hidden="true" width="1280" height="720" style="position: absolute; left: 0; top: 0"><path d="M628 388 L560 440 H452" fill="none" stroke="#FFB45A" stroke-width="1.2" stroke-dasharray="4 3"></path><circle cx="628" cy="388" r="3" fill="#FFB45A"></circle></svg>
+  <div style="position: absolute; left: 252px; top: 428px; width: 200px; box-sizing: border-box; padding: 8px 10px; border-radius: 6px; border: 1px solid rgba(255,180,90,.7); background: rgba(40,22,6,.72); box-shadow: 0 0 16px rgba(255,180,90,.25)">
+    <div style="font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: .1em; color: #FFB45A">1.17 KM INTERPOLATED</div>
+    <div style="margin-top: 2px; font-family: 'Inter', sans-serif; font-size: 10.5px; line-height: 1.4; color: #F4DFC6">Missing from OpenStreetMap · bridged with a flagged connector</div>
+  </div>
+
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 110px; background: linear-gradient(0deg, rgba(4,9,22,.92), rgba(4,9,22,0))"></div>
+  <div style="position: absolute; left: 40px; bottom: 30px; display: flex; flex-direction: column; gap: 8px">
+    <div style="display: flex; align-items: center; gap: 10px"><span style="padding: 5px 10px; border-radius: 8px; border: 1px solid rgba(97,226,235,.6); background: rgba(10,22,44,.7); font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: .12em; color: #61E2EB">MISSION 001</span><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: .1em; color: #D5DCEA">AR NAVIGATION</span></div>
+    <div style="font-family: 'Inter', sans-serif; font-size: 12.5px; color: #C9D2E6; max-width: 470px; line-height: 1.5">Offline augmented-reality guidance for pilgrims on the Alipiri steps route to Tirumala.</div>
+  </div>
+  <div style="position: absolute; right: 40px; bottom: 34px; display: flex; align-items: center; gap: 12px">
+    <a href="Lab.dc.html" aria-label="Previous mission" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(165,191,211,.45); display: flex; align-items: center; justify-content: center; font-size: 18px">←</a>
+    <span style="font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .14em; color: #A5BFD3">2 / 4</span>
+    <a href="Cinema.dc.html" aria-label="Next mission" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(165,191,211,.45); display: flex; align-items: center; justify-content: center; font-size: 18px">→</a>
+    <a href="https://github.com/bhargavm-iiits/AR-Navigation" style="height: 46px; padding: 0 18px; border-radius: 999px; border: 1px solid rgba(165,191,211,.45); display: flex; align-items: center; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: .12em">SOURCE ↗</a>
+    <a href="CaseFile.dc.html" style="height: 46px; padding: 0 22px; border-radius: 999px; border: 1.5px solid rgba(214,222,236,.6); background: rgba(27,38,52,.8); display: flex; align-items: center; gap: 10px; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .1em; color: #ffffff; box-shadow: 0 0 0 1px rgba(110,98,232,.35)">OPEN CASE FILE</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":720}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

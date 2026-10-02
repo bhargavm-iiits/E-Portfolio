@@ -1,0 +1,13 @@
+<!doctype html><html><body>
+<script type="importmap">{"imports":{"three":"/three/build/three.module.js","three/addons/":"/three/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from "three";
+import { FBXLoader } from "three/addons/loaders/FBXLoader.js";
+const t0 = performance.now();
+new FBXLoader().load("/char/Meshy_AI_Neon_Virtual_Vanguard_1001191442_texture.fbx", (obj) => {
+  const box = new THREE.Box3().setFromObject(obj);
+  const info = { ms: Math.round(performance.now() - t0), box: [box.min.toArray(), box.max.toArray()], meshes: [], anims: obj.animations.length, scale: obj.scale.toArray(), rot: obj.rotation.toArray() };
+  obj.traverse((o) => { if (o.isMesh) info.meshes.push({ name: o.name, skinned: !!o.isSkinnedMesh, verts: o.geometry.attributes.position.count, mat: [].concat(o.material).map((m) => ({ type: m.type, name: m.name, map: !!m.map, color: m.color && m.color.getHexString() })), attrs: Object.keys(o.geometry.attributes) }); if (o.isBone) info.bones = (info.bones || 0) + 1; });
+  window.__info = info;
+}, undefined, (e) => { window.__info = { err: String(e) }; });
+</script></body></html>

@@ -1,0 +1,7 @@
+<!doctype html><html><head><style>html,body{margin:0;background:transparent;overflow:hidden}canvas{display:block}</style></head><body>
+<script type="importmap">{"imports":{"three":"/three/build/three.module.js","three/addons/":"/three/examples/jsm/"}}</script>
+<script type="module">
+const s = new URLSearchParams(location.search).get("scene");
+window.onerror = (m) => console.log("ERR " + m);
+import(`./s_${s}.js?v=${Date.now()}`).catch((e) => console.log("IMPORT ERR " + e.message + " " + e.stack));
+</script></body></html>
