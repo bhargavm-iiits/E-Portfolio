@@ -218,7 +218,7 @@ export const sideQuests: SideQuest[] = [
     category: "web",
     stack: ["Next.js", "React Three Fiber", "TypeScript"],
     source: `${GH}/E-Portfolio`,
-    live: "https://e-portfolio-xi-bay.vercel.app",
+    live: "https://bhargavm-portfolio.vercel.app",
   },
 ];
 

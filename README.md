@@ -1,6 +1,6 @@
 # BHARGAV M // NEXUS — Portfolio
 
-**Live:** [e-portfolio-xi-bay.vercel.app](https://e-portfolio-xi-bay.vercel.app/)
+**Live:** [bhargavm-portfolio.vercel.app](https://bhargavm-portfolio.vercel.app/)
 
 A compact, game-flavoured portfolio built to the `Docs/Game` specification (`MASTER-PROMPT.md` and the reference screenshot, which is authoritative for layout). The page reads **World → Missions → Ability Tree + Player Log → Comms**. The default reading view is quiet. An optional, skippable **ENTER THE NEXUS** entry flies through the portal and lands on the missions.
 

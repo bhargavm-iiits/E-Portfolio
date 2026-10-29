@@ -245,7 +245,7 @@ export const projects = [
     ],
     color: "#94A3B8",
     github: "https://github.com/bhargavm-iiits/E-Portfolio",
-    live: "https://e-portfolio-xi-bay.vercel.app",
+    live: "https://bhargavm-portfolio.vercel.app",
   },
 ];
 

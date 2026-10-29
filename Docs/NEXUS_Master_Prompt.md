@@ -35,7 +35,7 @@ Items marked **[VERIFY]** are claims that show up in the videos or in brief v1 b
 3. **Shared soundtrack.** All three clips have an identical loudness envelope: a swell from −41 to −19 dB over 0–3 s, a dip at about 5.5 s, and a second lift at about 8.5 s. It's a riser → breath → lift structure you can mirror in optional sound design.
 4. **They are AI-generated concept clips.** On-screen text is garbled ("LET MORE", "ACITES", "DEPERNCES", "Ecact object", "Gyber Design", "UNIMEA", "CH J.TX"). Some project labels are wrong too; the Tirumala card reads "VR-Based • Unreal Engine". **Take the layout, hierarchy and motion. Never take the copy.** The facts are in §4.9.
 5. **The ✦ four-point sparkle** in the bottom-right corner of every frame is the video generator's watermark, not a UI element.
-6. **Other items in the folder.** `portfolio_1–3.mp4` weren't analysed (outside this request). There's a working Next.js 16 + React Three Fiber build, live at e-portfolio-xi-bay.vercel.app, with a portal, a procedural city, glass project cubes and a VR figure. There's also a full codebase audit in `Docs/portfolio.md` and a `legacy-static/` vanilla build. **This prompt evolves that repo. It isn't a rewrite from zero.**
+6. **Other items in the folder.** `portfolio_1–3.mp4` weren't analysed (outside this request). There's a working Next.js 16 + React Three Fiber build, live at bhargavm-portfolio.vercel.app, with a portal, a procedural city, glass project cubes and a VR figure. There's also a full codebase audit in `Docs/portfolio.md` and a `legacy-static/` vanilla build. **This prompt evolves that repo. It isn't a rewrite from zero.**
 
 **Pacing data** (mean luminance 0–255 and frame-to-frame motion, sampled at 8 fps)
 
@@ -360,7 +360,7 @@ Each world ends with a settle beat and a **`VIEW BRIEF →`** callout anchored t
 
 - **Warp** (p6): 1.0 s of star streaks (instanced lines stretched along the view axis), with engine logos flying past. It decelerates into the quietest, darkest frame on the site.
 - **Comms terminal:** heading **`ESTABLISH CONTACT`**, support line `IDEAS → EXPERIENCES → REAL IMPACT`.
-  - Channels: Email `bhargav.m23@iiits.in` · LinkedIn `linkedin.com/in/bhargav-ai` · GitHub `github.com/bhargavm-iiits` · Portfolio `e-portfolio-xi-bay.vercel.app`
+  - Channels: Email `bhargav.m23@iiits.in` · LinkedIn `linkedin.com/in/bhargav-ai` · GitHub `github.com/bhargavm-iiits` · Portfolio `bhargavm-portfolio.vercel.app`
   - Form fields: `CALLSIGN` (name), `RETURN FREQUENCY` (email), `TRANSMISSION` (message). Button **`TRANSMIT`**.
   - **Transmission effect:** on submit, the message text compresses into a beam and shoots up to a satellite dot. Status lines map to *real* Firestore states: `ENCRYPTING…` (validating) → `UPLINK…` (request pending) → `TRANSMISSION RECEIVED` (success) or `SIGNAL LOST — RETRY` (error). Status is announced via `aria-live="polite"`.
 - **End card** (p5/p6), last on the page: `BHARGAV M` / `UNITY • XR • AR/VR • GAME DEVELOPMENT` / divider / "Creating interactive worlds through immersive technology" / glass pill **`REPLAY ENTRY ↺`** (reticle hover). Corner orbital arcs, edge rails and the segmented progress bar complete the frame.
@@ -459,7 +459,7 @@ interface LogEntry { code: string; org: string; role: string; period: string; bu
 - Primary identity: `UNITY • AR/VR • XR • GAME DEVELOPMENT`
 - Supporting identity: `AI • 3D • INTERACTIVE SYSTEMS`
 - Education: B.Tech Artificial Intelligence & Data Science, IIIT Sri City, 2023 – present (graduating 2027)
-- Links: bhargav.m23@iiits.in · linkedin.com/in/bhargav-ai · github.com/bhargavm-iiits · e-portfolio-xi-bay.vercel.app
+- Links: bhargav.m23@iiits.in · linkedin.com/in/bhargav-ai · github.com/bhargavm-iiits · bhargavm-portfolio.vercel.app
 
 **MISSION // 001 — TIRUMALA AR NAVIGATION** · `AR / NAVIGATION`
 

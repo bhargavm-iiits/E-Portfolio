@@ -1,6 +1,6 @@
 # Bhargav M. — Immersive 3D E-Portfolio
 
-**🔴 LIVE DEPLOYMENT:** [https://e-portfolio-xi-bay.vercel.app/](https://e-portfolio-xi-bay.vercel.app/)
+**🔴 LIVE DEPLOYMENT:** [https://bhargavm-portfolio.vercel.app/](https://bhargavm-portfolio.vercel.app/)
 
 A fully interactive, cinematic 3D WebGL portfolio built with Three.js, GSAP, and vanilla ES modules — no build step. Scrolling flies the camera through a glowing portal into a procedurally generated city, past floating glass project cubes you can drag, hover, and click.
 

@@ -3,7 +3,7 @@
  * piece of navigation chrome, and the [VERIFY] switches from the NEXUS brief.
  */
 
-export const SITE_URL = "https://e-portfolio-xi-bay.vercel.app";
+export const SITE_URL = "https://bhargavm-portfolio.vercel.app";
 
 /** Contact form field limits (mirrored in Firestore rules). */
 export const CONTACT_LIMITS = { name: 80, email: 120, message: 2000 } as const;
@@ -15,7 +15,7 @@ export const links = {
   github: "https://github.com/bhargavm-iiits",
   githubLabel: "github.com/bhargavm-iiits",
   portfolio: SITE_URL,
-  portfolioLabel: "e-portfolio-xi-bay.vercel.app",
+  portfolioLabel: "bhargavm-portfolio.vercel.app",
   source: "https://github.com/bhargavm-iiits/E-Portfolio",
 } as const;
 
